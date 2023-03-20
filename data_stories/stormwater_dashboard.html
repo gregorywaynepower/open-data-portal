@@ -1,567 +1,785 @@
 <!-- Déclaration des contextes -->
-<ods-dataset-context context="devicesites,streamgages,raingages,ctxanalysisdevice,ctxanalysisdatestream,ctxanalysisdaterain"
-                     devicesites-dataset="device-sites"
-                     devicesites-parameters="{'disjunctive.type':true,'refine.type':['Stream Gage','Rain Gage']}"
-                     ctxanalysisdevice-dataset="device-sites"
-                     ctxanalysisdevice-parameters="{'disjunctive.type':true,'refine.type':['Stream Gage','Rain Gage']}"
-                     streamgages-dataset="stream-gages"
-                     raingages-dataset="rain-gages"
-                     ctxanalysisdatestream-dataset="stream-gages"
-                     ctxanalysisdaterain-dataset="rain-gages"
-                     ng-init="boundsstream = {'min':undefined,'max':undefined,'maxselection':undefined };
+<ods-dataset-context
+  context="devicesites,streamgages,raingages,ctxanalysisdevice,ctxanalysisdatestream,ctxanalysisdaterain"
+  devicesites-dataset="device-sites"
+  devicesites-parameters="{'disjunctive.type':true,'refine.type':['Stream Gage','Rain Gage']}"
+  ctxanalysisdevice-dataset="device-sites"
+  ctxanalysisdevice-parameters="{'disjunctive.type':true,'refine.type':['Stream Gage','Rain Gage']}"
+  streamgages-dataset="stream-gages"
+  raingages-dataset="rain-gages"
+  ctxanalysisdatestream-dataset="stream-gages"
+  ctxanalysisdaterain-dataset="rain-gages"
+  ng-init="boundsstream = {'min':undefined,'max':undefined,'maxselection':undefined };
                      boundsrain = {'min':undefined,'max':undefined,'maxselection':undefined };
                      variables = {'site':undefined, 'rain':undefined, 'stream':undefined,
                     'kpirain':undefined, 'kpistream':undefined,'customPeriodStream':false,'customPeriodRain':false,'sumrainamount':undefined};
-                    ">
-    {{ devicesites.parameters['refine.siteid'] = (devicesites.parameters['refine.siteid'].join('') ? devicesites.parameters['refine.siteid'].join('') : devicesites.parameters['refine.siteid']) ; '' }}
-                   
-    <div ods-adv-analysis="dateanalysisrain"
-     ods-adv-analysis-context="ctxanalysisdaterain"
-     ods-adv-analysis-select="min(createdate) as mindate, max(createdate) as maxdate">
-    {{ boundsrain.min = (dateanalysisrain[0].mindate | moment : 'YYYY-MM-DD' ) ; '' }}
-    {{ boundsrain.max = (dateanalysisrain[0].maxdate | moment : 'YYYY-MM-DD') ; '' }}
-</div>
-<div ods-adv-analysis="dateanalysisstream"
-     ods-adv-analysis-context="ctxanalysisdatestream"
-     ods-adv-analysis-select="min(createdate) as mindate, max(createdate) as maxdate">
-    {{ boundsstream.min = (dateanalysisstream[0].mindate | moment : 'YYYY-MM-DD' ) ; '' }}
-    {{ boundsstream.max = (dateanalysisstream[0].maxdate | moment : 'YYYY-MM-DD') ; '' }}
-</div>
-<div ng-if="boundsstream.min && boundsstream.max"
-     ng-init="
-boundsstream.minselection = boundsstream.min">
-    {{streamgages.parameters['q'] = 'createdate >= ' +boundsstream.minselection + ' AND ' + 'createdate&lt;= ' +boundsstream.max ; '' }}
-</div>
-<div ng-if="boundsrain.min && boundsrain.max"
-     ng-init="
-boundsrain.minselection = boundsrain.min">
-    {{raingages.parameters['q'] = 'createdate >= ' +boundsrain.minselection + ' AND ' + 'createdate&lt;= ' +boundsrain.max ; '' }}
-</div>
+                    "
+>
+  {{ devicesites.parameters['refine.siteid'] =
+  (devicesites.parameters['refine.siteid'].join('') ?
+  devicesites.parameters['refine.siteid'].join('') :
+  devicesites.parameters['refine.siteid']) ; '' }}
 
-<div ods-results="sitesdetails"
-     ods-results-context="devicesites"
-     ods-results-max="1">
+  <div
+    ods-adv-analysis="dateanalysisrain"
+    ods-adv-analysis-context="ctxanalysisdaterain"
+    ods-adv-analysis-select="min(createdate) as mindate, max(createdate) as maxdate"
+  >
+    {{ boundsrain.min = (dateanalysisrain[0].mindate | moment : 'YYYY-MM-DD' ) ;
+    '' }} {{ boundsrain.max = (dateanalysisrain[0].maxdate | moment :
+    'YYYY-MM-DD') ; '' }}
+  </div>
+  <div
+    ods-adv-analysis="dateanalysisstream"
+    ods-adv-analysis-context="ctxanalysisdatestream"
+    ods-adv-analysis-select="min(createdate) as mindate, max(createdate) as maxdate"
+  >
+    {{ boundsstream.min = (dateanalysisstream[0].mindate | moment : 'YYYY-MM-DD'
+    ) ; '' }} {{ boundsstream.max = (dateanalysisstream[0].maxdate | moment :
+    'YYYY-MM-DD') ; '' }}
+  </div>
+  <div
+    ng-if="boundsstream.min && boundsstream.max"
+    ng-init="
+boundsstream.minselection = boundsstream.min"
+  >
+    {{streamgages.parameters['q'] = 'createdate >= ' +boundsstream.minselection
+    + ' AND ' + 'createdate&lt;= ' +boundsstream.max ; '' }}
+  </div>
+  <div
+    ng-if="boundsrain.min && boundsrain.max"
+    ng-init="
+boundsrain.minselection = boundsrain.min"
+  >
+    {{raingages.parameters['q'] = 'createdate >= ' +boundsrain.minselection + '
+    AND ' + 'createdate&lt;= ' +boundsrain.max ; '' }}
+  </div>
+
+  <div
+    ods-results="sitesdetails"
+    ods-results-context="devicesites"
+    ods-results-max="1"
+  >
     {{variables['sites'] = sitesdetails ; ""}}
-</div>
-<div ods-results="streamgage"
-     ods-results-context="streamgages"
-     ods-results-max="1">
+  </div>
+  <div
+    ods-results="streamgage"
+    ods-results-context="streamgages"
+    ods-results-max="1"
+  >
     {{variables['stream'] = streamgage ; ""}}
-</div>
-<div ods-results="raingage"
-     ods-results-context="raingages"
-     ods-results-max="1">
+  </div>
+  <div
+    ods-results="raingage"
+    ods-results-context="raingages"
+    ods-results-max="1"
+  >
     {{variables['rain'] = raingage ; ""}}
-</div>
-<div ods-adv-analysis="kpirain"
-     ods-adv-analysis-context="raingages"
-     ods-adv-analysis-select="sum(rainamount) as rainamount, max(rainintensityhr) as maxrainintensity"
-     ods-adv-analysis-group-by="createdate"
-     ods-adv-analysis-order-by="-maxrainintensity">
-    {{variables['kpirain'] = kpirain ;
-     variables.kpirain[0].maxrainintensity;
-     variables.kpirain[0].createdate; ""}}
-</div>
-<div ods-subaggregation="variables.kpirain"
-     ods-subaggregation-serie-sumrainamount="SUM(rainamount)">
+  </div>
+  <div
+    ods-adv-analysis="kpirain"
+    ods-adv-analysis-context="raingages"
+    ods-adv-analysis-select="sum(rainamount) as rainamount, max(rainintensityhr) as maxrainintensity"
+    ods-adv-analysis-group-by="createdate"
+    ods-adv-analysis-order-by="-maxrainintensity"
+  >
+    {{variables['kpirain'] = kpirain ; variables.kpirain[0].maxrainintensity;
+    variables.kpirain[0].createdate; ""}}
+  </div>
+  <div
+    ods-subaggregation="variables.kpirain"
+    ods-subaggregation-serie-sumrainamount="SUM(rainamount)"
+  >
     {{variables['sumrainamount'] = results[0].sumrainamount ; ""}}
-</div>
-<div ods-adv-analysis="kpistream"
-     ods-adv-analysis-context="streamgages"
-     ods-adv-analysis-select="avg(stage) as avgstage, max(stage) as maxstage, min(stage) as minstage,
+  </div>
+  <div
+    ods-adv-analysis="kpistream"
+    ods-adv-analysis-context="streamgages"
+    ods-adv-analysis-select="avg(stage) as avgstage, max(stage) as maxstage, min(stage) as minstage,
      avg(air_temperature) as avgairtemp, max(air_temperature) as maxairtemp, min(air_temperature) as minairtemp,
      avg(water_temperature) as avgwatertemp, max(water_temperature) as maxwatertemp, min(water_temperature) as minwatertemp,
-     avg(barometric_pressure) as avgbarpres, max(barometric_pressure) as maxbarpres, min(barometric_pressure) as minbarpres">
-    {{variables['kpistream'] = kpistream ;
-     variables.kpistream[0].avgstage;
-     variables.kpistream[0].maxstage;
-     variables.kpistream[0].minstage;
-     variables.kpistream[0].avgairtemp;
-     variables.kpistream[0].maxairtemp;
-     variables.kpistream[0].minairtemp;
-     variables.kpistream[0].avgwatertemp;
-     variables.kpistream[0].maxwatertemp;
-     variables.kpistream[0].minwatertemp;
-     variables.kpistream[0].avgbarpres;
-     variables.kpistream[0].maxbarpres;
-     variables.kpistream[0].minbarpres;
-      ""}}
-</div>
-    {{ ctxanalysisdatestream.parameters['refine.siteid'] = ctxanalysisdaterain.parameters['refine.siteid'] = streamgages.parameters['refine.siteid'] = raingages.parameters['refine.siteid'] = devicesites.parameters['refine.siteid'] ; ""}}
+     avg(barometric_pressure) as avgbarpres, max(barometric_pressure) as maxbarpres, min(barometric_pressure) as minbarpres"
+  >
+    {{variables['kpistream'] = kpistream ; variables.kpistream[0].avgstage;
+    variables.kpistream[0].maxstage; variables.kpistream[0].minstage;
+    variables.kpistream[0].avgairtemp; variables.kpistream[0].maxairtemp;
+    variables.kpistream[0].minairtemp; variables.kpistream[0].avgwatertemp;
+    variables.kpistream[0].maxwatertemp; variables.kpistream[0].minwatertemp;
+    variables.kpistream[0].avgbarpres; variables.kpistream[0].maxbarpres;
+    variables.kpistream[0].minbarpres; ""}}
+  </div>
+  {{ ctxanalysisdatestream.parameters['refine.siteid'] =
+  ctxanalysisdaterain.parameters['refine.siteid'] =
+  streamgages.parameters['refine.siteid'] =
+  raingages.parameters['refine.siteid'] =
+  devicesites.parameters['refine.siteid'] ; ""}}
 
-    <!-- {{devicesites.parameters}} // {{streamgages.parameters}} // {{raingages.parameters}} -->
+  <!-- {{devicesites.parameters}} // {{streamgages.parameters}} // {{raingages.parameters}} -->
 
-    <section>
-        <div class="page-layout">
-            <div class="header">
-    <h1>Stormwater Monitoring</h1>
-    <p>In February 2020 Cary kicked off its Smart and Connected Community Stormwater Workshop. This 2-day workshop set
-        out to create a scalable and repeatable architecture for near real-time alerting and visualization of rising
-        storm water levels allowing for automated operational response and citizen notification, data sharing with
-        regional partners as well as analysis and prediction of future events. In the almost 3 years since this first
-        workshop Cary has put in place over 30 streamgages and 11 rain gauges in the Swift Creek and Walnut Creek basins.
-        Other town owned rain gauges have also been incorporated to help build out this network. To learn more about our
-        stormwater efforts please see the <a href="https://www.townofcary.org/services-publications/water-sewer/stormwater-management" target="_blank">Stormwater</a> page on the Cary website.</p>
-</div>        </div>
-    </section>
-
-    <section class="sticky-summary-wrapper">
-        <div class="page-layout">
-            <div class="box-container c-fg col-2">
-    <div class="box"
-         ods-adv-analysis="siteslist"
-         ods-adv-analysis-context="ctxanalysisdevice"
-         ods-adv-analysis-group-by="name,siteid"
-         ods-adv-analysis-select="count(*)"
-         ods-adv-analysis-order-by="name"
-         ods-adv-analysis-limit="100">
-        <select ng-model="devicesites.parameters['refine.siteid']"
-                ng-options="item.siteid as item.name for item in siteslist"
-                ng-selected="(devicesites.parameters['refine.siteid'].join('') + devicesites.parameters['refine.siteid']) == item.siteid">
-            <option value="">All sites</option>
-        </select>
+  <section>
+    <div class="page-layout">
+      <div class="header">
+        <h1>Stormwater Monitoring</h1>
+        <p>
+          In February 2020 Cary kicked off its Smart and Connected Community
+          Stormwater Workshop. This 2-day workshop set out to create a scalable
+          and repeatable architecture for near real-time alerting and
+          visualization of rising storm water levels allowing for automated
+          operational response and citizen notification, data sharing with
+          regional partners as well as analysis and prediction of future events.
+          In the almost 3 years since this first workshop Cary has put in place
+          over 30 streamgages and 11 rain gauges in the Swift Creek and Walnut
+          Creek basins. Other town owned rain gauges have also been incorporated
+          to help build out this network. To learn more about our stormwater
+          efforts please see the
+          <a
+            href="https://www.townofcary.org/services-publications/water-sewer/stormwater-management"
+            target="_blank"
+            >Stormwater</a
+          >
+          page on the Cary website.
+        </p>
+      </div>
     </div>
-    <div class="box" ng-if="variables.sites[0].fields.type == 'Rain Gage' && variables.rain.length > 0">
-        <button class="button-filters bg-bg c-w s-13 w-400"
-                ng-click="buttonSelected='lastDay';
+  </section>
+
+  <section class="sticky-summary-wrapper">
+    <div class="page-layout">
+      <div class="box-container c-fg col-2">
+        <div
+          class="box"
+          ods-adv-analysis="siteslist"
+          ods-adv-analysis-context="ctxanalysisdevice"
+          ods-adv-analysis-group-by="name,siteid"
+          ods-adv-analysis-select="count(*)"
+          ods-adv-analysis-order-by="name"
+          ods-adv-analysis-limit="100"
+        >
+          <select
+            ng-model="devicesites.parameters['refine.siteid']"
+            ng-options="item.siteid as item.name for item in siteslist"
+            ng-selected="(devicesites.parameters['refine.siteid'].join('') + devicesites.parameters['refine.siteid']) == item.siteid"
+          >
+            <option value="">All sites</option>
+          </select>
+        </div>
+        <div
+          class="box"
+          ng-if="variables.sites[0].fields.type == 'Rain Gage' && variables.rain.length > 0"
+        >
+          <button
+            class="button-filters bg-bg c-w s-13 w-400"
+            ng-click="buttonSelected='lastDay';
                     boundsrain.minselection=(boundsrain.max | momentadd : 'days' :-1);
                     boundsrain.maxselection=boundsstream.max;
                     variables.customPeriodRain='false'"
-                ng-class="{'button-filters-selected':
-buttonSelected=='lastDay'}">
+            ng-class="{'button-filters-selected':
+buttonSelected=='lastDay'}"
+          >
             Last day
-        </button>
-        <button class="button-filters bg-bg c-w s-13 w-400"
-                ng-click="buttonSelected='last3days';
+          </button>
+          <button
+            class="button-filters bg-bg c-w s-13 w-400"
+            ng-click="buttonSelected='last3days';
                     boundsrain.minselection=(boundsrain.max | momentadd : 'days' :-3);
                     boundsrain.maxselection=boundsstream.max;
                     variables.customPeriodRain='false'"
-                ng-class="{'button-filters-selected':
-buttonSelected=='last3days'}">
+            ng-class="{'button-filters-selected':
+buttonSelected=='last3days'}"
+          >
             Last 3 days
-        </button>
-        <button class="button-filters bg-bg c-w s-13 w-400"
-                ng-click="buttonSelected='last7days';
+          </button>
+          <button
+            class="button-filters bg-bg c-w s-13 w-400"
+            ng-click="buttonSelected='last7days';
                     boundsrain.minselection=(boundsrain.max | momentadd : 'days' :-7);
                     boundsrain.maxselection=boundsstream.max;
                     variables.customPeriodRain='false'"
-                ng-class="{'button-filters-selected':
-buttonSelected=='last7days'}">
+            ng-class="{'button-filters-selected':
+buttonSelected=='last7days'}"
+          >
             Last 7 days
-        </button>
-        <button class="button-filters bg-bg c-w s-13 w-400"
-                ng-click="buttonSelected='lastMonth';
+          </button>
+          <button
+            class="button-filters bg-bg c-w s-13 w-400"
+            ng-click="buttonSelected='lastMonth';
                     boundsrain.minselection=(boundsrain.max | momentadd : 'month' :-1);
                     boundsrain.maxselection=boundsstream.max;
                     variables.customPeriodRain='false'"
-                ng-class="{'button-filters-selected':
-buttonSelected=='lastMonth'}">
+            ng-class="{'button-filters-selected':
+buttonSelected=='lastMonth'}"
+          >
             Last 30 days
-        </button>
-        <button class="button-filters bg-bg c-w s-13 w-400 custom-period"
-                ng-click="variables.customPeriodRain='true';
+          </button>
+          <button
+            class="button-filters bg-bg c-w s-13 w-400 custom-period"
+            ng-click="variables.customPeriodRain='true';
                     buttonSelected='customRain'"
-                ng-class="{'button-filters-selected':
-                    variables.customPeriodRain=='true' && buttonSelected=='customRain'}">
-            Custom</button>
-        <ods-timerange ng-if="variables.customPeriodRain=='true'"
-                       display-time="false"
-                       date-format="DD MMM YYYY"
-                       context="raingages"
-                       default-from="{{boundsrain.min}}"
-                       default-to="{{boundsrain.max}}"
-                       label-from="From "
-                       label-to="to"
-                       placeholder-from="From"
-                       placeholder-to="to"
-                       to="boundsrain.maxselection"
-                       from="boundsrain.minselection">
-        </ods-timerange>
-    </div>
-    <div class="box" ng-if="variables.sites[0].fields.type == 'Stream Gage' && variables.stream.length >0">
-        <button class="button-filters bg-bg c-w s-13 w-400"
-                ng-click="buttonSelected='lastDay';
+            ng-class="{'button-filters-selected':
+                    variables.customPeriodRain=='true' && buttonSelected=='customRain'}"
+          >
+            Custom
+          </button>
+          <ods-timerange
+            ng-if="variables.customPeriodRain=='true'"
+            display-time="false"
+            date-format="DD MMM YYYY"
+            context="raingages"
+            default-from="{{boundsrain.min}}"
+            default-to="{{boundsrain.max}}"
+            label-from="From "
+            label-to="to"
+            placeholder-from="From"
+            placeholder-to="to"
+            to="boundsrain.maxselection"
+            from="boundsrain.minselection"
+          >
+          </ods-timerange>
+        </div>
+        <div
+          class="box"
+          ng-if="variables.sites[0].fields.type == 'Stream Gage' && variables.stream.length >0"
+        >
+          <button
+            class="button-filters bg-bg c-w s-13 w-400"
+            ng-click="buttonSelected='lastDay';
                     boundsstream.minselection=(boundsstream.max | momentadd : 'days' :-1);
                     boundsstream.maxselection=boundsstream.max;
                     variables.customPeriodStream='false'"
-                ng-class="{'button-filters-selected':
-    buttonSelected=='lastDay'}">
+            ng-class="{'button-filters-selected':
+    buttonSelected=='lastDay'}"
+          >
             Last day
-        </button>
-        <button class="button-filters bg-bg c-w s-13 w-400"
-                ng-click="buttonSelected='last3days';
+          </button>
+          <button
+            class="button-filters bg-bg c-w s-13 w-400"
+            ng-click="buttonSelected='last3days';
                     boundsstream.minselection=(boundsstream.max | momentadd : 'days' :-3);
                     boundsstream.maxselection=boundsstream.max;
                     variables.customPeriodStream='false'"
-                ng-class="{'button-filters-selected':
-buttonSelected=='last3days'}">
+            ng-class="{'button-filters-selected':
+buttonSelected=='last3days'}"
+          >
             Last 3 days
-        </button>
-        <!-- Bouton saison complète -->
-        <button class="button-filters bg-bg c-w s-13 w-400"
-                ng-click="buttonSelected='last7days';
+          </button>
+          <!-- Bouton saison complète -->
+          <button
+            class="button-filters bg-bg c-w s-13 w-400"
+            ng-click="buttonSelected='last7days';
                     boundsstream.minselection=(boundsstream.max | momentadd : 'days' :-7);
                     boundsstream.maxselection=boundsstream.max;
                     variables.customPeriodStream='false'"
-                ng-class="{'button-filters-selected':
-buttonSelected=='last7days'}">
+            ng-class="{'button-filters-selected':
+buttonSelected=='last7days'}"
+          >
             Last 7 days
-        </button>
-        <button class="button-filters bg-bg c-w s-13 w-400"
-                ng-click="buttonSelected='lastMonth';
+          </button>
+          <button
+            class="button-filters bg-bg c-w s-13 w-400"
+            ng-click="buttonSelected='lastMonth';
                     boundsstream.minselection=(boundsstream.max | momentadd : 'month' :-1);
                     boundsstream.maxselection=boundsstream.max;
                     variables.customPeriodStream='false'"
-                ng-class="{'button-filters-selected':
-buttonSelected=='lastMonth'}">
+            ng-class="{'button-filters-selected':
+buttonSelected=='lastMonth'}"
+          >
             Last 30 days
-        </button>
-        <button class="button-filters bg-bg c-w s-13 w-400 custom-period"
-                ng-click="variables.customPeriodStream='true';
+          </button>
+          <button
+            class="button-filters bg-bg c-w s-13 w-400 custom-period"
+            ng-click="variables.customPeriodStream='true';
                     buttonSelected='customStream'"
-                ng-class="{'button-filters-selected':
-            variables.customPeriodStream=='true' && buttonSelected=='customStream'}">
-            Custom</button>
-        <ods-timerange ng-if="variables.customPeriodStream=='true'"
-                       display-time="false"
-                       date-format="DD MMM YYYY"
-                       context="streamgages"
-                       default-from="{{boundsstream.min}}"
-                       default-to="{{boundsstream.max}}"
-                       label-from="From "
-                       label-to="to"
-                       placeholder-from="From"
-                       placeholder-to="to"
-                       to="boundsstream.maxselection"
-                       from="boundsstream.minselection">
-        </ods-timerange>
-    </div>
-    <div
-         ng-if="(variables.sites[0].fields.type == 'Stream Gage' && variables.stream.length == 0) || (variables.sites[0].fields.type == 'Rain Gage' && variables.rain.length == 0)">
-        No data available for this device
-    </div>
-</div>
-<div class="box-container c-fg col-4">
-    <div class="box">
-        <button class="clear-button"
-                ng-if="devicesites.parameters['refine.siteid']"
-                ng-click="devicesites.parameters['refine.siteid']= undefined">
+            ng-class="{'button-filters-selected':
+            variables.customPeriodStream=='true' && buttonSelected=='customStream'}"
+          >
+            Custom
+          </button>
+          <ods-timerange
+            ng-if="variables.customPeriodStream=='true'"
+            display-time="false"
+            date-format="DD MMM YYYY"
+            context="streamgages"
+            default-from="{{boundsstream.min}}"
+            default-to="{{boundsstream.max}}"
+            label-from="From "
+            label-to="to"
+            placeholder-from="From"
+            placeholder-to="to"
+            to="boundsstream.maxselection"
+            from="boundsstream.minselection"
+          >
+          </ods-timerange>
+        </div>
+        <div
+          ng-if="(variables.sites[0].fields.type == 'Stream Gage' && variables.stream.length == 0) || (variables.sites[0].fields.type == 'Rain Gage' && variables.rain.length == 0)"
+        >
+          No data available for this device
+        </div>
+      </div>
+      <div class="box-container c-fg col-4">
+        <div class="box">
+          <button
+            class="clear-button"
+            ng-if="devicesites.parameters['refine.siteid']"
+            ng-click="devicesites.parameters['refine.siteid']= undefined"
+          >
             <i class="fa fa-ban" aria-hidden="true"></i>
-            Clear selected device</button>
+            Clear selected device
+          </button>
+        </div>
+      </div>
     </div>
-</div>        </div>
-    </section>
+  </section>
 
-    <section ng-if="!devicesites.parameters['refine.siteid']">
-        <div class="page-layout">
-            <h2 class="s-20 bloc-title">GENERAL KPI</h2>
-<!-- KPI1 -->
-<div class="box-container col-2-centered">
-    <div class="box kpi-box">
-        <div class="kpi-box-half">
+  <section ng-if="!devicesites.parameters['refine.siteid']">
+    <div class="page-layout">
+      <h2 class="s-20 bloc-title">GENERAL KPI</h2>
+      <!-- KPI1 -->
+      <div class="box-container col-2-centered">
+        <div class="box kpi-box">
+          <div class="kpi-box-half">
             <p class="s-22">Total rain amount</p>
+          </div>
+          <div class="kpi-box-half bottom">
+            <p class="s-40">
+              {{variables.kpirain[0].rainamount || 0 | number: 1}} inches
+            </p>
+          </div>
         </div>
-        <div class="kpi-box-half bottom">
-            <p class="s-40">{{variables.kpirain[0].rainamount || 0 | number: 1}} inches</p>
-        </div>
-    </div>
-    <!-- KPI2 -->
-    <div class="box kpi-box">
-        <div class="kpi-box-half">
+        <!-- KPI2 -->
+        <div class="box kpi-box">
+          <div class="kpi-box-half">
             <p class="s-22">Average stage</p>
-        </div>
-        <div class="kpi-box-half bottom">
-            <p class="s-40">{{variables.kpistream[0].avgstage || 0 | number: 2}}
+          </div>
+          <div class="kpi-box-half bottom">
+            <p class="s-40">
+              {{variables.kpistream[0].avgstage || 0 | number: 2}}
             </p>
+          </div>
         </div>
+        <div>Select a site to see the data in details</div>
+      </div>
     </div>
-    <div>
-        Select a site to see the data in details
-    </div>
-</div>        </div>
-    </section>
+  </section>
 
-    <!-- Bloc with map, selector and captor details -->
-    <section>
-        <div class="page-layout">
-            <div class="box-container col-23">
-    <div class="box">
-        <h2 class="s-20 bloc-title">Map</h2>
-<div class="bg-w filters-box">
-    <ods-map no-refit="true" scroll-wheel-zoom="false" basemap="jawg.streets" location="10,35.75097,-78.78296">
-        <ods-map-layer-group>
-            <ods-map-layer context="devicesites"
-                           color-categories="{'Stream Gage':'#6D7A87','Rain Gage':'#619FC8'}"
-                           color-by-field="type" color-categories-other="#C32D1C" picto="ods-antenna" show-marker="true"
-                           display="categories" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF"
-                           border-opacity="1" border-size="1" border-pattern="solid" size="4"
-                           refine-on-click-context="devicesites"
-                           refine-on-click-devicesites-context-field="siteid"
-                           refine-on-click-devicesites-map-field="siteid"
-                           refine-on-click-devicesites-replace-refine="true">
-            </ods-map-layer>
-        </ods-map-layer-group>
-    </ods-map>
-</div>    </div>
-    <div class="box">
-        <h2 class="s-20 bloc-title">Details</h2>
-<div class="bg-w filters-box">
-    <span ng-if="!devicesites.parameters['refine.siteid']">
-        You have not selected any site
-    </span>
-    <span ng-if="devicesites.parameters['refine.siteid']">
-        <ul>
-            <li>
-                <strong>Name:</strong> {{variables.sites[0].fields.name}}
-            </li>
-            <li>
-                <strong>Location:</strong> {{variables.sites[0].fields.location}}
-            </li>
-            <li>
-                <strong>Type:</strong> {{variables.sites[0].fields.type}}
-            </li>
-            <li>
-                <strong>Vendor:</strong> {{variables.sites[0].fields.vendor}}
-            </li>
-        </ul>
-        <div ng-if="variables.sites[0].fields.type == 'Stream Gage'">
-            <img ng-if="variables.stream[0].fields.photo_link"
-                 src="{{variables.stream[0].fields.photo_link}}"
-                 class="sitephoto">
-            <img ng-if="!variables.stream[0].fields.photo_link"
-                 src="https://data.townofcary.org/assets/theme_image/streamgage.jpg"
-                 class="sitephoto">
+  <!-- Bloc with map, selector and captor details -->
+  <section>
+    <div class="page-layout">
+      <div class="box-container col-23">
+        <div class="box">
+          <h2 class="s-20 bloc-title">Map</h2>
+          <div class="bg-w filters-box">
+            <ods-map
+              no-refit="true"
+              scroll-wheel-zoom="false"
+              basemap="jawg.streets"
+              location="10,35.75097,-78.78296"
+            >
+              <ods-map-layer-group>
+                <ods-map-layer
+                  context="devicesites"
+                  color-categories="{'Stream Gage':'#6D7A87','Rain Gage':'#619FC8'}"
+                  color-by-field="type"
+                  color-categories-other="#C32D1C"
+                  picto="ods-antenna"
+                  show-marker="true"
+                  display="categories"
+                  shape-opacity="0.5"
+                  point-opacity="1"
+                  border-color="#FFFFFF"
+                  border-opacity="1"
+                  border-size="1"
+                  border-pattern="solid"
+                  size="4"
+                  refine-on-click-context="devicesites"
+                  refine-on-click-devicesites-context-field="siteid"
+                  refine-on-click-devicesites-map-field="siteid"
+                  refine-on-click-devicesites-replace-refine="true"
+                >
+                </ods-map-layer>
+              </ods-map-layer-group>
+            </ods-map>
+          </div>
         </div>
-        <div ng-if="variables.sites[0].fields.type == 'Rain Gage'">
-            <img src="https://data.townofcary.org/assets/theme_image/raingage.jpg"
-                 class="sitephoto">
+        <div class="box">
+          <h2 class="s-20 bloc-title">Details</h2>
+          <div class="bg-w filters-box">
+            <span ng-if="!devicesites.parameters['refine.siteid']">
+              You have not selected any site
+            </span>
+            <span ng-if="devicesites.parameters['refine.siteid']">
+              <ul>
+                <li>
+                  <strong>Name:</strong> {{variables.sites[0].fields.name}}
+                </li>
+                <li>
+                  <strong>Location:</strong>
+                  {{variables.sites[0].fields.location}}
+                </li>
+                <li>
+                  <strong>Type:</strong> {{variables.sites[0].fields.type}}
+                </li>
+                <li>
+                  <strong>Vendor:</strong> {{variables.sites[0].fields.vendor}}
+                </li>
+              </ul>
+              <div ng-if="variables.sites[0].fields.type == 'Stream Gage'">
+                <img
+                  ng-if="variables.stream[0].fields.photo_link"
+                  src="{{variables.stream[0].fields.photo_link}}"
+                  class="sitephoto"
+                />
+                <img
+                  ng-if="!variables.stream[0].fields.photo_link"
+                  src="https://data.townofcary.org/assets/theme_image/no_image_available.jpg"
+                  class="sitephoto"
+                />
+              </div>
+              <div ng-if="variables.sites[0].fields.type == 'Rain Gage'">
+                <img
+                  src="https://data.townofcary.org/assets/theme_image/no_image_available.jpg"
+                  class="sitephoto"
+                />
+              </div>
+              <p class="description-text">
+                This is a {{variables.sites[0].fields.type}} device from
+                {{variables.sites[0].fields.vendor}}. The sensor captures the
+                data in {{variables.sites[0].fields.feedfrequency}} increments
+                which gets added to the database every
+                {{variables.sites[0].fields.dbupdatefrequency}}. We are
+                reporting a running 60 day of data updated daily, last updated:
+                {{devicesites.dataset.metas.data_processed | date}}. The data
+                can have up to 2 days delay.
+              </p>
+            </span>
+          </div>
         </div>
-        <p class="description-text">
-            This is a {{variables.sites[0].fields.type}} device from {{variables.sites[0].fields.vendor}}. The
-            sensor
-            captures the data in {{variables.sites[0].fields.feedfrequency}} increments which gets added to the
-            database every
-            {{variables.sites[0].fields.dbupdatefrequency}}.
-            We are reporting a running 60 day of data updated daily, last updated:
-            {{devicesites.dataset.metas.data_processed | date}}. The data can have up to 2 days delay.
-        </p>
-    </span>
-</div>    </div>
-</div>        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section
-             ng-if="variables.sites[0].fields.type == 'Stream Gage' && devicesites.parameters['refine.siteid'] && variables.stream.length > 0">
-        <div class="page-layout">
-            <h2 class="s-20 bloc-title">Stream and Lake Observations
-    <i class="fa fa-info-circle"
-       aria-hidden="true"
-       ods-tooltip-direction="right"
-       ods-tooltip="These observations are obtained from stream gages that have been placed at varoius locations in the Cary North Carolina. Many of these report additional atmospheric information such as air and water temperature and barometric pressure. Below observations are expressed in minimum, average and maxium values for the selected time interval.">
-    </i>
-</h2>
-<!-- KPI1 -->
-<div class="box-container col-4">
-    <div class="box kpi-box">
-        <div class="kpi-box-half">
-            <h3 class="c-w s-22 w-500">Stage
-                <i class="fa fa-info-circle"
-                   aria-hidden="true"
-                   ods-tooltip-direction="right"
-                   ods-tooltip="The depth of water in feet from a known level in the stream or lake to the surface of the water."></i>
+  <section
+    ng-if="variables.sites[0].fields.type == 'Stream Gage' && devicesites.parameters['refine.siteid'] && variables.stream.length > 0"
+  >
+    <div class="page-layout">
+      <h2 class="s-20 bloc-title">
+        Stream and Lake Observations
+        <i
+          class="fa fa-info-circle"
+          aria-hidden="true"
+          ods-tooltip-direction="right"
+          ods-tooltip="These observations are obtained from stream gages that have been placed at varoius locations in the Cary North Carolina. Many of these report additional atmospheric information such as air and water temperature and barometric pressure. Below observations are expressed in minimum, average and maxium values for the selected time interval."
+        >
+        </i>
+      </h2>
+      <!-- KPI1 -->
+      <div class="box-container col-4">
+        <div class="box kpi-box">
+          <div class="kpi-box-half">
+            <h3 class="c-w s-22 w-500">
+              Stage
+              <i
+                class="fa fa-info-circle"
+                aria-hidden="true"
+                ods-tooltip-direction="right"
+                ods-tooltip="The depth of water in feet from a known level in the stream or lake to the surface of the water."
+              ></i>
             </h3>
-        </div>
-        <div class="kpi-box-half bottom">
-            <p class="s-12 w-500"> min {{variables.kpistream[0].minstage || 0 | number: 2}}</p>
-            <p class="s-18"> Average
-                <span class="s-40 w-500">{{variables.kpistream[0].avgstage || 0 | number: 2}}</span>
+          </div>
+          <div class="kpi-box-half bottom">
+            <p class="s-12 w-500">
+              min {{variables.kpistream[0].minstage || 0 | number: 2}}
             </p>
-            <p class="s-12 w-500"> max {{variables.kpistream[0].maxstage || 0 | number: 2}}
-            </p>
-        </div>
-    </div>
-    <!-- KPI2 -->
-    <div class="box kpi-box">
-        <div class="kpi-box-half">
-            <h3 class="c-w s-22 w-500">Air temperature
-                <i class="fa fa-info-circle"
-                   aria-hidden="true"
-                   ods-tooltip-direction="right"
-                   ods-tooltip="The air temperature measured at the gage air sensor in fahrenheit. This temperature can vary if the device is located in the shade or direct sunlight."></i>
-            </h3>
-        </div>
-        <div class="kpi-box-half bottom">
-            <p class="s-12 w-500"> min {{variables.kpistream[0].minairtemp || 0 | number: 2}}</p>
-            <p class="s-18"> Average
-                <span class="s-40 w-500">{{variables.kpistream[0].avgairtemp || 0 | number: 2}}</span>
-            </p>
-            <p class="s-12 w-500"> max {{variables.kpistream[0].maxairtemp || 0 | number: 2}}
-            </p>
-        </div>
-
-    </div>
-    <!-- KPI3 -->
-    <div class="box kpi-box">
-        <div class="kpi-box-half">
-            <h3 class="c-w s-22 w-500">Water temperature
-                <i class="fa fa-info-circle"
-                   aria-hidden="true"
-                   ods-tooltip-direction="right"
-                   ods-tooltip="Water temperature measured at the gage water sensor in Fahrenheit."></i>
-            </h3>
-        </div>
-        <div class="kpi-box-half bottom">
-            <p class="s-12 w-500"> min {{variables.kpistream[0].minwatertemp || 0 | number: 2}}</p>
-            <p class="s-18"> Average
-                <span class="s-40 w-500">{{variables.kpistream[0].avgwatertemp || 0 | number: 2}}</span>
-            </p>
-            <p class="s-12 w-500"> max {{variables.kpistream[0].maxwatertemp || 0 | number: 2}}
-            </p>
-        </div>
-    </div>
-    <!-- KPI4 -->
-    <div class="box kpi-box" ng-click="pop4.state = true">
-        <div class="kpi-box-half">
-            <h3 class="c-w s-22 w-500">Barometric pressure
-                <i class="fa fa-info-circle"
-                   aria-hidden="true"
-                   ods-tooltip-direction="right"
-                   ods-tooltip="Barometric Pressure measured at the gage sensor in millibars. Barometric pressure, also known as atmospheric pressure is the force per unit area exerted by the weight of the atmosphere."></i>
-            </h3>
-        </div>
-        <div class="kpi-box-half bottom">
-            <p class="s-12 w-500"> min {{variables.kpistream[0].minbarpres || 0 | number: 2}}</p>
-            <p class="s-18"> Average
-                <span class="s-40 w-500">{{variables.kpistream[0].avgbarpres || 0 | number: 2}}</span>
-            </p>
-            <p class="s-12 w-500"> max {{variables.kpistream[0].maxbarpres || 0 | number: 2}}
-            </p>
-        </div>
-    </div>
-</div>        </div>
-    </section>
-
-    <section
-             ng-if="variables.sites[0].fields.type == 'Rain Gage' && devicesites.parameters['refine.siteid'] && variables.rain.length > 0">
-        <div class="page-layout">
-            <h2 class="s-20 bloc-title">Rainfall Observations
-    <i class="fa fa-info-circle"
-       aria-hidden="true"
-       ods-tooltip-direction="right"
-       ods-tooltip="These observations are obtained from rain gages that have been placed at varoius locations in the Cary North Carolina. Information reported by these gages are used to help calculate sanitary sewer Inflow and Infiltration and for Flood modeling."></i>
-</h2>
-<!-- KPI1 -->
-<div class="box-container col-3">
-    <div class="box kpi-box">
-        <div class="kpi-box-half">
-            <h3 class="c-w s-22 w-500">Total rain amount
-                <i class="fa fa-info-circle"
-                   aria-hidden="true"
-                   ods-tooltip-direction="right"
-                   ods-tooltip="The Total Rain Amount is the observed total rainfall that has occurred at the location for the selected time interval in inches."></i>
-            </h3>
-        </div>
-        <div class="kpi-box-half bottom">
             <p class="s-18">
-                <span class="s-40 w-500">{{variables.sumrainamount || 0 | number: 2}} inches</span>
+              Average
+              <span class="s-40 w-500"
+                >{{variables.kpistream[0].avgstage || 0 | number: 2}}</span
+              >
             </p>
+            <p class="s-12 w-500">
+              max {{variables.kpistream[0].maxstage || 0 | number: 2}}
+            </p>
+          </div>
         </div>
-    </div>
-    <!-- KPI2 -->
-    <div class="box kpi-box">
-        <div class="kpi-box-half">
-            <h3 class="c-w s-22 w-500">Maximum rain intensity
-                <i class="fa fa-info-circle"
-                   aria-hidden="true"
-                   ods-tooltip-direction="right"
-                   ods-tooltip="The Maximum Rain Intensity is the observed maximum intensity that has occurred at the location for the selected time interval. Rain intensity is measured in inches of rain per hour. It is calculated by the amount of rain observed in a time interval multiplied by the number of intervals per hour."></i>
+        <!-- KPI2 -->
+        <div class="box kpi-box">
+          <div class="kpi-box-half">
+            <h3 class="c-w s-22 w-500">
+              Air temperature
+              <i
+                class="fa fa-info-circle"
+                aria-hidden="true"
+                ods-tooltip-direction="right"
+                ods-tooltip="The air temperature measured at the gage air sensor in fahrenheit. This temperature can vary if the device is located in the shade or direct sunlight."
+              ></i>
             </h3>
-        </div>
-        <div class="kpi-box-half bottom">
-            <p class="s-18">
-                <span class="s-40 w-500">{{variables.kpirain[0].maxrainintensity || 0 | number: 2}} inches/hour</span>
+          </div>
+          <div class="kpi-box-half bottom">
+            <p class="s-12 w-500">
+              min {{variables.kpistream[0].minairtemp || 0 | number: 2}}
             </p>
+            <p class="s-18">
+              Average
+              <span class="s-40 w-500"
+                >{{variables.kpistream[0].avgairtemp || 0 | number: 2}}</span
+              >
+            </p>
+            <p class="s-12 w-500">
+              max {{variables.kpistream[0].maxairtemp || 0 | number: 2}}
+            </p>
+          </div>
         </div>
-    </div>
-    <!-- KPI3 -->
-    <div class="box kpi-box">
-        <div class="kpi-box-half">
-            <h3 class="c-w s-22 w-500">Maximum rain occured on
-                <i class="fa fa-info-circle"
-                   aria-hidden="true"
-                   ods-tooltip-direction="right"
-                   ods-tooltip="The Maximum Rain at date is the observed date that the maximum amount occurred within the selected time interval."></i>
+        <!-- KPI3 -->
+        <div class="box kpi-box">
+          <div class="kpi-box-half">
+            <h3 class="c-w s-22 w-500">
+              Water temperature
+              <i
+                class="fa fa-info-circle"
+                aria-hidden="true"
+                ods-tooltip-direction="right"
+                ods-tooltip="Water temperature measured at the gage water sensor in Fahrenheit."
+              ></i>
             </h3>
-        </div>
-        <div class="kpi-box-half bottom">
-            <p class="s-18">
-                <span class="s-40 w-500"> {{variables.kpirain[0].createdate | date}}
-                </span>
+          </div>
+          <div class="kpi-box-half bottom">
+            <p class="s-12 w-500">
+              min {{variables.kpistream[0].minwatertemp || 0 | number: 2}}
             </p>
+            <p class="s-18">
+              Average
+              <span class="s-40 w-500"
+                >{{variables.kpistream[0].avgwatertemp || 0 | number: 2}}</span
+              >
+            </p>
+            <p class="s-12 w-500">
+              max {{variables.kpistream[0].maxwatertemp || 0 | number: 2}}
+            </p>
+          </div>
         </div>
+        <!-- KPI4 -->
+        <div class="box kpi-box" ng-click="pop4.state = true">
+          <div class="kpi-box-half">
+            <h3 class="c-w s-22 w-500">
+              Barometric pressure
+              <i
+                class="fa fa-info-circle"
+                aria-hidden="true"
+                ods-tooltip-direction="right"
+                ods-tooltip="Barometric Pressure measured at the gage sensor in millibars. Barometric pressure, also known as atmospheric pressure is the force per unit area exerted by the weight of the atmosphere."
+              ></i>
+            </h3>
+          </div>
+          <div class="kpi-box-half bottom">
+            <p class="s-12 w-500">
+              min {{variables.kpistream[0].minbarpres || 0 | number: 2}}
+            </p>
+            <p class="s-18">
+              Average
+              <span class="s-40 w-500"
+                >{{variables.kpistream[0].avgbarpres || 0 | number: 2}}</span
+              >
+            </p>
+            <p class="s-12 w-500">
+              max {{variables.kpistream[0].maxbarpres || 0 | number: 2}}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>        </div>
-    </section>
+  </section>
 
-    <section
-             ng-if="variables.sites[0].fields.type == 'Rain Gage' && devicesites.parameters['refine.siteid'] && variables.rain.length > 0">
-        <div class="page-layout">
-            <h2 class="s-20 bloc-title">Rainfall
-    <i class="fa fa-info-circle"
-       aria-hidden="true"
-       ods-tooltip-direction="right"
-       ods-tooltip="This graph represent the sum of rain that occurred at hourly intervals at the location for the selected time interval."></i>
-</h2>
-<div class="box-container c-fg col-1">
-    <div class="box kpi-box bg-w">
-        <ods-chart align-month="true">
-            <ods-chart-query context="raingages" field-x="createdate" maxpoints="0" timescale="hour">
-                <ods-chart-serie expression-y="rainamount" chart-type="area" function-y="SUM" color="#2B3F56"
-                                 scientific-display="true">
-                </ods-chart-serie>
-            </ods-chart-query>
-        </ods-chart>
+  <section
+    ng-if="variables.sites[0].fields.type == 'Rain Gage' && devicesites.parameters['refine.siteid'] && variables.rain.length > 0"
+  >
+    <div class="page-layout">
+      <h2 class="s-20 bloc-title">
+        Rainfall Observations
+        <i
+          class="fa fa-info-circle"
+          aria-hidden="true"
+          ods-tooltip-direction="right"
+          ods-tooltip="These observations are obtained from rain gages that have been placed at varoius locations in the Cary North Carolina. Information reported by these gages are used to help calculate sanitary sewer Inflow and Infiltration and for Flood modeling."
+        ></i>
+      </h2>
+      <!-- KPI1 -->
+      <div class="box-container col-3">
+        <div class="box kpi-box">
+          <div class="kpi-box-half">
+            <h3 class="c-w s-22 w-500">
+              Total rain amount
+              <i
+                class="fa fa-info-circle"
+                aria-hidden="true"
+                ods-tooltip-direction="right"
+                ods-tooltip="The Total Rain Amount is the observed total rainfall that has occurred at the location for the selected time interval in inches."
+              ></i>
+            </h3>
+          </div>
+          <div class="kpi-box-half bottom">
+            <p class="s-18">
+              <span class="s-40 w-500"
+                >{{variables.sumrainamount || 0 | number: 2}} inches</span
+              >
+            </p>
+          </div>
+        </div>
+        <!-- KPI2 -->
+        <div class="box kpi-box">
+          <div class="kpi-box-half">
+            <h3 class="c-w s-22 w-500">
+              Maximum rain intensity
+              <i
+                class="fa fa-info-circle"
+                aria-hidden="true"
+                ods-tooltip-direction="right"
+                ods-tooltip="The Maximum Rain Intensity is the observed maximum intensity that has occurred at the location for the selected time interval. Rain intensity is measured in inches of rain per hour. It is calculated by the amount of rain observed in a time interval multiplied by the number of intervals per hour."
+              ></i>
+            </h3>
+          </div>
+          <div class="kpi-box-half bottom">
+            <p class="s-18">
+              <span class="s-40 w-500"
+                >{{variables.kpirain[0].maxrainintensity || 0 | number: 2}}
+                inches/hour</span
+              >
+            </p>
+          </div>
+        </div>
+        <!-- KPI3 -->
+        <div class="box kpi-box">
+          <div class="kpi-box-half">
+            <h3 class="c-w s-22 w-500">
+              Maximum rain occured on
+              <i
+                class="fa fa-info-circle"
+                aria-hidden="true"
+                ods-tooltip-direction="right"
+                ods-tooltip="The Maximum Rain at date is the observed date that the maximum amount occurred within the selected time interval."
+              ></i>
+            </h3>
+          </div>
+          <div class="kpi-box-half bottom">
+            <p class="s-18">
+              <span class="s-40 w-500">
+                {{variables.kpirain[0].createdate | date}}
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>        </div>
-    </section>
+  </section>
 
-    <section
-             ng-if="variables.sites[0].fields.type == 'Stream Gage' && devicesites.parameters['refine.siteid'] && variables.stream.length > 0">
-        <div class="page-layout">
-            <h2 class="s-20 bloc-title">Stage and Temperatures
-    <i class="fa fa-info-circle"
-       aria-hidden="true"
-       ods-tooltip-direction="right"
-       ods-tooltip="These graphs represent the averages for the stage, air and water temperatures that occurred at hourly intervals at the location for the selected time interval."></i>
-</h2>
-<div class="box-container c-fg col-3">
-    <div class="box kpi-box bg-w">
-        <ods-chart align-month="true">
-            <ods-chart-query context="streamgages" field-x="createdate" maxpoints="0" timescale="hour">
-                <ods-chart-serie expression-y="stage" chart-type="line" function-y="AVG" color="#2B3F56"
-                                 scientific-display="true">
-                </ods-chart-serie>
+  <section
+    ng-if="variables.sites[0].fields.type == 'Rain Gage' && devicesites.parameters['refine.siteid'] && variables.rain.length > 0"
+  >
+    <div class="page-layout">
+      <h2 class="s-20 bloc-title">
+        Rainfall
+        <i
+          class="fa fa-info-circle"
+          aria-hidden="true"
+          ods-tooltip-direction="right"
+          ods-tooltip="This graph represent the sum of rain that occurred at hourly intervals at the location for the selected time interval."
+        ></i>
+      </h2>
+      <div class="box-container c-fg col-1">
+        <div class="box kpi-box bg-w">
+          <ods-chart align-month="true">
+            <ods-chart-query
+              context="raingages"
+              field-x="createdate"
+              maxpoints="0"
+              timescale="hour"
+            >
+              <ods-chart-serie
+                expression-y="rainamount"
+                chart-type="area"
+                function-y="SUM"
+                color="#2B3F56"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
             </ods-chart-query>
-        </ods-chart>
+          </ods-chart>
+        </div>
+      </div>
     </div>
-    <div class="box kpi-box bg-w">
-        <ods-chart align-month="true">
-            <ods-chart-query context="streamgages" field-x="createdate" maxpoints="0" timescale="hour">
-                <ods-chart-serie expression-y="air_temperature" chart-type="line" function-y="AVG" color="#2B3F56"
-                                 scientific-display="true">
-                </ods-chart-serie>
+  </section>
+
+  <section
+    ng-if="variables.sites[0].fields.type == 'Stream Gage' && devicesites.parameters['refine.siteid'] && variables.stream.length > 0"
+  >
+    <div class="page-layout">
+      <h2 class="s-20 bloc-title">
+        Stage and Temperatures
+        <i
+          class="fa fa-info-circle"
+          aria-hidden="true"
+          ods-tooltip-direction="right"
+          ods-tooltip="These graphs represent the averages for the stage, air and water temperatures that occurred at hourly intervals at the location for the selected time interval."
+        ></i>
+      </h2>
+      <div class="box-container c-fg col-3">
+        <div class="box kpi-box bg-w">
+          <ods-chart align-month="true">
+            <ods-chart-query
+              context="streamgages"
+              field-x="createdate"
+              maxpoints="0"
+              timescale="hour"
+            >
+              <ods-chart-serie
+                expression-y="stage"
+                chart-type="line"
+                function-y="AVG"
+                color="#2B3F56"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
             </ods-chart-query>
-        </ods-chart>
-    </div>
-    <div class="box kpi-box bg-w">
-        <ods-chart align-month="true">
-            <ods-chart-query context="streamgages" field-x="createdate" maxpoints="0" timescale="hour">
-                <ods-chart-serie expression-y="water_temperature" chart-type="line" function-y="AVG" color="#2B3F56"
-                                 scientific-display="true">
-                </ods-chart-serie>
+          </ods-chart>
+        </div>
+        <div class="box kpi-box bg-w">
+          <ods-chart align-month="true">
+            <ods-chart-query
+              context="streamgages"
+              field-x="createdate"
+              maxpoints="0"
+              timescale="hour"
+            >
+              <ods-chart-serie
+                expression-y="air_temperature"
+                chart-type="line"
+                function-y="AVG"
+                color="#2B3F56"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
             </ods-chart-query>
-        </ods-chart>
+          </ods-chart>
+        </div>
+        <div class="box kpi-box bg-w">
+          <ods-chart align-month="true">
+            <ods-chart-query
+              context="streamgages"
+              field-x="createdate"
+              maxpoints="0"
+              timescale="hour"
+            >
+              <ods-chart-serie
+                expression-y="water_temperature"
+                chart-type="line"
+                function-y="AVG"
+                color="#2B3F56"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </div>
+      </div>
     </div>
-</div>        </div>
-    </section>
+  </section>
 </ods-dataset-context>
