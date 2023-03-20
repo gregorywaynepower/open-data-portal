@@ -1,0 +1,413 @@
+@charset "UTF-8";
+/***** COLORS *****/
+/***** COLORS *****/
+/* DÉCLARATION DE LA PALETTE DE TAILLES DE POLICES */
+.s-12 {
+  font-size: 12px;
+}
+
+.s-13 {
+  font-size: 13px;
+}
+
+.s-16 {
+  font-size: 16px;
+}
+
+.s-18 {
+  font-size: 18px;
+}
+
+.s-20 {
+  font-size: 20px;
+}
+
+.s-22 {
+  font-size: 22px;
+}
+
+.s-24 {
+  font-size: 24px;
+}
+
+.s-28 {
+  font-size: 28px;
+}
+
+.s-32 {
+  font-size: 32px;
+}
+
+.s-34 {
+  font-size: 34px;
+}
+
+.s-36 {
+  font-size: 36px;
+}
+
+.s-38 {
+  font-size: 38px;
+}
+
+.s-40 {
+  font-size: 40px;
+}
+
+.s-52 {
+  font-size: 52px;
+}
+
+/* DÉCLARATION DE LA PALETTE DE GRAISSES */
+.w-200 {
+  font-weight: 200;
+}
+
+.w-300 {
+  font-weight: 300;
+}
+
+.w-400 {
+  font-weight: 400;
+}
+
+.w-500 {
+  font-weight: 500;
+}
+
+.w-700 {
+  font-weight: 700;
+}
+
+/* DÉCLARATION DE LA PALETTE DE COULEURS ATTRIBUÉE AUX TEXTES ET BACKGROUNDS */
+.c-b {
+  color: #112980;
+}
+
+.bg-b {
+  background-color: #112980;
+}
+
+.c-o {
+  color: #d84d32;
+}
+
+.bg-o {
+  background-color: #d84d32;
+}
+
+.c-w {
+  color: white;
+}
+
+.bg-w {
+  background-color: white;
+}
+
+.c-gy {
+  color: #333333;
+}
+
+.bg-gy {
+  background-color: #333333;
+}
+
+.c-lb {
+  color: #E5EDF0;
+}
+
+.bg-lb {
+  background-color: #E5EDF0;
+}
+
+.c-lg {
+  color: #DEDEDE;
+}
+
+.bg-lg {
+  background-color: #DEDEDE;
+}
+
+.c-p {
+  color: #285170;
+}
+
+.bg-p {
+  background-color: #285170;
+}
+
+/* DÉCLARATION DES TAILLES D'ICONES */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.material-icons.md-50 {
+  font-size: 50px;
+}
+
+.material-icons-outlined.md-18 {
+  font-size: 18px;
+}
+
+.material-icons-outlined.md-24 {
+  font-size: 24px;
+}
+
+.material-icons-outlined.md-36 {
+  font-size: 36px;
+}
+
+.material-icons-outlined.md-48 {
+  font-size: 48px;
+}
+
+.material-icons-outlined.md-50 {
+  font-size: 50px;
+}
+
+/***** COMMON STYLE *****/
+section {
+  padding: 30px 0px 0px 0px;
+}
+
+.page-layout {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ng-scope section {
+  padding-top: 30px !important;
+}
+
+/***** HEADER *****/
+.header h1 {
+  font-size: 54px;
+}
+.header p {
+  padding: 0px !important;
+}
+
+/* GRID AND BOX*/
+.box-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.box-container .box {
+  height: 100%;
+}
+@media (max-width: 570px) {
+  .box-container .box {
+    margin-bottom: 10px;
+  }
+}
+
+.col-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 1179px) {
+  .col-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 570px) {
+  .col-4 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.col-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 969px) {
+  .col-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.col-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 570px) {
+  .col-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.col-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.col-23 {
+  grid-template-columns: 60% 40%;
+}
+
+.col-2-centered {
+  grid-template-columns: repeat(2, minmax(0, 0.4fr));
+  justify-content: center;
+}
+
+/* TEXTS*/
+.bloc-title {
+  margin-bottom: 20px;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/***** BLOC MAP *****/
+.leaflet-control-container {
+  z-index: 0;
+}
+
+/**** BLOC FILTERS *****/
+.sticky-summary-wrapper {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.filters-box {
+  border-radius: 15px;
+  padding: 0px;
+}
+.filters-box .selecteur-capteurs {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.filters-box ul {
+  padding: 0px;
+  list-style: none;
+  margin-top: 0px;
+}
+.filters-box .description-text {
+  padding: 0px !important;
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.button-filters {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 8px 15px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.2s;
+  outline: none;
+  background-color: #285170;
+}
+.button-filters:hover {
+  background-color: #E5EDF0;
+  /* Button background color on mouse hover */
+  color: #285170;
+}
+
+.button-filters-selected {
+  border: 2px solid #285170;
+  background-color: #E5EDF0;
+  color: #285170;
+}
+
+.align-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.clear-button {
+  background-color: transparent;
+  border-color: transparent;
+}
+.clear-button:hover {
+  color: darkred;
+}
+
+/* CLEAR FILTER */
+.clear-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.clear-filters-button:hover {
+  opacity: 0.65;
+}
+
+/***** DETAILS BLOC *****/
+.sitephoto {
+  max-height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+    .sitephoto {
+        width: -moz-available;          /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        width: fill-available;
+    }
+    .tablet_and_smaller_fix {
+        width: -moz-available;          /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        width: fill-available;
+    }
+}
+
+/***** BLOC KPI *****/
+.kpi-box {
+  border-radius: 7px;
+  padding: 16px;
+  text-align: left;
+  position: relative;
+  border: 1px solid #DEDEDE;
+  box-shadow: 0 4px 6px 0 rgba(100, 100, 100, 0.2);
+}
+.kpi-box .kpi-box-half {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.kpi-box .kpi-box-half p {
+  padding: 5px !important;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*** ods-tooltip over ride */
+.ods-tooltip.ods-tooltip {
+  text-align: center;
+  background: white;
+  font-size: 14px;
+  color: #285170;
+  padding: 14px;
+  box-shadow: 0px 0px 40px rgba(6, 32, 77, 0.25);
+}
