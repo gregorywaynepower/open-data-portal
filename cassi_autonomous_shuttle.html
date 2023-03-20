@@ -21,6 +21,9 @@
   </div>
 
   <div class="container">
+    <center>
+      <h2>Ridership & Affecting Factors</h2>
+    </center>
     <div class="column">
       <div class="col-md-6">
         <div class="chart-title">
@@ -89,6 +92,9 @@
         </ods-dataset-context>
       </div>
       <div class="col-md-12">
+        <center>
+          <h2>Most Popular Days of Week</h2>
+        </center>
         <div class="chart-title">
           <center>Most Popular Days of Week by Ridership</center>
         </div>
@@ -125,9 +131,21 @@
 <section>
   <div class="container">
     <div class="column">
+      <center>
+        <h2>Disengagement of Autonomous Operation</h2>
+      </center>
+      <p>
+        The following maps show disengagement of autonomous operation events.
+        The first is a heatmap showing the density of events where the attendent
+        has to take manual control over the shuttle. The darker the color, the
+        more disengagement events occurred in that area. The second map shows
+        the reason for each disengagement of autonomous operation.
+      </p>
       <div class="col-md-6">
         <div class="chart-title">
-          <center>Density of Disengagement of Autonomous Operation Events</center>
+          <center>
+            Density of Disengagement of Autonomous Operation Events
+          </center>
         </div>
         <ods-dataset-context
           context="autonomousshuttledisengagement"
@@ -164,7 +182,9 @@
       </div>
       <div class="col-md-6">
         <div class="chart-title">
-          <center>Reasons for Disengagement of Autonomous Operation</center>
+          <center>
+            Reasons for Disengagement of Autonomous Operation Events
+          </center>
         </div>
         <ods-dataset-context
           context="autonomousshuttledisengagement"
@@ -174,22 +194,24 @@
             no-refit="true"
             scroll-wheel-zoom="false"
             basemap="jawg.streets"
-            location="17,35.78331,-78.82589"
+            location="16,35.7826,-78.82484"
           >
             <ods-map-layer-group>
               <ods-map-layer
                 context="autonomousshuttledisengagement"
-                color="#C32D1C"
+                color="#263891"
                 picto="ods-circle"
                 show-marker="true"
-                display="auto"
+                display="clusters"
+                function="COUNT"
+                expression="vehicle_speed"
                 shape-opacity="0.5"
                 point-opacity="1"
                 border-color="#FFFFFF"
                 border-opacity="1"
                 border-size="1"
                 border-pattern="solid"
-                size="4"
+                caption-picto-color="#E5E5E5"
                 size-min="3"
                 size-max="5"
                 size-function="linear"
