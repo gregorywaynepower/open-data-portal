@@ -1,0 +1,203 @@
+<section>
+  <center>
+    <h1 class="title">CASSI Autonomous Shuttle Usage</h1>
+    <ods-dataset-context
+      context="autonomousshuttleusage"
+      autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+      ng-init="values = {};"
+    >
+      <p class="kpi-description">
+        Last Updated:<span class="kpi-value2">
+          {{ autonomousshuttleusage.dataset.metas.metadata_processed | date
+          }}</span
+        >
+      </p>
+    </ods-dataset-context>
+  </center>
+</section>
+<section>
+  <div class="container-fluid">
+    <div class="ods-box"></div>
+  </div>
+
+  <div class="container">
+    <div class="column">
+      <div class="col-md-6">
+        <div class="chart-title">
+          <center>Ridership over Time</center>
+        </div>
+        <ods-dataset-context
+          context="autonomousshuttleusage"
+          autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+        >
+          <ods-chart
+            timescale="day"
+            scientific-display="false"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="autonomousshuttleusage"
+              field-x="date"
+              maxpoints="0"
+              timescale="day"
+            >
+              <ods-chart-serie
+                expression-y="number_of_passengers"
+                chart-type="line"
+                function-y="SUM"
+                label-y="Number of Passengers"
+                color="#8da0cb"
+                step=""
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+      <div class="col-md-6">
+        <div class="chart-title">
+          <center>Hours of Operation over Time</center>
+        </div>
+        <ods-dataset-context
+          context="autonomousshuttleusage"
+          autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+        >
+          <ods-chart
+            timescale="day"
+            scientific-display="false"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="autonomousshuttleusage"
+              field-x="date"
+              maxpoints="0"
+              timescale="day"
+            >
+              <ods-chart-serie
+                expression-y="number_of_hours_operated"
+                chart-type="line"
+                function-y="SUM"
+                label-y="Hours of Operation"
+                color="#8da0cb"
+                step=""
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+      <div class="col-md-12">
+        <div class="chart-title">
+          <center>Most Popular Days of Week by Ridership</center>
+        </div>
+        <ods-dataset-context
+          context="autonomousshuttleusage"
+          autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+        >
+          <ods-chart
+            timescale="year"
+            scientific-display="false"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="autonomousshuttleusage"
+              field-x="date"
+              maxpoints="0"
+              timescale="day weekday"
+            >
+              <ods-chart-serie
+                expression-y="number_of_passengers"
+                chart-type="pie"
+                function-y="SUM"
+                color="range-custom"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="column">
+      <div class="col-md-6">
+        <div class="chart-title">
+          <center>Density of Disengagement of Autonomous Operation Events</center>
+        </div>
+        <ods-dataset-context
+          context="autonomousshuttledisengagement"
+          autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
+        >
+          <ods-map
+            no-refit="true"
+            scroll-wheel-zoom="false"
+            basemap="jawg.streets"
+            location="16,35.7826,-78.82484"
+          >
+            <ods-map-layer-group>
+              <ods-map-layer
+                context="autonomousshuttledisengagement"
+                color-gradient="{'1':'#FF0000','0.4':'#0000FF','0.6':'#00FFFF','0.7':'#00FF00','0.8':'#FFFF00'}"
+                picto="ods-circle"
+                show-marker="true"
+                display="heatmap"
+                radius="4"
+                function="COUNT"
+                expression="vehicle_speed"
+                shape-opacity="0.5"
+                point-opacity="1"
+                border-color="#FFFFFF"
+                border-opacity="1"
+                border-size="1"
+                border-pattern="solid"
+                caption-picto-color="#E5E5E5"
+                size-function="linear"
+              ></ods-map-layer>
+            </ods-map-layer-group>
+          </ods-map>
+        </ods-dataset-context>
+      </div>
+      <div class="col-md-6">
+        <div class="chart-title">
+          <center>Reasons for Disengagement of Autonomous Operation</center>
+        </div>
+        <ods-dataset-context
+          context="autonomousshuttledisengagement"
+          autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
+        >
+          <ods-map
+            no-refit="true"
+            scroll-wheel-zoom="false"
+            basemap="jawg.streets"
+            location="17,35.78331,-78.82589"
+          >
+            <ods-map-layer-group>
+              <ods-map-layer
+                context="autonomousshuttledisengagement"
+                color="#C32D1C"
+                picto="ods-circle"
+                show-marker="true"
+                display="auto"
+                shape-opacity="0.5"
+                point-opacity="1"
+                border-color="#FFFFFF"
+                border-opacity="1"
+                border-size="1"
+                border-pattern="solid"
+                size="4"
+                size-min="3"
+                size-max="5"
+                size-function="linear"
+              ></ods-map-layer>
+            </ods-map-layer-group>
+          </ods-map>
+        </ods-dataset-context>
+      </div>
+    </div>
+  </div>
+</section>
