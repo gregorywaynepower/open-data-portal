@@ -21,6 +21,56 @@
       <h2>Ridership & Affecting Factors</h2>
     </center>
     <div class="column">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <center>Cumulative Ridership by Week</center>
+        </div>
+        <ods-dataset-context
+          context="autonomousshuttleusage"
+          autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+        >
+          <ods-chart
+            single-y-axis="true"
+            single-y-axis-label="Number of Passengers"
+            scientific-display="false"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="autonomousshuttleusage"
+              field-x="weeks_into_pilot"
+              maxpoints="0"
+            >
+              <ods-chart-serie
+                expression-y="number_of_passengers"
+                chart-type="column"
+                function-y="SUM"
+                label-y="Number of Passengers"
+                color="#0073b3"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+            <ods-chart-query
+              context="autonomousshuttleusage"
+              field-x="weeks_into_pilot"
+              maxpoints="0"
+            >
+              <ods-chart-serie
+                expression-y="number_of_passengers"
+                chart-type="line"
+                function-y="SUM"
+                label-y="Cumulative Number of Passengers"
+                color="#fe6260"
+                scientific-display="true"
+                cumulative="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+    </div>
+    <div class="column">
       <div class="col-md-6">
         <div class="chart-title">
           <center>Ridership over Time</center>
@@ -131,11 +181,13 @@
         <h2>Disengagement of Autonomous Operation</h2>
       </center>
       <p>
-        The following maps show disengagement of autonomous operation events.
-        The first is a heatmap showing the density of events where the attendent
-        has to take manual control over the shuttle. The darker the color, the
-        more disengagement events occurred in that area. The second map shows
-        the reason for each disengagement of autonomous operation.
+        The maps below illustrate the density and reasons for the autonomous
+        driving system disengaging, coming to a complete stop, and handing
+        control back to the shuttle attendant until autonomous operation can
+        resume. The first map, a heatmap, displays the density of these events,
+        with darker colors indicating higher frequency of disengagement events.
+        The second map shows the number of events and reasons behind each
+        disengagement event.
       </p>
       <div class="col-md-6">
         <div class="chart-title">
