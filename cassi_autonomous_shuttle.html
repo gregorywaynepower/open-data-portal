@@ -1,6 +1,6 @@
 <section>
   <center>
-    <h1 class="title">CASSI Autonomous Shuttle Usage</h1>
+    <h1 class="title">CASSI Autonomous Shuttle</h1>
     <ods-dataset-context
       context="autonomousshuttleusage"
       autonomousshuttleusage-dataset="autonomous-shuttle-usage"
@@ -178,17 +178,54 @@
   <div class="container">
     <div class="column">
       <center>
-        <h2>Where and Why Did the Shuttle Stop?</h2>
+        <h2>Why Did the Shuttle Stop?</h2>
       </center>
-      <p>
-        The maps below illustrate the density and reasons for the autonomous
-        driving system disengaging, coming to a complete stop, and handing
-        control back to the shuttle attendant until autonomous operation can
-        resume. The first map, a heatmap, displays the density of these events,
-        with darker colors indicating higher frequency of disengagement events.
-        The second map shows the number of events and reasons behind each
-        disengagement event.
-      </p>
+      <div class="col-md-12">
+        <div class="chart-title">
+          <center>Disengagements by Cause</center>
+        </div>
+        <ods-dataset-context
+          context="autonomousshuttledisengagement"
+          autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
+          autonomousshuttledisengagement-parameters="{'disjunctive.cause':true,'sort':'incident_time'}"
+        >
+          <ods-chart
+            scientific-display="false"
+            display-legend="false"
+            labels-x-length="48"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="autonomousshuttledisengagement"
+              field-x="cause"
+              maxpoints="0"
+            >
+              <ods-chart-serie
+                expression-y="vehicle_speed"
+                chart-type="pie"
+                function-y="COUNT"
+                color="range-custom"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+      <div class="col-md-12">
+        <center>
+          <h2>Where Did the Shuttle Stop?</h2>
+        </center>
+        <p>
+          The maps below illustrate the density and reasons for the autonomous
+          driving system disengaging, coming to a complete stop, and handing
+          control back to the shuttle attendant until autonomous operation can
+          resume. The first map, a heatmap, displays the density of these
+          events, with darker colors indicating higher frequency of
+          disengagement events. The second map shows the number of events and
+          reasons behind each disengagement event.
+        </p>
+      </div>
       <div class="col-md-6">
         <div class="chart-title">
           <center>
@@ -231,7 +268,7 @@
       <div class="col-md-6">
         <div class="chart-title">
           <center>
-            Reasons for Disengagement of Autonomous Operation Events
+            Number and Reasons for Disengagement of Autonomous Operation Events
           </center>
         </div>
         <ods-dataset-context
