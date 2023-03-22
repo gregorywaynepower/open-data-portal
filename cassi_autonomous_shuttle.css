@@ -15,13 +15,25 @@
 	max-width: 600px;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 	.shuttle-image {
 		width: 70%;
 	}
 }
 
-@media (min-width: 994px) {
+@media only screen and (max-width: 990px) {
+	.add-whitespace {
+		margin-top: 2em;
+	}
+}
+
+@media only screen and (min-width: 992px )and (max-width: 1024px) {
+	.laptop-width-fix {
+		line-height: 49.59px;
+	}
+}
+
+@media only screen and (min-width: 994px) {
 	.kpi-box {
 		margin-bottom: 2rem;
 	}
