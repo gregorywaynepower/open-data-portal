@@ -10,6 +10,16 @@
 	border-radius: 7px;
 }
 
+.shuttle-image {
+	width: 100%;
+	max-width: 600px;
+}
+
+@media (max-width: 768px) {
+	.shuttle-image {
+		width: 70%;
+	}
+}
 
 @media (min-width: 994px) {
 	.kpi-box {
