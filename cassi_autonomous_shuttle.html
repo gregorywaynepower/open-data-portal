@@ -32,13 +32,13 @@
         style="display: flex; justify-content: center; align-items: center"
       >
         <p>
-          From March 6th, 2023 to June 2nd, 2023 Fred G. Bond Metro Park is the site of
-          an exciting demonstration in autonomous vehicle technology. The North
-          Carolina Department of Transportation (NCDOT) has partnered with Cary
-          to bring an all-electric, driverless shuttle to Bond Park. CASSI
-          (Connected Autonomous Shuttle Supporting Innovation) will run a
-          four-stop route from the Cary Senior Center to Bond Park Community
-          Center on weekdays from 10:00 a.m. to 4:00 p.m.
+          During a 12-week period between March 6 and June 2, 2023, Fred G. Bond
+          Metro Park is the site of an exciting demonstration in autonomous
+          vehicle technology. The North Carolina Department of Transportation
+          (NCDOT) has partnered with Cary to bring an all-electric, driverless
+          shuttle to Bond Park. CASSI (Connected Autonomous Shuttle Supporting
+          Innovation) will run a four-stop route from the Cary Senior Center to
+          Bond Park Community Center on weekdays from 10:00 a.m. to 4:00 p.m.
           <br />
           <br />
           Please see Cary's
@@ -230,11 +230,9 @@
         <ods-dataset-context
           context="autonomousshuttledisengagement"
           autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
-          autonomousshuttledisengagement-parameters="{'disjunctive.cause':true,'sort':'incident_time'}"
         >
           <ods-chart
             scientific-display="false"
-            display-legend="false"
             labels-x-length="48"
             align-month="true"
           >
@@ -242,12 +240,13 @@
               context="autonomousshuttledisengagement"
               field-x="cause"
               maxpoints="0"
+              sort="serie1-1"
             >
               <ods-chart-serie
                 expression-y="vehicle_speed"
-                chart-type="pie"
+                chart-type="column"
                 function-y="COUNT"
-                color="range-custom"
+                color="#FE6260"
                 scientific-display="true"
               >
               </ods-chart-serie>
