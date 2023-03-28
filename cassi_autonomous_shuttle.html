@@ -192,7 +192,7 @@
           autonomousshuttleusage-dataset="autonomous-shuttle-usage"
         >
           <ods-chart
-            timescale="year"
+            timescale="day weekday"
             scientific-display="false"
             align-month="true"
           >
@@ -201,12 +201,14 @@
               field-x="date"
               maxpoints="0"
               timescale="day weekday"
+              sort="serie1-1"
             >
               <ods-chart-serie
                 expression-y="number_of_passengers"
-                chart-type="pie"
+                chart-type="bar"
                 function-y="SUM"
-                color="range-custom"
+                label-y="Total Number of Passengers"
+                color="#0073b3"
                 scientific-display="true"
               >
               </ods-chart-serie>
