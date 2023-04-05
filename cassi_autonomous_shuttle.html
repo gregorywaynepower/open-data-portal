@@ -69,16 +69,18 @@
             <div class="chart-title">
               <center>Ridership over Time</center>
             </div>
-            <ods-dataset-context context="autonomousshuttleusage"
-              autonomousshuttleusage-dataset="autonomous-shuttle-usage">
-              <ods-chart timescale="day" scientific-display="false" align-month="true">
-                <ods-chart-query context="autonomousshuttleusage" field-x="date" maxpoints="0" timescale="day">
-                  <ods-chart-serie expression-y="number_of_passengers" chart-type="line" function-y="SUM"
-                    label-y="Number of Passengers" color="#8da0cb" step="" scientific-display="true">
-                  </ods-chart-serie>
-                </ods-chart-query>
-              </ods-chart>
-            </ods-dataset-context>
+            <figure>
+              <ods-dataset-context context="autonomousshuttleusage"
+                autonomousshuttleusage-dataset="autonomous-shuttle-usage">
+                <ods-chart timescale="day" scientific-display="false" align-month="true">
+                  <ods-chart-query context="autonomousshuttleusage" field-x="date" maxpoints="0" timescale="day">
+                    <ods-chart-serie expression-y="number_of_passengers" chart-type="line" function-y="SUM"
+                      label-y="Number of Passengers" color="#8da0cb" step="" scientific-display="true">
+                    </ods-chart-serie>
+                  </ods-chart-query>
+                </ods-chart>
+              </ods-dataset-context>
+            </figure>
           </div>
           <div class="col-md-6">
             <div class="chart-title">
