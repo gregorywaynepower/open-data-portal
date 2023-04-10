@@ -1,197 +1,336 @@
 <section>
-    <div class="container">
-        <div class="heading">
-            <br />
-            <center>
-                <h1 class="title">Cary Composts - Food Waste Recycling</h1>
+  <div class="container">
+    <div class="heading">
+      <br />
+      <center>
+        <h1 class="title">Cary Composts - Food Waste Recycling</h1>
 
-                <ods-dataset-context context="foodwastepilotproject" 
-                                     foodwastepilotproject-dataset="food-waste-pilot"
-                                     ng-init="values = {};
-                                              ">
-                    <p class="kpi-description">
-                        Last Monthly Update:<span class="kpi-value2"> {{ foodwastepilotproject.dataset.metas.metadata_processed | date }}</span>
-                    </p>
-                </ods-dataset-context>
-            </center>              
-        </div>              
+        <ods-dataset-context
+          context="foodwastepilotproject"
+          foodwastepilotproject-dataset="food-waste-pilot"
+          ng-init="values = {};
+                                              "
+        >
+          <p class="kpi-description">
+            Last Monthly Update:<span class="kpi-value2">
+              {{ foodwastepilotproject.dataset.metas.metadata_processed | date
+              }}</span
+            >
+          </p>
+        </ods-dataset-context>
+      </center>
     </div>
+  </div>
 </section>
 <section>
-    <div class="container">
-        <div class="column">
-            <div class="col-md-12">
-                <img src="/assets/theme_image/food waste drop off.jpg" width=100%/>
-                <p>
-                    In 2019, Cary partnered with Wake County to conduct a <a href= "https://s3.us-west-2.amazonaws.com/wakegov.com.if-us-west-2/prod/documents/2020-10/2019%20Wake%20WCS%20Final%20Report_Final.pdf">Waste Characterization Study</a>, which estimated that 27.4% of Cary's single-family residential waste was food waste. 
-                    In light of this study's results, Cary began work on a pilot Food Waste Recycling Drop-Off program to help the community divert food waste from the landfill and create compost.
-                    The pilot launched on February 7, 2022, <a href="https://www.townofcary.org/services-publications/garbage-recycling-yard-waste/citizen-s-convenience-center">Citizen's Convenience Center</a>, 313 N Dixon Ave., for Cary citizens to drop off their food scraps and other compostable items.
-                    Accepted items include food scraps (raw or cooked), coffee grounds, paper towels, pizza boxes, and pet food, among other compostable items.
-                    Check out the full list of accepted materials on our <a href="https://www.townofcary.org/services-publications/garbage-recycling-yard-waste/food-waste">website</a>.
-                    <br>
-                    <br>
-                    The pilot became a <a href="https://www.townofcary.org/Home/Components/News/News/16092/715">permanent service in February 2023</a>.
-                    <br />
-                    <br />
-                    Be sure to check back each month to stay up-to-date on this service's statistics. Check out the full datasets: <a href="https://data.townofcary.org/explore/dataset/food-waste-pilot/information/?sort=date_collection_datetime">Food Waste Recycling Impact</a> and  <a href="https://data.townofcary.org/explore/dataset/food-waste-recycling-participation/information/?sort=date">Food Waste Recycling Participation</a>.
-                </p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="column">
+      <div class="col-md-12">
+        <img src="/assets/theme_image/food waste drop off.jpg" width="100%" />
+        <p>
+          In 2019, Cary partnered with Wake County to conduct a
+          <a
+            href="https://s3.us-west-2.amazonaws.com/wakegov.com.if-us-west-2/prod/documents/2020-10/2019%20Wake%20WCS%20Final%20Report_Final.pdf"
+            >Waste Characterization Study</a
+          >, which estimated that 27.4% of Cary's single-family residential
+          waste was food waste. In light of this study's results, Cary began
+          work on a pilot Food Waste Recycling Drop-Off program to help the
+          community divert food waste from the landfill and create compost. The
+          pilot launched on February 7, 2022,
+          <a
+            href="https://www.townofcary.org/services-publications/garbage-recycling-yard-waste/citizen-s-convenience-center"
+            >Citizen's Convenience Center</a
+          >, 313 N Dixon Ave., for Cary citizens to drop off their food scraps
+          and other compostable items. Accepted items include food scraps (raw
+          or cooked), coffee grounds, paper towels, pizza boxes, and pet food,
+          among other compostable items. Check out the full list of accepted
+          materials on our
+          <a
+            href="https://www.townofcary.org/services-publications/garbage-recycling-yard-waste/food-waste"
+            >website</a
+          >.
+          <br />
+          <br />
+          The pilot became a
+          <a
+            href="https://www.townofcary.org/Home/Components/News/News/16092/715"
+            >permanent service in February 2023</a
+          >.
+          <br />
+          <br />
+          Be sure to check back each month to stay up-to-date on this service's
+          statistics. Check out the full datasets:
+          <a
+            href="https://data.townofcary.org/explore/dataset/food-waste-pilot/information/?sort=date_collection_datetime"
+            >Food Waste Recycling Impact</a
+          >
+          and
+          <a
+            href="https://data.townofcary.org/explore/dataset/food-waste-recycling-participation/information/?sort=date"
+            >Food Waste Recycling Participation</a
+          >.
+        </p>
+      </div>
     </div>
-    <br />
-    <div class="container">
-        <div class="grid sm:grid-5 gap-10 my-4.5">
-            <div class="sm:cell-2 content-box text align-right">
-                <center>
-                    <h3>Impact to Date</h3>
-                </center>
-                <p> 
-                    What happens after our citizen's food scraps are dropped off?
-                    All materials are processed by a local facility, after which some of the finished compost is returned to the earth at <a href="https://www.townofcary.org/recreation-enjoyment/parks-greenways-environment/community-gardens-urban-agriculture/good-hope-farm">Good Hope Farm</a>. 
-                    So far, the results have been impressive.
-                </p>
-            </div>
-        </div>
+  </div>
+  <br />
+  <div class="container">
+    <div class="grid sm:grid-5 gap-10 my-4.5">
+      <div class="sm:cell-2 content-box text align-right">
+        <center>
+          <h3>Impact to Date</h3>
+        </center>
+        <p>
+          What happens after our citizen's food scraps are dropped off? All
+          materials are processed by a local facility, after which some of the
+          finished compost is returned to the earth at
+          <a
+            href="https://www.townofcary.org/recreation-enjoyment/parks-greenways-environment/community-gardens-urban-agriculture/good-hope-farm"
+            >Good Hope Farm</a
+          >. So far, the results have been impressive.
+        </p>
+      </div>
     </div>
-    <br />
-    <div class="container">
-        <div class="column">
-            <div class="col-md-4">
-                <div class="kpi-box">
-                    <ods-dataset-context context="foodwastepilotproject" foodwastepilotproject-dataset="food-waste-pilot">
-                        <div ods-aggregation="myvar"
-                             ods-aggregation-context="foodwastepilotproject"
-                             ods-aggregation-function="SUM"
-                             ods-aggregation-expression="lbs_collected">
-                            <img src="/assets/theme_image/CaryComposts_Icons_Fruits-Vegs.png" width=20%/>
-                            <img src="/assets/theme_image/CaryComposts_Icons_Dairy.png" width=20%/>
-                            <p class="kpi-description">
-                                Total <b>Lbs</b> of Food Waste Collected to Date:
-                            </p>
-                            <span class="kpi-value"> {{ myvar | number }}</span>
-                        </div>
-                    </ods-dataset-context>
-                </div>
+  </div>
+  <br />
+  <div class="container">
+    <div class="column">
+      <div class="col-md-4">
+        <div class="kpi-box">
+          <ods-dataset-context
+            context="foodwastepilotproject"
+            foodwastepilotproject-dataset="food-waste-pilot"
+          >
+            <div
+              ods-aggregation="myvar"
+              ods-aggregation-context="foodwastepilotproject"
+              ods-aggregation-function="SUM"
+              ods-aggregation-expression="lbs_collected"
+            >
+              <img
+                src="/assets/theme_image/CaryComposts_Icons_Fruits-Vegs.png"
+                width="20%"
+              />
+              <img
+                src="/assets/theme_image/CaryComposts_Icons_Dairy.png"
+                width="20%"
+              />
+              <p class="kpi-description">
+                Total <b>Lbs</b> of Food Waste Collected to Date:
+              </p>
+              <span class="kpi-value"> {{ myvar | number }}</span>
             </div>
+          </ods-dataset-context>
         </div>
-        <div class="column">
-            <div class="col-md-4">
-                <img src="/assets/theme_image/Food waste site.jpg" width=100%/>
-            </div>
-        </div>
-        <div class="column">
-            <div class="col-md-4">
-                <ods-dataset-context context="foodwastepilotproject" foodwastepilotproject-dataset="food-waste-pilot">
-                    <div class="kpi-box">
-                        <div ods-aggregation="myvar"
-                             ods-aggregation-context="foodwastepilotproject"
-                             ods-aggregation-function="SUM"
-                             ods-aggregation-expression="compost_created_lbs">
-                            <img src="/assets/theme_image/CaryComposts_Icons_Arrows.png" width=20%/>
-                            <img src="/assets/theme_image/CaryComposts_Icons_Leaves.png" width=20%/>
-                            <p class="kpi-description">
-                                Total Estimated Earned <b>Lbs</b> of Compost Created to Date: 
-                            </p>
-                            <span class="kpi-value">  {{ myvar | number }}</span>
-                        </div>
-                    </div>
-                </ods-dataset-context>
-            </div>
-        </div>
-        <div class="column">
-            <div class="col-md-12">
-                <p>
-                </p>
-                <ods-dataset-context context="foodwastepilotproject" foodwastepilotproject-dataset="food-waste-pilot" foodwastepilotproject-parameters="{'sort':'date_collection_datetime'}">
-                    <ods-chart label-x="Collection Date" timescale="month" single-y-axis="true" align-month="true">
-                        <ods-chart-query context="foodwastepilotproject" field-x="date_collection_datetime" maxpoints="0" timescale="month">
-                            <ods-chart-serie expression-y="lbs_collected" chart-type="column" function-y="SUM" label-y="Food Waste Collected (Lbs)" color="#83a506" scientific-display="true">
-                            </ods-chart-serie>
-                            <ods-chart-serie expression-y="compost_created_lbs" chart-type="line" function-y="SUM" label-y="Estimated Earned Compost Created (Lbs)" color="#0c6256" scientific-display="true">
-                            </ods-chart-serie>
-                        </ods-chart-query>
-                    </ods-chart>
-                </ods-dataset-context>
-                <br />
-                <br />
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="column">
+      <div class="col-md-4">
+        <img src="/assets/theme_image/Food waste site.jpg" width="100%" />
+      </div>
+    </div>
+    <div class="column">
+      <div class="col-md-4">
+        <ods-dataset-context
+          context="foodwastepilotproject"
+          foodwastepilotproject-dataset="food-waste-pilot"
+        >
+          <div class="kpi-box">
+            <div
+              ods-aggregation="myvar"
+              ods-aggregation-context="foodwastepilotproject"
+              ods-aggregation-function="SUM"
+              ods-aggregation-expression="compost_created_lbs"
+            >
+              <img
+                src="/assets/theme_image/CaryComposts_Icons_Arrows.png"
+                width="20%"
+              />
+              <img
+                src="/assets/theme_image/CaryComposts_Icons_Leaves.png"
+                width="20%"
+              />
+              <p class="kpi-description">
+                Total Estimated Earned <b>Lbs</b> of Compost Created to Date:
+              </p>
+              <span class="kpi-value"> {{ myvar | number }}</span>
+            </div>
+          </div>
+        </ods-dataset-context>
+      </div>
+    </div>
+    <div class="column">
+      <div class="col-md-12">
+        <p></p>
+        <ods-dataset-context
+          context="foodwastepilotproject"
+          foodwastepilotproject-dataset="food-waste-pilot"
+          foodwastepilotproject-parameters="{'sort':'date_collection_datetime'}"
+        >
+          <ods-chart
+            label-x="Collection Date"
+            timescale="month"
+            single-y-axis="true"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="foodwastepilotproject"
+              field-x="date_collection_datetime"
+              maxpoints="0"
+              timescale="month"
+            >
+              <ods-chart-serie
+                expression-y="lbs_collected"
+                chart-type="column"
+                function-y="SUM"
+                label-y="Food Waste Collected (Lbs)"
+                color="#83a506"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+              <ods-chart-serie
+                expression-y="compost_created_lbs"
+                chart-type="line"
+                function-y="SUM"
+                label-y="Estimated Earned Compost Created (Lbs)"
+                color="#0c6256"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+        <br />
+        <br />
+      </div>
+    </div>
+  </div>
 </section>
 <br />
 <br />
 <section>
-    <div class="container">
-        <div class="heading">
-            <center>
-                <h3 class="title">Gaining Popularity</h3>
-            </center>
-        </div>
-        <div class="column">
-            <div class="col-md-12">
-                <p>
-                    We saw a nearly 83% increase in participation between the first and second weeks of the pilot's launch. 
-                    In the first twelve weeks, we recorded an estimated 2,301 drop-offs, with weekends being our busiest time.
-                </p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="col-md-6">
-                <div class="chart-title">
-                    <center>
-                        Estimated Drop-Offs Containing Food Waste by Day of Week:
-                    </center>
-                </div>
-                <ods-dataset-context context="foodwasterecyclingparticipation" foodwasterecyclingparticipation-dataset="food-waste-recycling-participation" foodwasterecyclingparticipation-parameters="{'sort':'date'}">
-                    <ods-chart timescale="day weekday">
-                        <ods-chart-query context="foodwasterecyclingparticipation" field-x="date" maxpoints="0"  timescale="day weekday">
-                            <ods-chart-serie expression-y="counts" chart-type="pie" function-y="SUM" color="range-Greens" scientific-display="true" label-y="Estimated Drop-Offs Containing Food Waste:" >
-                            </ods-chart-serie>
-                        </ods-chart-query>
-                    </ods-chart>
-                </ods-dataset-context>
-            </div>
-        </div>
-        <div class="column">
-            <div class="col-md-6">
-                <p>             
-                    <img src="/assets/theme_image/FoodWasteAcceptedMaterials.jpg" width=100%/> 
-                </p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="heading">
+      <center>
+        <h3 class="title">Gaining Popularity</h3>
+      </center>
     </div>
-    <div class="container">
-        <div class="column">
-            <div class="col-md-3">
-                <div class="kpi-box">
-                    <ods-dataset-context context="foodwasterecyclingparticipation" foodwasterecyclingparticipation-dataset="food-waste-recycling-participation">
-                        <div ods-aggregation="myvar"
-                             ods-aggregation-context="foodwasterecyclingparticipation"
-                             ods-aggregation-function="SUM"
-                             ods-aggregation-expression="counts">
-                            <img src="/assets/theme_image/CaryComposts_Icons_FoodScraps.png" width=40%/>
-                            <p class="kpi-description">
-                                Total Estimated Drop-Offs Containing Food Waste: 
-                            </p>
-                            <span class="kpi-value">  {{ myvar | number }}</span>
-                        </div>
-                    </ods-dataset-context>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="col-md-9">
-                <ods-dataset-context context="foodwasterecyclingparticipation" foodwasterecyclingparticipation-dataset="food-waste-recycling-participation" foodwasterecyclingparticipation-parameters="{'sort':'date'}">
-                    <ods-chart single-y-axis="true" label-x="Drop-Off Date" timescale="month" align-month="true">
-                        <ods-chart-query context="foodwasterecyclingparticipation" field-x="date" maxpoints="0" timescale="month">
-                            <ods-chart-serie expression-y="counts" chart-type="column" function-y="SUM" label-y="Estimated Drop-Offs Containing Food Waste" color="#48382b" min="0" scientific-display="true">
-                            </ods-chart-serie>
-                        </ods-chart-query>
-                    </ods-chart>
-                </ods-dataset-context>
-            </div>
-        </div>
+    <div class="column">
+      <div class="col-md-12">
+        <p>
+          We saw a nearly 83% increase in participation between the first and
+          second weeks of the pilot's launch. In the first twelve weeks, we
+          recorded an estimated 2,301 drop-offs, with weekends being our busiest
+          time.
+        </p>
+      </div>
     </div>
+    <div class="column">
+      <div class="col-md-6">
+        <div class="chart-title">
+          <center>
+            Estimated Drop-Offs Containing Food Waste by Day of Week:
+          </center>
+        </div>
+        <ods-dataset-context
+          context="foodwasterecyclingparticipation"
+          foodwasterecyclingparticipation-dataset="food-waste-recycling-participation"
+          foodwasterecyclingparticipation-parameters="{'sort':'date'}"
+        >
+          <ods-chart timescale="day weekday">
+            <ods-chart-query
+              context="foodwasterecyclingparticipation"
+              field-x="date"
+              maxpoints="0"
+              timescale="day weekday"
+            >
+              <ods-chart-serie
+                expression-y="counts"
+                chart-type="pie"
+                function-y="SUM"
+                color="range-Greens"
+                scientific-display="true"
+                label-y="Estimated Drop-Offs Containing Food Waste:"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+    </div>
+    <div class="column">
+      <div class="col-md-6">
+        <p>
+          <img
+            src="/assets/theme_image/FoodWasteAcceptedMaterials.jpg"
+            width="100%"
+          />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="column">
+      <div class="col-md-3">
+        <div class="kpi-box">
+          <ods-dataset-context
+            context="foodwasterecyclingparticipation"
+            foodwasterecyclingparticipation-dataset="food-waste-recycling-participation"
+          >
+            <div
+              ods-aggregation="myvar"
+              ods-aggregation-context="foodwasterecyclingparticipation"
+              ods-aggregation-function="SUM"
+              ods-aggregation-expression="counts"
+            >
+              <img
+                src="/assets/theme_image/CaryComposts_Icons_FoodScraps.png"
+                width="40%"
+              />
+              <p class="kpi-description">
+                Total Estimated Drop-Offs Containing Food Waste:
+              </p>
+              <span class="kpi-value"> {{ myvar | number }}</span>
+            </div>
+          </ods-dataset-context>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="col-md-9">
+        <ods-dataset-context
+          context="foodwasterecyclingparticipation"
+          foodwasterecyclingparticipation-dataset="food-waste-recycling-participation"
+          foodwasterecyclingparticipation-parameters="{'sort':'date'}"
+        >
+          <ods-chart
+            single-y-axis="true"
+            label-x="Drop-Off Date"
+            timescale="month"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="foodwasterecyclingparticipation"
+              field-x="date"
+              maxpoints="0"
+              timescale="month"
+            >
+              <ods-chart-serie
+                expression-y="counts"
+                chart-type="column"
+                function-y="SUM"
+                label-y="Estimated Drop-Offs Containing Food Waste"
+                color="#48382b"
+                min="0"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+    </div>
+  </div>
 </section>
 <br />
 <!--Leaving off for now until can confirm calculations
