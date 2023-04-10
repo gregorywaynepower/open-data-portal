@@ -63,6 +63,29 @@
     <center>
       <h2>Ridership & Affecting Factors</h2>
     </center>
+    <ods-dataset-context
+          context="autonomousshuttleusage"
+          autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+        >
+          <div class="row">
+            <div class="col-sm-offset-4 col-sm-4">
+              <!-- KPI box component -->
+              <div class="kpi-card">
+                <i class="kpi-icon fa fa-bus" aria-hidden="true"></i>
+                <p
+                  class="kpi-title"
+                  ods-aggregation="myvar"
+                  ods-aggregation-context="autonomousshuttleusage"
+                  ods-aggregation-function="SUM"
+                  ods-aggregation-expression="number_of_passengers"
+                >
+                  {{ myvar | number }}
+                </p>
+                <p class="kpi-description">Total Riders Served</p>
+              </div>
+            </div>
+          </div>
+        </ods-dataset-context>
     <div class="column">
       <div class="col-md-12">
         <div class="chart-title">
