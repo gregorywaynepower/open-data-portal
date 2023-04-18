@@ -37,8 +37,8 @@
           vehicle technology. The North Carolina Department of Transportation
           (NCDOT) has partnered with Cary to bring an all-electric, driverless
           shuttle to Bond Park. CASSI (Connected Autonomous Shuttle Supporting
-          Innovation) runs a route from the Cary Senior Center to Bond
-          Park Community Center on weekdays from 10:00 a.m. to 4:00 p.m.
+          Innovation) runs a route from the Cary Senior Center to Bond Park
+          Community Center on weekdays from 10:00 a.m. to 4:00 p.m.
           <br />
           <br />
           Please see Cary's
@@ -58,6 +58,72 @@
     </div>
   </div>
 </section>
+<section>
+  <div class="container">
+    <center>
+      <h2>Stops & Route</h2>
+    </center>
+    <ods-dataset-context
+      context="cassiautonomousshuttlestops,cassiautonomousshuttleroute"
+      cassiautonomousshuttlestops-dataset="cassi-autonomous-shuttle-stops"
+      cassiautonomousshuttleroute-dataset="cassi-autonomous-shuttle-route"
+    >
+      <ods-map
+        no-refit="true"
+        scroll-wheel-zoom="false"
+        toolbar-fullscreen="true"
+        basemap="jawg.streets"
+        location="16,35.78426,-78.82409"
+      >
+        <ods-map-layer-group>
+          <ods-map-layer
+            context="cassiautonomousshuttlestops"
+            color="#C32D1C"
+            picto="ods-bus_stop"
+            show-marker="false"
+            display="auto"
+            shape-opacity="0.5"
+            point-opacity="1"
+            border-color="#FFFFFF"
+            border-opacity="1"
+            border-size="1"
+            border-pattern="solid"
+            caption="true"
+            title="CASSI Autonomous Shuttle Stops"
+            description="Shuttle stops for the CASSI Autonomous Shuttle Pilot pilot program.Partnering with North Carolina Department of Transportation (NCDOT) to bring the Connected Autonomous Shuttle Supporting Innovatio…"
+            size="7"
+            size-min="3"
+            size-max="5"
+            size-function="linear"
+          ></ods-map-layer>
+        </ods-map-layer-group>
+        <ods-map-layer-group>
+          <ods-map-layer
+            context="cassiautonomousshuttleroute"
+            color="#C32D1C"
+            picto="ods-circle"
+            show-marker="true"
+            display="auto"
+            shape-opacity="0.5"
+            point-opacity="1"
+            border-color="#FFFFFF"
+            border-opacity="1"
+            border-size="1"
+            border-pattern="solid"
+            caption="true"
+            title="CASSI Autonomous Shuttle Route"
+            description="Shuttle route for the CASSI Autonomous Shuttle Pilot pilot program.Partnering with North Carolina Department of Transportation (NCDOT) to bring the Connected Autonomous Shuttle Supporting Innovatio…"
+            size="4"
+            size-min="3"
+            size-max="5"
+            size-function="linear"
+          ></ods-map-layer>
+        </ods-map-layer-group>
+      </ods-map>
+    </ods-dataset-context>
+  </div>
+</section>
+<br />
 <section>
   <div class="container">
     <center>
