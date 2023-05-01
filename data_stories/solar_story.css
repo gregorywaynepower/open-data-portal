@@ -1,3 +1,11 @@
+/* 
+<center> deprecation fix
+*/
+.center {
+	margin:auto 0px;
+	text-align: center;
+}
+
 .kpi-box {
 	display: flex;
 	flex-direction: column;
@@ -76,7 +84,6 @@
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	text-align: center;
 	max-height: 250px;
 }
 
@@ -414,14 +421,9 @@ g.highcharts-legend-item rect {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-
+	background-color: #ffffff;
 }
 
 .ods-box {
 	border-color: #ffffff;
-}
-
-
-.page-layout {
-	background-color: #ffffff;
 }
