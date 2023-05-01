@@ -46,7 +46,6 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    text-align: center;
 	border: 1px solid #e6e6e6;
 	box-shadow: 0 4px 6px 0 rgba(100, 100, 100, 0.2);
 }
