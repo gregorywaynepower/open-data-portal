@@ -1,0 +1,91 @@
+<section>
+  <center>
+    <h1 class="title">Cary's Water Use per Capita</h1>
+    <ods-dataset-context
+      context="residentialgpcd"
+      residentialgpcd-dataset="residential-gpcd"
+      ng-init="values = {};"
+    >
+      <p class="kpi-description">
+        Last Updated:<span class="kpi-value2">
+          {{ residentialgpcd.dataset.metas.metadata_processed | date }}</span
+        >
+      </p>
+    </ods-dataset-context>
+  </center>
+</section>
+<section>
+  <div class="container">
+    <div class="column">
+      <div class="col-md-6">
+        <center>
+          <img
+            class="introduction-image"
+            src="https://data.townofcary.org/assets/theme_image/autonomous_shuttle_profile.png"
+            alt="A small self-driving bus parked with a forest in the background."
+          />
+        </center>
+      </div>
+      <div
+        class="col-md-6"
+        style="display: flex; justify-content: center; align-items: center"
+      >
+        <p>
+          Gallons per capita per day (GPCD) is a measure of the average daily
+          water usage per person in a particular area or community. It is
+          typically used to estimate the water demand and consumption of a
+          population and is expressed in gallons per day per person. GPCD can be
+          used by water utilities, policymakers, and researchers to understand
+          water usage patterns, forecast future demand, and identify areas where
+          water conservation efforts may be needed.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <center>
+      <h2>Gallons per Capita per Day</h2>
+    </center>
+    <ods-dataset-context
+      context="residentialgpcd"
+      residentialgpcd-dataset="residential-gpcd"
+    >
+      <ods-chart
+        timescale="year"
+        single-y-axis="true"
+        single-y-axis-label="Gallons per Capita Daily"
+        scientific-display="false"
+        align-month="true"
+      >
+        <ods-chart-query
+          context="residentialgpcd"
+          field-x="year"
+          maxpoints="0"
+          timescale="year"
+        >
+          <ods-chart-serie
+            expression-y="gpcd"
+            chart-type="column"
+            function-y="AVG"
+            label-y="Gallons per Capita per Day"
+            color="#2B3F56"
+            display-values="false"
+            scientific-display="true"
+          >
+          </ods-chart-serie>
+          <ods-chart-serie
+            expression-y="multi_year_average"
+            chart-type="line"
+            function-y="AVG"
+            label-y="Multi-Year Average"
+            color="#66c2a5"
+            scientific-display="true"
+          >
+          </ods-chart-serie>
+        </ods-chart-query>
+      </ods-chart>
+    </ods-dataset-context>
+  </div>
+</section>
