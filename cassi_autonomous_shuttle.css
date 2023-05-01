@@ -1,3 +1,11 @@
+/* 
+<center> deprecation fix
+*/
+.center {
+	margin:auto 0px;
+	text-align: center;
+}
+
 /* Variables & Shared classes
 ========================================================================== */
 :root {
@@ -38,7 +46,6 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    text-align: center;
 	border: 1px solid #e6e6e6;
 	box-shadow: 0 4px 6px 0 rgba(100, 100, 100, 0.2);
 }
@@ -92,6 +99,9 @@
 	.laptop-width-fix {
 		line-height: 49.59px;
 	}
+	.laptop-width-fix center {
+		margin:auto 0px;
+	}
 }
 
 @media only screen and (min-width: 994px) {
@@ -113,8 +123,7 @@
 	font-size: 1.4rem;
 	line-height: 1.5;
 	font-weight: normal;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin: auto 0px;
 	max-width: 100%;
 }
 
@@ -464,14 +473,9 @@ g.highcharts-legend-item rect {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-
+	background-color: #ffffff;
 }
 
 .ods-box {
 	border-color: #ffffff;
-}
-
-
-.page-layout {
-	background-color: #ffffff;
 }
