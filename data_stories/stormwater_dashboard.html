@@ -428,17 +428,20 @@ buttonSelected=='lastMonth'}"
                   ng-if="variables.stream[0].fields.photo_link"
                   src="{{variables.stream[0].fields.photo_link}}"
                   class="sitephoto"
+                  alt="Photo of stream gage site"
                 />
                 <img
                   ng-if="!variables.stream[0].fields.photo_link"
                   src="https://data.townofcary.org/assets/theme_image/no_image_available.jpg"
                   class="sitephoto"
+                  alt="Photo of stream gage site"
                 />
               </div>
               <div ng-if="variables.sites[0].fields.type == 'Rain Gage'">
                 <img
                   src="https://data.townofcary.org/assets/theme_image/no_image_available.jpg"
                   class="sitephoto"
+                  alt="No image of stream gage site available."
                 />
               </div>
               <p class="description-text">
