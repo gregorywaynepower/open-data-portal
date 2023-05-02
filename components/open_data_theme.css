@@ -298,8 +298,6 @@ a:hover {
 .container-fluid {
 	font-family: 'Open Sans', sans-serif;
 	max-width: 1200px;
-	padding-left: 2px;
-	padding-right: 2px;
 	line-height: 1.53333333 !important;
 	font-weight: 400;
 	padding: 20px !important;
