@@ -1,15 +1,14 @@
-.Menu_Contact { border-bottom: 3px solid #d84d32!important; }
-
-.page-layout {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-   
+.Menu_Contact {
+	border-bottom: 3px solid #d84d32 !important;
 }
 
-.ods-box {border-color: #ffffff;}
+.page-layout {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffff;
+}
 
-
-.page-layout{
-    background-color: #ffffff;
+.ods-box {
+	border-color: #ffffff;
 }
