@@ -1,3 +1,11 @@
+/* 
+<center> deprecation fix
+*/
+.center {
+	margin:0px auto;
+	text-align: center;
+}
+
 .kpi-box {
 	display: flex;
 	width: 100%;
