@@ -503,6 +503,16 @@ td a:hover {
 	text-decoration: none;
 }
 
+/* Fix Hyperlink in sup Element*/
+
+sup a {
+	text-decoration: underline;
+}
+
+sup a:hover {
+	text-decoration: none;
+}
+
 .buttonsArea {
 	width: 100%;
 }
