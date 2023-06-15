@@ -493,6 +493,16 @@ p a {
 	text-decoration: underline;
 }
 
+/* Fix Hyperlink in Table */
+
+td a {
+	text-decoration: underline;
+}
+
+td a:hover {
+	text-decoration: none;
+}
+
 .buttonsArea {
 	width: 100%;
 }
