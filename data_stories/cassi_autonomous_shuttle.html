@@ -67,74 +67,78 @@
     <div class="center">
       <h2>Stops & Route</h2>
     </div>
-    <div class="chart-title">
-      <div class="center">
-        Map of Fred G. Bond Metro Park Stops & Route<sup
-          >[<a href="#CASSI-Autonomous-Shuttle-Stops">1</a>,<a
-            href="#CASSI-Autonomous-Shuttle-Route"
-            >2</a
-          >]</sup
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Map of Fred G. Bond Metro Park Stops & Route<sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Stops">1</a>,<a
+                href="#CASSI-Autonomous-Shuttle-Route"
+                >2</a
+              >]</sup
+            >
+          </div>
+        </div>
+        <ods-dataset-context
+          context="cassiautonomousshuttlestops,cassiautonomousshuttleroute"
+          cassiautonomousshuttlestops-dataset="cassi-autonomous-shuttle-stops"
+          cassiautonomousshuttleroute-dataset="cassi-autonomous-shuttle-route"
         >
+          <ods-map
+            no-refit="true"
+            scroll-wheel-zoom="false"
+            toolbar-fullscreen="true"
+            basemap="jawg.streets"
+            location="16,35.78426,-78.82409"
+          >
+            <ods-map-layer-group>
+              <ods-map-layer
+                context="cassiautonomousshuttlestops"
+                color="#C32D1C"
+                picto="ods-bus_stop"
+                show-marker="false"
+                display="auto"
+                shape-opacity="0.5"
+                point-opacity="1"
+                border-color="#FFFFFF"
+                border-opacity="1"
+                border-size="1"
+                border-pattern="solid"
+                caption="false"
+                title="CASSI Autonomous Shuttle Stops"
+                description="Shuttle stops for the CASSI Autonomous Shuttle Pilot pilot program.Partnering with North Carolina Department of Transportation (NCDOT) to bring the Connected Autonomous Shuttle Supporting Innovatio…"
+                size="7"
+                size-min="3"
+                size-max="5"
+                size-function="linear"
+              ></ods-map-layer>
+            </ods-map-layer-group>
+            <ods-map-layer-group>
+              <ods-map-layer
+                context="cassiautonomousshuttleroute"
+                color="#C32D1C"
+                picto="ods-circle"
+                show-marker="true"
+                display="auto"
+                shape-opacity="0.5"
+                point-opacity="1"
+                border-color="#FFFFFF"
+                border-opacity="1"
+                border-size="1"
+                border-pattern="solid"
+                caption="false"
+                title="CASSI Autonomous Shuttle Route"
+                description="Shuttle route for the CASSI Autonomous Shuttle Pilot pilot program.Partnering with North Carolina Department of Transportation (NCDOT) to bring the Connected Autonomous Shuttle Supporting Innovatio…"
+                size="4"
+                size-min="3"
+                size-max="5"
+                size-function="linear"
+              ></ods-map-layer>
+            </ods-map-layer-group>
+          </ods-map>
+        </ods-dataset-context>
       </div>
     </div>
-    <ods-dataset-context
-      context="cassiautonomousshuttlestops,cassiautonomousshuttleroute"
-      cassiautonomousshuttlestops-dataset="cassi-autonomous-shuttle-stops"
-      cassiautonomousshuttleroute-dataset="cassi-autonomous-shuttle-route"
-    >
-      <ods-map
-        no-refit="true"
-        scroll-wheel-zoom="false"
-        toolbar-fullscreen="true"
-        basemap="jawg.streets"
-        location="16,35.78426,-78.82409"
-      >
-        <ods-map-layer-group>
-          <ods-map-layer
-            context="cassiautonomousshuttlestops"
-            color="#C32D1C"
-            picto="ods-bus_stop"
-            show-marker="false"
-            display="auto"
-            shape-opacity="0.5"
-            point-opacity="1"
-            border-color="#FFFFFF"
-            border-opacity="1"
-            border-size="1"
-            border-pattern="solid"
-            caption="false"
-            title="CASSI Autonomous Shuttle Stops"
-            description="Shuttle stops for the CASSI Autonomous Shuttle Pilot pilot program.Partnering with North Carolina Department of Transportation (NCDOT) to bring the Connected Autonomous Shuttle Supporting Innovatio…"
-            size="7"
-            size-min="3"
-            size-max="5"
-            size-function="linear"
-          ></ods-map-layer>
-        </ods-map-layer-group>
-        <ods-map-layer-group>
-          <ods-map-layer
-            context="cassiautonomousshuttleroute"
-            color="#C32D1C"
-            picto="ods-circle"
-            show-marker="true"
-            display="auto"
-            shape-opacity="0.5"
-            point-opacity="1"
-            border-color="#FFFFFF"
-            border-opacity="1"
-            border-size="1"
-            border-pattern="solid"
-            caption="false"
-            title="CASSI Autonomous Shuttle Route"
-            description="Shuttle route for the CASSI Autonomous Shuttle Pilot pilot program.Partnering with North Carolina Department of Transportation (NCDOT) to bring the Connected Autonomous Shuttle Supporting Innovatio…"
-            size="4"
-            size-min="3"
-            size-max="5"
-            size-function="linear"
-          ></ods-map-layer>
-        </ods-map-layer-group>
-      </ods-map>
-    </ods-dataset-context>
   </div>
 </section>
 <br />
@@ -172,45 +176,90 @@
     </ods-dataset-context>
     <div class="column">
       <div class="col-md-12">
-        <div class="chart-title">
-          <div class="center">
-            Ridership by Week<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
-            >
-          </div>
-          <ods-dataset-context
-            context="autonomousshuttleusage"
-            autonomousshuttleusage-dataset="autonomous-shuttle-usage"
-          >
-            <ods-chart scientific-display="false" align-month="true">
-              <ods-chart-query
-                context="autonomousshuttleusage"
-                field-x="weeks_into_pilot"
-                maxpoints="0"
+        <div class="row">
+          <div class="chart-title">
+            <div class="center">
+              Ridership by Week<sup
+                >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
               >
-                <ods-chart-serie
-                  expression-y="number_of_passengers"
-                  chart-type="column"
-                  function-y="SUM"
-                  label-y="Number of Passengers"
-                  color="#0073b3"
-                  scientific-display="true"
-                >
-                </ods-chart-serie>
-              </ods-chart-query>
-            </ods-chart>
-          </ods-dataset-context>
-        </div>
-        <div class="column">
-          <div class="col-md-6">
-            <div class="chart-title">
-              <div class="center">
-                Ridership over Time<sup
-                  >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
-                >
-              </div>
             </div>
-            <figure>
+            <ods-dataset-context
+              context="autonomousshuttleusage"
+              autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+            >
+              <ods-chart
+                display-legend="false"
+                scientific-display="false"
+                align-month="true"
+              >
+                <ods-chart-query
+                  context="autonomousshuttleusage"
+                  field-x="weeks_into_pilot"
+                  maxpoints="0"
+                >
+                  <ods-chart-serie
+                    expression-y="number_of_passengers"
+                    chart-type="column"
+                    function-y="SUM"
+                    label-y="Number of Passengers"
+                    color="#0073b3"
+                    scientific-display="true"
+                  >
+                  </ods-chart-serie>
+                </ods-chart-query>
+              </ods-chart>
+            </ods-dataset-context>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="col-md-6">
+              <div class="chart-title">
+                <div class="center">
+                  Ridership over Time<sup
+                    >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+                  >
+                </div>
+              </div>
+              <figure>
+                <ods-dataset-context
+                  context="autonomousshuttleusage"
+                  autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+                >
+                  <ods-chart
+                    timescale="day"
+                    scientific-display="false"
+                    align-month="true"
+                  >
+                    <ods-chart-query
+                      context="autonomousshuttleusage"
+                      field-x="date"
+                      maxpoints="0"
+                      timescale="day"
+                    >
+                      <ods-chart-serie
+                        expression-y="number_of_passengers"
+                        chart-type="line"
+                        function-y="SUM"
+                        label-y="Number of Passengers"
+                        color="#8da0cb"
+                        step=""
+                        scientific-display="true"
+                      >
+                      </ods-chart-serie>
+                    </ods-chart-query>
+                  </ods-chart>
+                </ods-dataset-context>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <div class="chart-title">
+                <div class="center">
+                  Hours of Operation over Time<sup
+                    >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+                  >
+                </div>
+              </div>
               <ods-dataset-context
                 context="autonomousshuttleusage"
                 autonomousshuttleusage-dataset="autonomous-shuttle-usage"
@@ -227,10 +276,10 @@
                     timescale="day"
                   >
                     <ods-chart-serie
-                      expression-y="number_of_passengers"
+                      expression-y="number_of_hours_operated"
                       chart-type="line"
                       function-y="SUM"
-                      label-y="Number of Passengers"
+                      label-y="Hours of Operation"
                       color="#8da0cb"
                       step=""
                       scientific-display="true"
@@ -239,84 +288,52 @@
                   </ods-chart-query>
                 </ods-chart>
               </ods-dataset-context>
-            </figure>
-          </div>
-          <div class="col-md-6">
-            <div class="chart-title">
-              <div class="center">
-                Hours of Operation over Time<sup
-                  >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
-                >
-              </div>
             </div>
-            <ods-dataset-context
-              context="autonomousshuttleusage"
-              autonomousshuttleusage-dataset="autonomous-shuttle-usage"
-            >
-              <ods-chart
-                timescale="day"
-                scientific-display="false"
-                align-month="true"
-              >
-                <ods-chart-query
-                  context="autonomousshuttleusage"
-                  field-x="date"
-                  maxpoints="0"
-                  timescale="day"
-                >
-                  <ods-chart-serie
-                    expression-y="number_of_hours_operated"
-                    chart-type="line"
-                    function-y="SUM"
-                    label-y="Hours of Operation"
-                    color="#8da0cb"
-                    step=""
-                    scientific-display="true"
-                  >
-                  </ods-chart-serie>
-                </ods-chart-query>
-              </ods-chart>
-            </ods-dataset-context>
           </div>
           <div class="col-md-12">
             <div class="center">
               <h2>Most Popular Days of Week</h2>
             </div>
-            <div class="chart-title">
-              <div class="center">
-                Most Popular Days of Week by Ridership<sup
-                  >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+            <div class="row">
+              <div class="col-md-12">
+                <div class="chart-title">
+                  <div class="center">
+                    Most Popular Days of Week by Ridership<sup
+                      >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+                    >
+                  </div>
+                </div>
+                <ods-dataset-context
+                  context="autonomousshuttleusage"
+                  autonomousshuttleusage-dataset="autonomous-shuttle-usage"
                 >
+                  <ods-chart
+                    timescale="day weekday"
+                    display-legend="false"
+                    scientific-display="false"
+                    align-month="true"
+                  >
+                    <ods-chart-query
+                      context="autonomousshuttleusage"
+                      field-x="date"
+                      maxpoints="0"
+                      timescale="day weekday"
+                      sort="serie1-1"
+                    >
+                      <ods-chart-serie
+                        expression-y="number_of_passengers"
+                        chart-type="bar"
+                        function-y="SUM"
+                        label-y="Total Number of Passengers"
+                        color="#0073b3"
+                        scientific-display="true"
+                      >
+                      </ods-chart-serie>
+                    </ods-chart-query>
+                  </ods-chart>
+                </ods-dataset-context>
               </div>
             </div>
-            <ods-dataset-context
-              context="autonomousshuttleusage"
-              autonomousshuttleusage-dataset="autonomous-shuttle-usage"
-            >
-              <ods-chart
-                timescale="day weekday"
-                scientific-display="false"
-                align-month="true"
-              >
-                <ods-chart-query
-                  context="autonomousshuttleusage"
-                  field-x="date"
-                  maxpoints="0"
-                  timescale="day weekday"
-                  sort="serie1-1"
-                >
-                  <ods-chart-serie
-                    expression-y="number_of_passengers"
-                    chart-type="bar"
-                    function-y="SUM"
-                    label-y="Total Number of Passengers"
-                    color="#0073b3"
-                    scientific-display="true"
-                  >
-                  </ods-chart-serie>
-                </ods-chart-query>
-              </ods-chart>
-            </ods-dataset-context>
           </div>
         </div>
       </div>
@@ -340,40 +357,44 @@
         operating the vehicle within range of the RSU until the connection was
         reestablished and autonomous mode resumed.
       </p>
-      <div class="col-md-12">
-        <div class="chart-title">
-          <div class="center">
-            Disengagements by Cause<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Disengagement">3</a>]</sup
-            >
-          </div>
-        </div>
-        <ods-dataset-context
-          context="autonomousshuttledisengagement"
-          autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
-        >
-          <ods-chart
-            scientific-display="false"
-            labels-x-length="48"
-            align-month="true"
-          >
-            <ods-chart-query
-              context="autonomousshuttledisengagement"
-              field-x="cause"
-              maxpoints="0"
-              sort="serie1-1"
-            >
-              <ods-chart-serie
-                expression-y="vehicle_speed"
-                chart-type="column"
-                function-y="COUNT"
-                color="#FE6260"
-                scientific-display="true"
+      <div class="row">
+        <div class="col-md-12">
+          <div class="chart-title">
+            <div class="center">
+              Disengagements by Cause<sup
+                >[<a href="#CASSI-Autonomous-Shuttle-Disengagement">3</a>]</sup
               >
-              </ods-chart-serie>
-            </ods-chart-query>
-          </ods-chart>
-        </ods-dataset-context>
+            </div>
+          </div>
+          <ods-dataset-context
+            context="autonomousshuttledisengagement"
+            autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
+          >
+            <ods-chart
+              scientific-display="false"
+              display-legend="false"
+              labels-x-length="48"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="autonomousshuttledisengagement"
+                field-x="cause"
+                maxpoints="0"
+                sort="serie1-1"
+              >
+                <ods-chart-serie
+                  expression-y="vehicle_speed"
+                  chart-type="column"
+                  function-y="COUNT"
+                  label-y="Number of Respondents"
+                  color="#FE6260"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </div>
       </div>
       <div class="col-md-12">
         <div class="center">
@@ -389,88 +410,90 @@
           shows the number of events and the reason behind each disengagement.
         </p>
       </div>
-      <div class="col-md-6">
-        <div class="chart-title">
-          <div class="laptop-width-fix center">
-            Density of Disengagement Events<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Disengagement">3</a>]</sup
-            >
+      <div class="row">
+        <div class="col-md-6">
+          <div class="chart-title">
+            <div class="center">
+              Density of Disengagement Events<sup
+                >[<a href="#CASSI-Autonomous-Shuttle-Disengagement">3</a>]</sup
+              >
+            </div>
           </div>
-        </div>
-        <ods-dataset-context
-          context="autonomousshuttledisengagement"
-          autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
-        >
-          <ods-map
-            no-refit="true"
-            scroll-wheel-zoom="false"
-            basemap="jawg.streets"
-            location="16,35.7826,-78.82484"
+          <ods-dataset-context
+            context="autonomousshuttledisengagement"
+            autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
           >
-            <ods-map-layer-group>
-              <ods-map-layer
-                context="autonomousshuttledisengagement"
-                color-gradient="{'1':'#FF0000','0.4':'#0000FF','0.6':'#00FFFF','0.7':'#00FF00','0.8':'#FFFF00'}"
-                picto="ods-circle"
-                show-marker="true"
-                display="heatmap"
-                radius="4"
-                function="COUNT"
-                expression="vehicle_speed"
-                shape-opacity="0.5"
-                point-opacity="1"
-                border-color="#FFFFFF"
-                border-opacity="1"
-                border-size="1"
-                border-pattern="solid"
-                caption-picto-color="#E5E5E5"
-                size-function="linear"
-              ></ods-map-layer>
-            </ods-map-layer-group>
-          </ods-map>
-        </ods-dataset-context>
-      </div>
-      <div class="col-md-6">
-        <div class="chart-title add-whitespace">
-          <div class="center">
-            Frequency and Reasons for Disengagement Events<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Disengagement">3</a>]</sup
+            <ods-map
+              no-refit="true"
+              scroll-wheel-zoom="false"
+              basemap="jawg.streets"
+              location="16,35.7826,-78.82484"
             >
-          </div>
+              <ods-map-layer-group>
+                <ods-map-layer
+                  context="autonomousshuttledisengagement"
+                  color-gradient="{'1':'#FF0000','0.4':'#0000FF','0.6':'#00FFFF','0.7':'#00FF00','0.8':'#FFFF00'}"
+                  picto="ods-circle"
+                  show-marker="true"
+                  display="heatmap"
+                  radius="4"
+                  function="COUNT"
+                  expression="vehicle_speed"
+                  shape-opacity="0.5"
+                  point-opacity="1"
+                  border-color="#FFFFFF"
+                  border-opacity="1"
+                  border-size="1"
+                  border-pattern="solid"
+                  caption-picto-color="#E5E5E5"
+                  size-function="linear"
+                ></ods-map-layer>
+              </ods-map-layer-group>
+            </ods-map>
+          </ods-dataset-context>
         </div>
-        <ods-dataset-context
-          context="autonomousshuttledisengagement"
-          autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
-        >
-          <ods-map
-            no-refit="true"
-            scroll-wheel-zoom="false"
-            basemap="jawg.streets"
-            location="16,35.7826,-78.82484"
+        <div class="col-md-6">
+          <div class="chart-title add-whitespace">
+            <div class="center">
+              Frequency and Reasons for Disengagement Events<sup
+                >[<a href="#CASSI-Autonomous-Shuttle-Disengagement">3</a>]</sup
+              >
+            </div>
+          </div>
+          <ods-dataset-context
+            context="autonomousshuttledisengagement"
+            autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
           >
-            <ods-map-layer-group>
-              <ods-map-layer
-                context="autonomousshuttledisengagement"
-                color="#263891"
-                picto="ods-circle"
-                show-marker="true"
-                display="clusters"
-                function="COUNT"
-                expression="vehicle_speed"
-                shape-opacity="0.5"
-                point-opacity="1"
-                border-color="#FFFFFF"
-                border-opacity="1"
-                border-size="1"
-                border-pattern="solid"
-                caption-picto-color="#E5E5E5"
-                size-min="3"
-                size-max="5"
-                size-function="linear"
-              ></ods-map-layer>
-            </ods-map-layer-group>
-          </ods-map>
-        </ods-dataset-context>
+            <ods-map
+              no-refit="true"
+              scroll-wheel-zoom="false"
+              basemap="jawg.streets"
+              location="16,35.7826,-78.82484"
+            >
+              <ods-map-layer-group>
+                <ods-map-layer
+                  context="autonomousshuttledisengagement"
+                  color="#263891"
+                  picto="ods-circle"
+                  show-marker="true"
+                  display="clusters"
+                  function="COUNT"
+                  expression="vehicle_speed"
+                  shape-opacity="0.5"
+                  point-opacity="1"
+                  border-color="#FFFFFF"
+                  border-opacity="1"
+                  border-size="1"
+                  border-pattern="solid"
+                  caption-picto-color="#E5E5E5"
+                  size-min="3"
+                  size-max="5"
+                  size-function="linear"
+                ></ods-map-layer>
+              </ods-map-layer-group>
+            </ods-map>
+          </ods-dataset-context>
+        </div>
       </div>
     </div>
   </div>
@@ -479,617 +502,684 @@
 <section>
   <h3 class="center">Survey Responses</h3>
   <br />
-  <div class="chart-title add-whitespace">
-    <div class="center">Where did you get on the shuttle?</div>
-  </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="30"
-      align-month="true"
-    >
-      <ods-chart-query
+  <div class="row">
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          Where did you get on the shuttle?<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
         context="cassiincarysbondparkridersurvey"
-        field-x="where_did_you_get_on_the_shuttle"
-        maxpoints="0"
-        sort="serie1-1"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
       >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="bar"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="30"
+          align-month="true"
         >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
-  <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">Where did you get off the shuttle?</div>
-  </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="30"
-      align-month="true"
-    >
-      <ods-chart-query
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="where_did_you_get_on_the_shuttle"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="bar"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
+    </div>
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          Where did you get off the shuttle?<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
         context="cassiincarysbondparkridersurvey"
-        field-x="where_did_you_get_off_the_shuttle"
-        maxpoints="0"
-        sort="serie1-1"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
       >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="bar"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="30"
+          align-month="true"
         >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
-  <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">Did you visit Bond Park to ride the shuttle?</div>
-  </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="21"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="did_you_visit_bond_park_to_ride_the_shuttle"
-        maxpoints="0"
-        sort="serie1-1"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
-          color-thresholds="[]"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
-  <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">How did you get to Bond Park?</div>
-  </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="30"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="how_did_you_get_to_bond_park"
-        maxpoints="0"
-        sort="serie1-1"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="bar"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
-  <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">I had a good experience using the shuttle.</div>
-  </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="31"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="i_had_a_good_experience_using_the_shuttle"
-        maxpoints="0"
-        sort="serie1-1"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
-          color-thresholds="[]"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
-  <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">
-      The shuttle arrived at my stop within a reasonable amount of time.
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="where_did_you_get_off_the_shuttle"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="bar"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
     </div>
   </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="31"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="the_shuttle_arrived_at_my_stop_within_a_reasonable_amount_of_time"
-        maxpoints="0"
-        sort="serie1-1"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
-          color-thresholds="[]"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
   <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">
-      I was able to get to my destination in a reasonable amount of time.
+  <div class="row">
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          Did you visit Bond Park to ride the shuttle?<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="21"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="did_you_visit_bond_park_to_ride_the_shuttle"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+              color-thresholds="[]"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
+    </div>
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          How did you get to Bond Park?<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="30"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="how_did_you_get_to_bond_park"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="bar"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
     </div>
   </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="31"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="i_was_able_to_get_to_my_destination_in_a_reasonable_amount_of_time"
-        maxpoints="0"
-        sort="serie1-1"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
-          color-thresholds="[]"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
   <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">
-      I had a good experience with the attendant on the shuttle.
+  <div class="row">
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          I had a good experience using the shuttle.<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="31"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="i_had_a_good_experience_using_the_shuttle"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+              color-thresholds="[]"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
+    </div>
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          I had a good experience with the attendant on the shuttle.
+          <sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="31"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="i_had_a_good_experience_with_the_attendant_on_the_shuttle"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+              color-thresholds="[]"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
     </div>
   </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="31"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="i_had_a_good_experience_with_the_attendant_on_the_shuttle"
-        maxpoints="0"
-        sort="serie1-1"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
-          color-thresholds="[]"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
   <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">I support seeing more driverless shuttles in Cary.</div>
-  </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="31"
-      align-month="true"
-    >
-      <ods-chart-query
+  <div class="row">
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          The shuttle arrived at my stop within a reasonable amount of time.
+          <sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
         context="cassiincarysbondparkridersurvey"
-        field-x="i_support_seeing_more_driverless_shuttles_in_cary"
-        maxpoints="0"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
       >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          min=""
-          scientific-display="true"
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="31"
+          align-month="true"
         >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
-  <br />
-
-    <!-- TODO:  Combine the Before and After Shuttle Questions to 1 Chart-->
-
-  <div class="chart-title add-whitespace">
-    <div class="center">
-      BEFORE riding the shuttle, I felt that driverless vehicles are:
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="the_shuttle_arrived_at_my_stop_within_a_reasonable_amount_of_time"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+              color-thresholds="[]"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
+    </div>
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          I was able to get to my destination in a reasonable amount of time.
+          <sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="31"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="i_was_able_to_get_to_my_destination_in_a_reasonable_amount_of_time"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+              color-thresholds="[]"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
     </div>
   </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="38"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="before_riding_the_shuttle_i_felt_that_driverless_vehicles_are"
-        maxpoints="0"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          min=""
-          scientific-display="true"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
   <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">
-      AFTER riding the shuttle, I feel that driverless vehicles are:
+  <div class="row">
+    <div class="col-md-12">
+      <div class="chart-title add-whitespace">
+        <div class="center">
+          BEFORE & AFTER riding the shuttle, I felt that driverless vehicles
+          are:
+          <sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          single-y-axis="true"
+          single-y-axis-label="Number of Respondents"
+          color="#0073b3"
+          scientific-display="false"
+          label-x="BEFORE & AFTER riding the shuttle, I felt that driverless vehicles are:"
+          labels-x-length="38"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="before_riding_the_shuttle_i_felt_that_driverless_vehicles_are"
+            maxpoints="0"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              function-y="COUNT"
+              label-y="BEFORE"
+              color="#0073b3"
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="after_riding_the_shuttle_i_feel_that_driverless_vehicles_are"
+            maxpoints="0"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              function-y="COUNT"
+              label-y="AFTER"
+              color="#FE6260"
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
     </div>
   </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="38"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="after_riding_the_shuttle_i_feel_that_driverless_vehicles_are"
-        maxpoints="0"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          min=""
-          scientific-display="true"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
   <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">
-      Did you ride the driverless shuttle for a fun experience or to get to a
-      specific destination?
+  <div class="row">
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          I support seeing more driverless shuttles in Cary.<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="31"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="i_support_seeing_more_driverless_shuttles_in_cary"
+            maxpoints="0"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              min=""
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
+    </div>
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          Would you ride the shuttle again?<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="30"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="would_you_ride_the_shuttle_again"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
     </div>
   </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="30"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="did_you_ride_the_driverless_shuttle_for_a_fun_experience_or_to_get_to_a_specific_destination"
-        maxpoints="0"
-        sort="serie1-1"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
   <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">
-      If you had not taken the driverless shuttle, which of the following modes
-      of transportation best describes how you would have traveled?
+  <div class="row">
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          Did you ride the driverless shuttle for a fun experience or to get to
+          a specific destination?
+          <sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="30"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="did_you_ride_the_driverless_shuttle_for_a_fun_experience_or_to_get_to_a_specific_destination"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
+    </div>
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          If you had not taken the driverless shuttle, which of the following
+          modes of transportation best describes how you would have traveled?
+          <sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="30"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="if_you_had_not_taken_the_driverless_shuttle_which_of_the_following_modes_of_transportation_best_desc"
+            maxpoints="0"
+            sort="serie1-1"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
     </div>
   </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="30"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="if_you_had_not_taken_the_driverless_shuttle_which_of_the_following_modes_of_transportation_best_desc"
-        maxpoints="0"
-        sort="serie1-1"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
   <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">Would you ride the shuttle again?</div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          What is your age?<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="15"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="what_is_your_age"
+            maxpoints="0"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              min=""
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
+    </div>
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          Are you a resident of Cary?<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurvey"
+        cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
+      >
+        <ods-chart
+          scientific-display="false"
+          display-legend="false"
+          labels-x-length="15"
+          align-month="true"
+        >
+          <ods-chart-query
+            context="cassiincarysbondparkridersurvey"
+            field-x="are_you_a_resident_of_cary"
+            maxpoints="0"
+          >
+            <ods-chart-serie
+              expression-y="primary_column_survey_id"
+              chart-type="column"
+              labelsposition="inside"
+              function-y="COUNT"
+              label-y="Number of Respondents"
+              color="#0073b3"
+              min=""
+              scientific-display="true"
+            >
+            </ods-chart-serie>
+          </ods-chart-query>
+        </ods-chart>
+      </ods-dataset-context>
+    </div>
   </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="30"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="would_you_ride_the_shuttle_again"
-        maxpoints="0"
-        sort="serie1-1"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          scientific-display="true"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
   <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">What is your age?</div>
+</section>
+<section>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="chart-title add-whitespace">
+        <div class="center">
+          ZIP Codes of Respondents<sup
+            >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey-ZIP-Codes"
+              >6</a
+            >]</sup
+          >
+        </div>
+      </div>
+      <ods-dataset-context
+        context="cassiincarysbondparkridersurveyrespondentzipcodes"
+        cassiincarysbondparkridersurveyrespondentzipcodes-dataset="cassi-in-cary-s-bond-park-rider-survey-respondent-zip-codes"
+      >
+        <ods-map
+          no-refit="true"
+          scroll-wheel-zoom="false"
+          search-box="true"
+          toolbar-fullscreen="true"
+          toolbar-geolocation="true"
+          basemap="jawg.streets"
+          location="5,39.21523,-97.42676"
+        >
+          <ods-map-layer-group>
+            <ods-map-layer
+              context="cassiincarysbondparkridersurveyrespondentzipcodes"
+              color-numeric-ranges="{'3.6':'#CCBBD8','6.2':'#BFA8CF','8.8':'#B296C6','11.4':'#A584BD','14.0':'#9872B4','16.6':'#8C5FAB','19.2':'#7F4DA2','21.8':'#723B99','24.4':'#652990','27.0':'#591787'}"
+              color-undefined="#1B5AA5"
+              color-out-of-bounds="#1BA566"
+              color-by-field="respondent"
+              color-numeric-range-min="1"
+              picto="ods-circle"
+              show-marker="true"
+              display="choropleth"
+              shape-opacity="1"
+              point-opacity="1"
+              border-color="#000000"
+              border-opacity="0.5"
+              border-size="1"
+              border-pattern="solid"
+              caption="false"
+              caption-picto-color="#E5E5E5"
+              title="CASSI in Cary's Bond Park - Rider Survey Respondent ZIP Codes"
+            ></ods-map-layer>
+          </ods-map-layer-group>
+        </ods-map>
+      </ods-dataset-context>
+    </div>
   </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="15"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="what_is_your_age"
-        maxpoints="0"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          min=""
-          scientific-display="true"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
-  <br />
-
-  <div class="chart-title add-whitespace">
-    <div class="center">Are you a resident of Cary?</div>
-  </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurvey"
-    cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-  >
-    <ods-chart
-      scientific-display="false"
-      display-legend="false"
-      labels-x-length="15"
-      align-month="true"
-    >
-      <ods-chart-query
-        context="cassiincarysbondparkridersurvey"
-        field-x="are_you_a_resident_of_cary"
-        maxpoints="0"
-      >
-        <ods-chart-serie
-          expression-y="primary_column_survey_id"
-          chart-type="column"
-          labelsposition="inside"
-          function-y="COUNT"
-          label-y="Number of Respondents"
-          color="#0073b3"
-          min=""
-          scientific-display="true"
-        >
-        </ods-chart-serie>
-      </ods-chart-query>
-    </ods-chart>
-  </ods-dataset-context>
-  <br />
 </section>
 <br />
-<section>
-  <div class="chart-title add-whitespace">
-    <div class="center">ZIP Codes of Respondents</div>
-  </div>
-  <ods-dataset-context
-    context="cassiincarysbondparkridersurveyrespondentzipcodes"
-    cassiincarysbondparkridersurveyrespondentzipcodes-dataset="cassi-in-cary-s-bond-park-rider-survey-respondent-zip-codes"
-  >
-    <ods-map
-      no-refit="true"
-      scroll-wheel-zoom="false"
-      search-box="true"
-      toolbar-fullscreen="true"
-      toolbar-geolocation="true"
-      basemap="jawg.streets"
-      location="5,39.21523,-97.42676"
-    >
-      <ods-map-layer-group>
-        <ods-map-layer
-          context="cassiincarysbondparkridersurveyrespondentzipcodes"
-          color-numeric-ranges="{'3.6':'#CCBBD8','6.2':'#BFA8CF','8.8':'#B296C6','11.4':'#A584BD','14.0':'#9872B4','16.6':'#8C5FAB','19.2':'#7F4DA2','21.8':'#723B99','24.4':'#652990','27.0':'#591787'}"
-          color-undefined="#1B5AA5"
-          color-out-of-bounds="#1BA566"
-          color-by-field="respondent"
-          color-numeric-range-min="1"
-          picto="ods-circle"
-          show-marker="true"
-          display="choropleth"
-          shape-opacity="1"
-          point-opacity="1"
-          border-color="#000000"
-          border-opacity="0.5"
-          border-size="1"
-          border-pattern="solid"
-          caption="false"
-          caption-picto-color="#E5E5E5"
-          title="CASSI in Cary's Bond Park - Rider Survey Respondent ZIP Codes"
-        ></ods-map-layer>
-      </ods-map-layer-group>
-    </ods-map>
-  </ods-dataset-context>
-</section>
-<br>
 <section>
   <div class="containter">
     <h2>Data Sources</h2>
@@ -1146,7 +1236,7 @@
           <td>
             <a
               href="https://data.townofcary.org/explore/dataset/cassi-in-cary-s-bond-park-rider-survey-respondent-zip-codes/information/"
-              >CASSI in Cary's Bond Park Rider Survey</a
+              >CASSI in Cary's Bond Park Rider Survey ZIP Codes</a
             >
           </td>
         </tr>
