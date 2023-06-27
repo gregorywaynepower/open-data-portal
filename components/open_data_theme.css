@@ -211,6 +211,13 @@
     color: #112980;
 }
 
+.ods-dataset-selection-list__catalog-sort {
+	display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5em;
+}
+
 .leaflet-control-attribution img {
     width: auto !important;
 }
