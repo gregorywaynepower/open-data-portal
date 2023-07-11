@@ -245,6 +245,28 @@
     U+FEFF, U+FFFD;
 }
 
+/* Fix Swagger UI Headings */
+
+.swagger-ui .info .title {
+	color: #ffffff !important;
+}
+
+.swagger-ui .opblock-tag {
+	color: #ffffff !important;
+}
+
+.swagger-ui .opblock-tag:hover {
+	color: #3b4151 !important;
+}
+
+.swagger-ui .opblock-tag small {
+	color: inherit;
+}
+
+.swagger-ui .opblock-tag small:hover {
+	color: inherit;
+}
+
 /* Fix Text Not Showing Up in Builder */
 
 .ods-mapbuilder__datasets-panel__layer {
