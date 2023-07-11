@@ -353,6 +353,14 @@
   transition: background 0.2s;
 }
 
+.swagger-ui .dialog-ux .modal-ux-header h3 {
+	color: #ffffff;
+}
+
+.swagger-ui .opblock .opblock-section-header h4 {
+	background: #ffffff;
+}
+
 /* Fix Text Not Showing Up in Builder */
 
 .ods-mapbuilder__datasets-panel__layer {
