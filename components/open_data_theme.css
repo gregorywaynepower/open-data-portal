@@ -267,6 +267,50 @@
   color: inherit;
 }
 
+/* Select this H4 Element in Particular to Fix :hover Stylings*/
+
+#swagger-ui-container > div > div:nth-child(2) > div:nth-child(5) > section > section > h4 {
+  background: #3b4151;
+  color: #ffffff;
+  transition: color 0.2s;
+  transition: background 0.2s;
+}
+
+#swagger-ui-container > div > div:nth-child(2) > div:nth-child(5) > section > section > h4 > button {
+  background: #3b4151;
+  color: #ffffff;
+  transition: color 0.2s;
+  transition: background 0.2s;
+}
+
+#swagger-ui-container > div > div:nth-child(2) > div:nth-child(5) > section > section > h4 > button > span {
+  background: #3b4151;
+  color: #ffffff;
+  transition: color 0.2s;
+  transition: background 0.2s;
+}
+
+#swagger-ui-container > div > div:nth-child(2) > div:nth-child(5) > section > section > h4:hover {
+  background: #ffffff;
+  color: #3b4151;
+  transition: color 0.2s;
+  transition: background 0.2s;
+}
+
+#swagger-ui-container > div > div:nth-child(2) > div:nth-child(5) > section > section > h4:hover > button {
+  background: #ffffff;
+  color: #3b4151;
+  transition: color 0.2s;
+  transition: background 0.2s;
+}
+
+#swagger-ui-container > div > div:nth-child(2) > div:nth-child(5) > section > section > h4:hover > button > span {
+  background: #ffffff;
+  color: #3b4151;
+  transition: color 0.2s;
+  transition: background 0.2s;
+}
+
 /* Fix Text Not Showing Up in Builder */
 
 .ods-mapbuilder__datasets-panel__layer {
