@@ -249,6 +249,7 @@
 
 .swagger-ui .info .title {
   color: #ffffff !important;
+  background: #16386d;
 }
 
 .swagger-ui .opblock-tag {
@@ -256,7 +257,7 @@
 }
 
 .swagger-ui .opblock-tag:hover {
-  color: #3b4151 !important;
+  color: #16386d !important;
 }
 
 .swagger-ui .opblock-tag small {
@@ -276,7 +277,7 @@
   > section
   > section
   > h4 {
-  background: #3b4151;
+  background: #16386d;
   color: #ffffff;
   transition: color 0.2s;
   transition: background 0.2s;
@@ -290,7 +291,7 @@
   > section
   > h4
   > button {
-  background: #3b4151;
+  background: #16386d;
   color: #ffffff;
   transition: color 0.2s;
   transition: background 0.2s;
@@ -305,7 +306,7 @@
   > h4
   > button
   > span {
-  background: #3b4151;
+  background: #16386d;
   color: #ffffff;
   transition: color 0.2s;
   transition: background 0.2s;
@@ -319,7 +320,7 @@
   > section
   > h4:hover {
   background: #ffffff;
-  color: #3b4151;
+  color: #16386d;
   transition: color 0.2s;
   transition: background 0.2s;
 }
@@ -333,7 +334,7 @@
   > h4:hover
   > button {
   background: #ffffff;
-  color: #3b4151;
+  color: #16386d;
   transition: color 0.2s;
   transition: background 0.2s;
 }
@@ -348,7 +349,7 @@
   > button
   > span {
   background: #ffffff;
-  color: #3b4151;
+  color: #16386d;
   transition: color 0.2s;
   transition: background 0.2s;
 }
@@ -413,7 +414,7 @@ a:hover {
 .main--page {
   margin: 0px;
   background: url(https://data.townofcary.org/assets/theme_image/Homepage_Hombre.png),
-    linear-gradient(180deg, #acc8df, #285170);
+    linear-gradient(180deg, #acc8df, #223849);
   background-repeat: no-repeat, no-repeat;
   background-position:
     left top,
@@ -430,7 +431,7 @@ a:hover {
 .main--catalog {
   margin: 0px;
   background: url(https://data.townofcary.org/assets/theme_image/Homepage_Hombre.png),
-    linear-gradient(180deg, #acc8df, #285170);
+    linear-gradient(180deg, #acc8df, #223849);
   background-repeat: no-repeat, no-repeat;
   background-position:
     left top,
@@ -441,7 +442,7 @@ a:hover {
 .main--chartbuilder {
   margin: 0px;
   background: url(https://data.townofcary.org/assets/theme_image/Homepage_Hombre.png),
-    linear-gradient(180deg, #acc8df, #285170);
+    linear-gradient(180deg, #acc8df, #223849);
   background-repeat: no-repeat, no-repeat;
   background-position:
     left top,
@@ -452,7 +453,7 @@ a:hover {
 .page-layout-single-main-contact {
   margin: 0px;
   background: url(https://data.townofcary.org/assets/theme_image/Homepage_Hombre.png),
-    linear-gradient(180deg, #acc8df, #285170);
+    linear-gradient(180deg, #acc8df, #223849);
   background-repeat: no-repeat, no-repeat;
   background-position:
     left top,
@@ -463,7 +464,7 @@ a:hover {
 .ods-mapbuilder__main {
   margin: 0px;
   background: url(https://data.townofcary.org/assets/theme_image/Homepage_Hombre.png),
-    linear-gradient(180deg, #acc8df, #285170);
+    linear-gradient(180deg, #acc8df, #223849);
   background-repeat: no-repeat, no-repeat;
   background-position:
     left top,
@@ -474,7 +475,7 @@ a:hover {
 .main--dataset {
   margin: 0px;
   background: url(https://data.townofcary.org/assets/theme_image/Homepage_Hombre.png),
-    linear-gradient(180deg, #acc8df, #285170);
+    linear-gradient(180deg, #acc8df, #223849);
   background-repeat: no-repeat, no-repeat;
   background-position:
     left top,
@@ -503,7 +504,7 @@ a:hover {
 }
 
 .ods-catalog-sort-selected-label {
-  color: #285170;
+  color: #223849;
 }
 
 .ng-scope {
@@ -548,7 +549,7 @@ a:hover {
 
 .ods-catalog-card__keyword {
   font-size: 16px;
-  background-color: #26597c !important;
+  background-color: #223849 !important;
 }
 
 .ods-catalog-card__title {
@@ -656,7 +657,7 @@ h3 {
   padding: 10px;
   margin-bottom: 10px;
   position: relative;
-  background: #10263dcc;
+  background: #16386d;
   text-transform: uppercase;
 }
 
@@ -750,7 +751,7 @@ h2 {
   margin-left: 0;
   margin-bottom: 0.6rem;
   width: 100%;
-  background: #285170;
+  background: #223849;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -848,7 +849,7 @@ h2 {
 .dividerStrip {
   width: 100%;
   max-width: 1200px;
-  border-top: 8px solid #26597c;
+  border-top: 8px solid #223849;
   display: block;
   margin: auto;
 }
@@ -914,40 +915,40 @@ h1 {
 }
 
 .ods-catalog-card__visualization {
-  color: #26597c !important;
+  color: #223849 !important;
 }
 
 .ods-filters__count {
   color: #ffffff !important;
-  background: #285170;
+  background: #223849;
   font-weight: 100 !important;
   padding: 10px !important;
 }
 
 .ods-filters__export-catalog-title {
   color: #ffffff !important;
-  background: #285170;
+  background: #223849;
   font-weight: 100 !important;
   padding: 10px !important;
 }
 
 .ods-filters__filters {
   color: #ffffff !important;
-  background: #285170;
+  background: #223849;
   font-weight: 100 !important;
   padding: 10px !important;
 }
 
 .ods-filters__filters-summary {
   color: #ffffff !important;
-  background: #285170;
+  background: #223849;
   font-weight: 100 !important;
   padding: 10px !important;
 }
 
 .odswidget-facet__facet-title {
   color: #ffffff !important;
-  background: #285170;
+  background: #223849;
   font-weight: 100 !important;
   padding: 10px !important;
 }
