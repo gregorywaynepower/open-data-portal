@@ -354,11 +354,11 @@
 }
 
 .swagger-ui .dialog-ux .modal-ux-header h3 {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 .swagger-ui .opblock .opblock-section-header h4 {
-	background: #ffffff;
+  background: #ffffff;
 }
 
 /* Fix Text Not Showing Up in Builder */
