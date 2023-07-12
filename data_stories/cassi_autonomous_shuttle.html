@@ -197,8 +197,8 @@
       context="autonomousshuttleusage"
       autonomousshuttleusage-dataset="autonomous-shuttle-usage"
     >
-      <div class="row">
-        <div class="col-sm-offset-4 col-sm-4">
+      <div class="row justify-content-around">
+        <div class="col-4 col-sm-4">
           <!-- KPI box component -->
           <div class="kpi-card">
             <i class="kpi-icon fa fa-users" aria-hidden="true"></i>
@@ -219,7 +219,7 @@
           </div>
         </div>
 
-        <div class="col-sm-offset-4 col-sm-4">
+        <div class="col-sm-4">
           <!-- KPI box component -->
           <div class="kpi-card">
             <i class="kpi-icon fa fa-bus" aria-hidden="true"></i>
@@ -241,7 +241,7 @@
         </div>
       </div>
     </ods-dataset-context>
-
+    <br>
     <div class="row">
       <div class="col-md-12">
         <div class="chart-title">
@@ -452,7 +452,63 @@
         </figure>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h3>Vehicle Speed</h3>
+        </div>
+      </div>
+    </div>
+    <ods-dataset-context
+      context="autonomousshuttleusage"
+      autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+    >
+      <div class="row justify-content-around">
+        <div class="col-sm-4 col-md-4">
+          <!-- KPI box component -->
+          <div class="kpi-card">
+            <i class="fa-solid fa-gauge-circle-bolt" aria-hidden="true"></i>
+            <p
+              class="kpi-title"
+              ods-aggregation="myvar"
+              ods-aggregation-context="autonomousshuttleusage"
+              ods-aggregation-function="AVG"
+              ods-aggregation-expression="average_speed_mph"
+            >
+              {{ myvar | number : 1 }} mph
+            </p>
+            <p class="kpi-description">
+              Average Vehicle Speed<sup
+                >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-md-4">
+          <!-- KPI box component -->
+          <div class="kpi-card">
+            <i class="fa-solid fa-gauge-max" aria-hidden="true"></i>
+            <p
+              class="kpi-title"
+              ods-aggregation="myvar"
+              ods-aggregation-context="autonomousshuttleusage"
+              ods-aggregation-function="MAX"
+              ods-aggregation-expression="max_speed_mph"
+            >
+              {{ myvar | number : 1 }} mph
+            </p>
+            <p class="kpi-description">
+              Maximum Reported Speed<sup
+                >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </ods-dataset-context>
   </div>
+  <br>
 </section>
 <section>
   <div class="container">

@@ -28,6 +28,13 @@
     content: normal;
 }
 
+@media only screen and (min-width: 426px) {
+    .justify-content-around {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
 /* KPI Card
 ========================================================================== */
 .kpi-card {
