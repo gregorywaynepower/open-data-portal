@@ -592,6 +592,61 @@
     </div>
     <div class="row">
       <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Disengagement Cause by Weeks into Pilot<sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Disengagement">3</a>]</sup
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <figure>
+          <ods-dataset-context
+            context="autonomousshuttledisengagement"
+            autonomousshuttledisengagement-dataset="autonomous-shuttle-disengagement"
+          >
+            <ods-chart scientific-display="false" align-month="false">
+              <ods-chart-query
+                context="autonomousshuttledisengagement"
+                field-x="weeks_into_pilot"
+                maxpoints="0"
+                stacked="normal"
+                series-breakdown="cause"
+                category-colors="{'Signalized Intersection':'#CC6677','Signal Loss':'#332288','Fault Code/Error Code':'#DDCC77','Station Blocked':'#117733','Other Road Users':'#88CCEE','Obstacle Detection':'#882255','Shuttle Manually Deviated From Approved Path':'#44AA99','Vegetation':'#999933','Priority Zone':'#AA4499'}"
+              >
+                <ods-chart-serie
+                  expression-y="vehicle_speed"
+                  chart-type="column"
+                  function-y="COUNT"
+                  color="range-Paired"
+                  display-values="false"
+                  display-stack-values="false"
+                  step=""
+                  scientific-display="true"
+                  color-thresholds="[]"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          We observed that Signal Loss was a common cause of disengagement
+          from autonomous driving mode early in the pilot period, whereas
+          Signalized Intersection was a common cause of disengagement later on
+          in the pilot period.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
         <h4>Definitions for Each Cause of Disengagement Type</h4>
       </div>
     </div>
