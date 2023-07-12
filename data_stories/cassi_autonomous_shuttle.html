@@ -165,7 +165,7 @@
           <p style="text-align: left">
             Beep provided weekly data reports to Cary and NCDOT that included
             ridership and operations data. The following charts summarize these
-            data for the pilot period
+            data for the pilot period.
           </p>
         </div>
       </div>
@@ -201,7 +201,7 @@
         <div class="col-sm-offset-4 col-sm-4">
           <!-- KPI box component -->
           <div class="kpi-card">
-            <i class="kpi-icon fa fa-bus" aria-hidden="true"></i>
+            <i class="kpi-icon fa fa-users" aria-hidden="true"></i>
             <p
               class="kpi-title"
               ods-aggregation="myvar"
@@ -213,6 +213,27 @@
             </p>
             <p class="kpi-description">
               Total Riders Served<sup
+                >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm-offset-4 col-sm-4">
+          <!-- KPI box component -->
+          <div class="kpi-card">
+            <i class="kpi-icon fa fa-bus" aria-hidden="true"></i>
+            <p
+              class="kpi-title"
+              ods-aggregation="myvar"
+              ods-aggregation-context="autonomousshuttleusage"
+              ods-aggregation-function="SUM"
+              ods-aggregation-expression="number_of_trips_operated"
+            >
+              {{ myvar | number }}
+            </p>
+            <p class="kpi-description">
+              Total Number of Trips<sup
                 >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
               >
             </p>
@@ -266,6 +287,40 @@
             pilot period.
           </p>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Average Hours of Operation by Week<sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+            >
+          </div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="autonomousshuttleusage"
+            autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+          >
+            <ods-chart scientific-display="false" align-month="true">
+              <ods-chart-query
+                context="autonomousshuttleusage"
+                field-x="weeks_into_pilot"
+                maxpoints="0"
+              >
+                <ods-chart-serie
+                  expression-y="number_of_hours_operated"
+                  chart-type="column"
+                  function-y="AVG"
+                  color="#E5352E"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
       </div>
     </div>
     <div class="row">
@@ -404,7 +459,9 @@
     <div class="row">
       <div class="col-md-12">
         <div class="center">
-          <h3>Reasons for Disengagement from Autonomous Mode</h3>
+          <h3>
+            Reasons for Disengagement from & Time Spent in Autonomous Mode
+          </h3>
         </div>
         <p>
           The autonomous shuttle uses an automated driving system (ADS) to
@@ -527,6 +584,63 @@
       </div>
     </div>
     <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h3>Percentage Time in Autonomous Mode by Week</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Percentage Time in Autonomous Mode by Week<sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+            >
+          </div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="autonomousshuttleusage"
+            autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+            autonomousshuttleusage-parameters="{'sort':'-date'}"
+          >
+            <ods-chart scientific-display="false" align-month="true">
+              <ods-chart-query
+                context="autonomousshuttleusage"
+                field-x="weeks_into_pilot"
+                maxpoints="0"
+              >
+                <ods-chart-serie
+                  expression-y="autonomous_runtime_percentage"
+                  chart-type="column"
+                  function-y="AVG"
+                  label-y="Percentage Time in Autonomous Mode"
+                  color="#0073b3"
+                  max="100"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          Raw data were retrieved from the shuttle and processed to produce the
+          percentage of time while the vehicle is in motion that it is either
+          being operated autonomously or manually. From the total daily manual
+          miles driven per shuttle and daily autonomous percentage per shuttle,
+          Beep estimates a weighted weekly and monthly autonomous efficiency
+          average. Beep estimated that the shuttle operated 98.3% of the time in
+          autonomous mode during the pilot period.
+        </p>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-12 col-md-12">
         <div class="center">
           <h3>Where Did Autonomous Mode Disengage?</h3>
@@ -638,7 +752,7 @@
   <div class="container">
     <div class="row">
       <div class="col col-md-12">
-        <h3 class="center">Rider Survey</h3>
+        <h2 class="center">Rider Survey</h2>
         <p>
           NCDOT implemented an online survey using Smartsheet. The survey was
           accessible through URL and QR codes at the shuttle stops and inside
@@ -651,7 +765,7 @@
     </div>
     <div class="row">
       <div class="col col-md-12">
-        <h4 style="margin-bottom: 0px">Travel Patterns</h4>
+        <h3 style="margin-bottom: 0px">Travel Patterns</h3>
         <p>
           Most respondents got on the shuttle at the Cary Senior Center (39%) or
           the Bond Park Boathouse (26%), got off the shuttle at the Cary Senior
@@ -830,9 +944,9 @@
     <br />
     <div class="row">
       <div class="col col-md-12">
-        <h4 style="margin-bottom: 0px">
+        <h3 style="margin-bottom: 0px">
           Experience with the Autonomous Shuttle and Attendant
-        </h4>
+        </h3>
         <p>
           Respondents were asked four questions to capture their level of
           agreement related to their experience using the shuttle, their
@@ -1024,9 +1138,9 @@
     <br />
     <div class="row">
       <div class="col col-md-12">
-        <h4 style="margin-bottom: 0px">
+        <h3 style="margin-bottom: 0px">
           Perception of Safety of Driverless Vehicles
-        </h4>
+        </h3>
         <p>
           Respondents were asked two questions to capture their perception of
           the safety of driverless vehicles. Respondents were asked: "On a scale
@@ -1102,7 +1216,7 @@
     <br />
     <div class="row">
       <div class="col col-md-12">
-        <h4 style="margin-bottom: 0px">Acceptance of Driverless Shuttles</h4>
+        <h3 style="margin-bottom: 0px">Acceptance of Driverless Shuttles</h3>
         <p>
           Respondents' acceptance of driverless shuttles can be evaluated based
           on their willingness to ride the autonomous shuttle again and to see
@@ -1199,7 +1313,7 @@
     <br />
     <div class="row">
       <div class="col col-md-12">
-        <h4 style="margin-bottom: 0px">Trip Purpose and Mode Choice</h4>
+        <h3 style="margin-bottom: 0px">Trip Purpose and Mode Choice</h3>
         <p>
           Most respondents (88%) rode the autonomous shuttle for a fun
           experience rather than to get to a specific destination. 8% of
@@ -1300,7 +1414,9 @@
     <br />
     <div class="row">
       <div class="col-md-12">
-        <div class="center"><h4>Respondent Demographics</h4></div>
+        <div class="center">
+          <h3>Respondent Demographics</h3>
+        </div>
         <p>
           7% of respondents were under the age of 18, 12% were age 18-29, 37%
           were age 30-49, and 44% were age 50 or older. Nearly half of
