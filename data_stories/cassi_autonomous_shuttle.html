@@ -638,10 +638,10 @@
     <div class="row">
       <div class="col-md-12">
         <p>
-          We observed that Signal Loss was a common cause of disengagement
-          from autonomous driving mode early in the pilot period, whereas
-          Signalized Intersection was a common cause of disengagement later on
-          in the pilot period.
+          We observed that Signal Loss was a common cause of disengagement from
+          autonomous driving mode early in the pilot period, whereas Signalized
+          Intersection was a common cause of disengagement later on in the pilot
+          period.
         </p>
       </div>
     </div>
@@ -1282,53 +1282,15 @@
             >
           </div>
         </div>
-        <figure>
-          <ods-dataset-context
-            context="cassiincarysbondparkridersurvey"
-            cassiincarysbondparkridersurvey-dataset="cassi-in-cary-s-bond-park-rider-survey"
-          >
-            <ods-chart
-              single-y-axis="true"
-              single-y-axis-label="Number of Respondents"
-              color="#0073b3"
-              scientific-display="false"
-              label-x="BEFORE & AFTER riding the shuttle, I felt that driverless vehicles are:"
-              labels-x-length="38"
-              align-month="true"
-            >
-              <ods-chart-query
-                context="cassiincarysbondparkridersurvey"
-                field-x="before_riding_the_shuttle_i_felt_that_driverless_vehicles_are"
-                maxpoints="0"
-              >
-                <ods-chart-serie
-                  expression-y="primary_column_survey_id"
-                  chart-type="column"
-                  function-y="COUNT"
-                  label-y="BEFORE"
-                  color="#0073b3"
-                  scientific-display="true"
-                >
-                </ods-chart-serie>
-              </ods-chart-query>
-              <ods-chart-query
-                context="cassiincarysbondparkridersurvey"
-                field-x="after_riding_the_shuttle_i_feel_that_driverless_vehicles_are"
-                maxpoints="0"
-              >
-                <ods-chart-serie
-                  expression-y="primary_column_survey_id"
-                  chart-type="column"
-                  function-y="COUNT"
-                  label-y="AFTER"
-                  color="#FE6260"
-                  scientific-display="true"
-                >
-                </ods-chart-serie>
-              </ods-chart-query>
-            </ods-chart>
-          </ods-dataset-context>
-        </figure>
+        <section class="odp_container">
+          <figure>
+            <iframe
+              src="https://flo.uri.sh/visualisation/14375974/embed"
+              title="Ridership Survey Safety Before & After"
+              class="odp_responsive-iframe"
+            ></iframe>
+          </figure>
+        </section>
       </div>
     </div>
     <br />
