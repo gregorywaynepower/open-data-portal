@@ -11,7 +11,7 @@
 
 ### Headings
 
-#### `h1`
+#### `h1` Heading
 
 The following styles will be implemented:
 
@@ -20,7 +20,7 @@ background-color: ;
 font-size: ;
 ```
 
-#### `h2`
+#### `h2` Heading
 
 The following styles will be implemented:
 
@@ -29,7 +29,7 @@ background-color: ;
 font-size: ;
 ```
 
-#### `h3`
+#### `h3` Heading
 
 The following styles will be implemented:
 
@@ -38,7 +38,7 @@ background-color: ;
 font-size: ;
 ```
 
-#### `h4`
+#### `h4` Heading
 
 The following styles will be implemented:
 
@@ -47,7 +47,7 @@ background-color: ;
 font-size: ;
 ```
 
-#### `h5`
+#### `h5` Heading
 
 The following styles will be implemented:
 
@@ -56,7 +56,7 @@ background-color: ;
 font-size: ;
 ```
 
-#### `h6`
+#### `h6` Heading
 
 The following styles will be implemented:
 
@@ -65,7 +65,7 @@ background-color: ;
 font-size: ;
 ```
 
-### Body Text
+### `<p>` Paragraph Text
 
 ```css
 background-color: ;
