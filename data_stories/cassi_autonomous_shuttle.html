@@ -431,24 +431,17 @@
             context="autonomousshuttleusage"
             autonomousshuttleusage-dataset="autonomous-shuttle-usage"
           >
-            <ods-chart
-              timescale="day weekday"
-              display-legend="false"
-              scientific-display="false"
-              align-month="true"
-            >
+            <ods-chart scientific-display="false" align-month="true">
               <ods-chart-query
                 context="autonomousshuttleusage"
-                field-x="date"
+                field-x="day_of_week"
                 maxpoints="0"
-                timescale="day weekday"
                 sort="serie1-1"
               >
                 <ods-chart-serie
-                  expression-y="number_of_passengers"
+                  expression-y="passengers_per_hour_of_availability"
                   chart-type="bar"
-                  function-y="SUM"
-                  label-y="Total Number of Passengers"
+                  function-y="AVG"
                   color="#0073b3"
                   scientific-display="true"
                 >
@@ -456,6 +449,13 @@
               </ods-chart-query>
             </ods-chart>
           </ods-dataset-context>
+          <figcaption>
+            <p>
+              When controlling for the number of hours operated by day of the
+              week, Monday appears to be the day of the week with the highest
+              ridership at 5.98 passengers per hour of operation.
+            </p>
+          </figcaption>
         </figure>
       </div>
     </div>
@@ -530,13 +530,14 @@
           The autonomous shuttle uses an automated driving system (ADS) to
           operate without a driver on a pre-determined, pre-mapped, fixed route.
           The system provides conditional automation, meaning that most driving
-          functions and roadway monitoring are automated. The shuttle uses
-          LiDAR, cameras, and GPS technology to know its location, where it is
-          going, and what is happening around it. The shuttle is programmed to
-          disengage from autonomous mode and come to a complete stop when an
-          obstacle is too close or when all required conditions for operation
-          are not met. The system then prompts the attendant to take control
-          until autonomous operation can resume.
+          functions and roadway monitoring are automated. The shuttle uses Light
+          Detection and Ranging (LiDAR), cameras, and Global Positioning System
+          (GPS) technology to know its location, where it is going, and what is
+          happening around it. The shuttle is programmed to disengage from
+          autonomous mode and come to a complete stop when an obstacle is too
+          close or when all required conditions for operation are not met. The
+          system then prompts the attendant to take control until autonomous
+          operation can resume.
         </p>
         <p>
           The vehicle's On-board Unit (OBU) was expected to receive messages
@@ -632,17 +633,15 @@
               </ods-chart-query>
             </ods-chart>
           </ods-dataset-context>
+          <figcaption>
+            <p>
+              We observed that Signal Loss was a common cause of disengagement
+              from autonomous driving mode early in the pilot period, whereas
+              Signalized Intersection was a common cause of disengagement later
+              on in the pilot period.
+            </p>
+          </figcaption>
         </figure>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <p>
-          We observed that Signal Loss was a common cause of disengagement from
-          autonomous driving mode early in the pilot period, whereas Signalized
-          Intersection was a common cause of disengagement later on in the pilot
-          period.
-        </p>
       </div>
     </div>
     <div class="row">
