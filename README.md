@@ -15,52 +15,59 @@
 
 The following styles will be implemented:
 
-- `background-color`
-- `font-size`
-- `color`
+```css
+background-color: ;
+font-size: ;
+```
 
 #### `h2`
 
 The following styles will be implemented:
 
-- `background-color`
-- `font-size`
-- `color`
+```css
+background-color: ;
+font-size: ;
+```
 
 #### `h3`
 
 The following styles will be implemented:
 
-- `background-color`
-- `font-size`
-- `color`
+```css
+background-color: ;
+font-size: ;
+```
 
 #### `h4`
 
 The following styles will be implemented:
 
-- `background-color`
-- `font-size`
-- `color`
+```css
+background-color: ;
+font-size: ;
+```
 
 #### `h5`
 
 The following styles will be implemented:
 
-- `background-color`
-- `font-size`
-- `color`
+```css
+background-color: ;
+font-size: ;
+```
 
 #### `h6`
 
 The following styles will be implemented:
 
-- `background-color`
-- `font-size`
-- `color`
+```css
+background-color: ;
+font-size: ;
+```
 
 ### Body Text
 
-- `font-family` : 'Oswald'
-- `font-size`
-- `color`
+```css
+background-color: ;
+font-size: ;
+```
