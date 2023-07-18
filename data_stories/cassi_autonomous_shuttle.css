@@ -171,8 +171,13 @@ h6 {
     max-width: 600px;
 }
 
+.survey-image {
+    width: 100%;
+    max-width: 30rem;
+}
+
 @media only screen and (min-width: 426px) {
-    
+
     /* Hack to Fix Percentage of Uptime KPI Card */
 
     .hack-kpi-card-spacing-for-mobile {
@@ -183,6 +188,10 @@ h6 {
 @media only screen and (max-width: 768px) {
     .shuttle-image {
         width: 70%;
+    }
+
+    .survey-image {
+        width: 85%;
     }
 }
 
