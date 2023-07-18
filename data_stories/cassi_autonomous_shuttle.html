@@ -235,7 +235,7 @@
               {{ myvar | number }}
             </p>
             <p class="kpi-description">
-              Total Number of Trips<sup
+              Total Trips<sup
                 >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
               >
             </p>
@@ -375,7 +375,7 @@
       <div class="col-md-6">
         <div class="chart-title">
           <div class="center">
-            Hours of Operation by Date<sup
+            Hours Operated by Date<sup
               >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
             >
           </div>
@@ -423,7 +423,7 @@
       <div class="col-md-12">
         <div class="chart-title">
           <div class="center">
-            Days of Week with Highest Ridership<sup
+            Ridership by Day of Week<sup
               >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
             >
           </div>
@@ -524,9 +524,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="center">
-          <h3>
-            Reasons for Disengagement from & Time Spent in Autonomous Mode
-          </h3>
+          <h3>Reasons for Disengagement From Autonomous Mode</h3>
         </div>
         <p>
           The autonomous shuttle uses an automated driving system (ADS) to
@@ -535,16 +533,23 @@
           functions and roadway monitoring are automated. The shuttle uses LiDAR
           (Light Detection and Ranging), cameras, and GPS (Global Positioning
           System) technology to know its location, where it is going, and what
-          is happening around it. The shuttle is programmed to disengage from
-          autonomous mode and come to a complete stop when an obstacle is too
-          close or when all required conditions for operation are not met. The
-          system then prompts the attendant to take control until autonomous
-          operation can resume.
-        </p>
-        <p>
-          The vehicle's On-board Unit (OBU) was expected to receive messages
-          from the RSU about the signal's phasing and timing and use the
-          information to operate autonomously through the intersection.
+          is happening around it. The shuttle is programmed to automatically
+          disengage from autonomous mode and come to a complete stop when an
+          obstacle is too close or when all required conditions for operation
+          are not met. The system then prompts the attendant to take control
+          until autonomous operation can resume. The attendant can also manually
+          disengage from autonomous mode when deemed necessary.
+          <br />
+          <br />
+          The leading cause of disengagement from autonomous mode into manual
+          mode was when the vehicle's Onboard Unit (OBU) lost connection to or
+          experienced miscommunication with the Roadside Unit (RSU) at the
+          intersection of Maury Odell Place and Metro Park Drive. The vehicle's
+          OBU was expected to receive messages from the RSU about the signal's
+          phasing and timing and use the information to operate autonomously
+          through the intersection. The attendant resolved this issue by
+          manually operating the vehicle within range of the RSU until the
+          connection was reestablished and autonomous mode resumed.
         </p>
       </div>
     </div>
@@ -597,7 +602,7 @@
       <div class="col-md-12">
         <div class="chart-title">
           <div class="center">
-            Disengagement Cause by Weeks into Pilot<sup
+            Disengagement by Cause and Week<sup
               >[<a href="#CASSI-Autonomous-Shuttle-Disengagement">3</a>]</sup
             >
           </div>
@@ -637,10 +642,9 @@
           </ods-dataset-context>
           <figcaption>
             <p>
-              We observed that Signal Loss was a common cause of disengagement
-              from autonomous driving mode early in the pilot period, whereas
-              Signalized Intersection was a common cause of disengagement later
-              on in the pilot period.
+              Signal Loss was a common cause of disengagement from autonomous
+              mode early in the pilot period, whereas Signalized Intersection
+              was a common cause of disengagement later on in the pilot period.
             </p>
           </figcaption>
         </figure>
@@ -648,7 +652,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <h4>Definitions for Each Cause of Disengagement Type</h4>
+        <h4>Definitions for Each Cause of Disengagement</h4>
       </div>
     </div>
     <div class="row">
@@ -705,7 +709,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="center">
-          <h3>Percentage Time in Autonomous Mode by Week</h3>
+          <h3>Time Spent in Autonomous Mode</h3>
         </div>
       </div>
     </div>
