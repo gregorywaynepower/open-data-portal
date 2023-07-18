@@ -1,3 +1,58 @@
+/* Custom Heading Sytlings */
+
+h1 {
+    color: ;
+    font-size: ;
+    line-height: ;
+    font-family: ;
+    font-weight: ;
+}
+
+h2 {
+    color: ;
+    background-color: ;
+    font-size: ;
+    line-height: ;
+    font-family: ;
+    font-weight: ;
+}
+
+h3 {
+    color: ;
+    background-color: ;
+    font-size: ;
+    line-height: ;
+    font-family: ;
+    font-weight: ;
+}
+
+h4 {
+    color: ;
+    background-color: ;
+    font-size: ;
+    line-height: ;
+    font-family: ;
+    font-weight: ;
+}
+
+h5 {
+    color: ;
+    background-color: ;
+    font-size: ;
+    line-height: ;
+    font-family: ;
+    font-weight: ;
+}
+
+h6 {
+    color: ;
+    background-color: ;
+    font-size: ;
+    line-height: ;
+    font-family: ;
+    font-weight: ;
+}
+
 /* iframe Container */
 
 .odp_container {
