@@ -1,56 +1,66 @@
-/* Custom Heading Stylings */
-
 h1 {
-    color: ;
-    font-size: ;
-    line-height: ;
-    font-family: ;
-    font-weight: ;
+    color: #003e7a !important;
+    font-size: 2rem;
+    line-height: 1.25;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: none;
 }
 
 h2 {
-    color: ;
-    background-color: ;
-    font-size: ;
-    line-height: ;
-    font-family: ;
-    font-weight: ;
+    color: #FFFFFF;
+    background-color: #003e7a;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: none;
 }
 
 h3 {
-    color: ;
-    background-color: ;
-    font-size: ;
-    line-height: ;
-    font-family: ;
-    font-weight: ;
+    color: #FFFFFF;
+    background-color: #003e7a;
+    font-size: 1.50rem;
+    line-height: 1.25;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: none;
 }
 
 h4 {
-    color: ;
-    background-color: ;
-    font-size: ;
-    line-height: ;
-    font-family: ;
-    font-weight: ;
+    color: #FFFFFF;
+    background-color: #003e7a;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: none;
 }
 
 h5 {
-    color: ;
-    background-color: ;
-    font-size: ;
-    line-height: ;
-    font-family: ;
-    font-weight: ;
+    color: #FFFFFF;
+    background-color: #003e7a;
+    font-size: 1.10rem;
+    line-height: 1.25;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: none;
 }
 
 h6 {
-    color: ;
-    background-color: ;
-    font-size: ;
-    line-height: ;
-    font-family: ;
-    font-weight: ;
+    color: #FFFFFF;
+    background-color: #003e7a;
+    font-size: 1.00rem;
+    line-height: 1.25;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: none;
 }
 
 /* iframe Container */
@@ -168,7 +178,7 @@ h6 {
 
 .shuttle-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
 }
 
 .survey-image {
