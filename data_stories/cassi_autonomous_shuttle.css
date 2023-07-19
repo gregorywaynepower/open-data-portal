@@ -1,3 +1,7 @@
+html {
+    font-size: 16px;
+}
+
 h1 {
     color: #003e7a !important;
     font-size: 2rem;
@@ -11,7 +15,7 @@ h1 {
 h2 {
     color: #FFFFFF;
     background-color: #003e7a;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -23,7 +27,7 @@ h3 {
     color: #FFFFFF;
     background-color: #003e7a;
     font-size: 1.50rem;
-    line-height: 1.25;
+    line-height: 1.17;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-align: center;
@@ -33,8 +37,8 @@ h3 {
 h4 {
     color: #FFFFFF;
     background-color: #003e7a;
-    font-size: 1.25rem;
-    line-height: 1.25;
+    font-size: 1rem;
+    line-height: 1.17;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-align: center;
@@ -44,8 +48,8 @@ h4 {
 h5 {
     color: #FFFFFF;
     background-color: #003e7a;
-    font-size: 1.10rem;
-    line-height: 1.25;
+    font-size: 0.83rem;
+    line-height: 1.17;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-align: center;
@@ -55,8 +59,8 @@ h5 {
 h6 {
     color: #FFFFFF;
     background-color: #003e7a;
-    font-size: 1.00rem;
-    line-height: 1.25;
+    font-size: 0.67rem;
+    line-height: 1.17;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-align: center;
