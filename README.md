@@ -15,13 +15,30 @@
 
 ### Headings
 
+#### `html` Tag
+
+Provides a default standard text size for the HTML document.
+
+```css
+html {
+  font-size: 16px;
+}
+```
+
 #### `h1` Heading
 
 The following styles will be implemented:
 
 ```css
-background-color: ;
-font-size: ;
+h1 {
+  color: #003e7a !important;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
 ```
 
 #### `h2` Heading
@@ -29,8 +46,16 @@ font-size: ;
 The following styles will be implemented:
 
 ```css
-background-color: ;
-font-size: ;
+h2 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
 ```
 
 #### `h3` Heading
@@ -38,8 +63,16 @@ font-size: ;
 The following styles will be implemented:
 
 ```css
-background-color: ;
-font-size: ;
+h3 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.5rem;
+  line-height: 1.17;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
 ```
 
 #### `h4` Heading
@@ -47,8 +80,16 @@ font-size: ;
 The following styles will be implemented:
 
 ```css
-background-color: ;
-font-size: ;
+h4 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1rem;
+  line-height: 1.17;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
 ```
 
 #### `h5` Heading
@@ -56,8 +97,16 @@ font-size: ;
 The following styles will be implemented:
 
 ```css
-background-color: ;
-font-size: ;
+h5 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 0.83rem;
+  line-height: 1.17;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
 ```
 
 #### `h6` Heading
@@ -65,8 +114,16 @@ font-size: ;
 The following styles will be implemented:
 
 ```css
-background-color: ;
-font-size: ;
+h6 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 0.67rem;
+  line-height: 1.17;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
 ```
 
 ### Body Text
@@ -74,6 +131,8 @@ font-size: ;
 #### `<p>` Paragraph Text
 
 ```css
-background-color: ;
-font-size: ;
+p {
+  font-family: "Poppins", sans-serif;
+  color: #4d4d4d;
+}
 ```
