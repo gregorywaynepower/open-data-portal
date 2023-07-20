@@ -1,22 +1,22 @@
 /* Fix Images Spilling Over Content Boxes */
 
 img.featured-data-story-img {
-	object-fit: contain;
-	width: 100%;
-	height: 100%;
-	max-width: 375px;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-width: 375px;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-	img.featured-data-story-img {
-		max-height: 215px;
-	}
+  img.featured-data-story-img {
+    max-height: 215px;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
-	img.featured-data-story-img {
-		max-height: 250px;
-	}
+  img.featured-data-story-img {
+    max-height: 250px;
+  }
 }
 
 /* 
