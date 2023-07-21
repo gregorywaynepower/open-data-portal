@@ -113,19 +113,19 @@
 }
 
 .c-lb {
-  color: #E5EDF0;
+  color: #e5edf0;
 }
 
 .bg-lb {
-  background-color: #E5EDF0;
+  background-color: #e5edf0;
 }
 
 .c-lg {
-  color: #DEDEDE;
+  color: #dedede;
 }
 
 .bg-lg {
-  background-color: #DEDEDE;
+  background-color: #dedede;
 }
 
 .c-p {
@@ -286,7 +286,7 @@ section {
   z-index: 10;
   top: 0;
   left: 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -323,14 +323,14 @@ section {
   background-color: #285170;
 }
 .button-filters:hover {
-  background-color: #E5EDF0;
+  background-color: #e5edf0;
   /* Button background color on mouse hover */
   color: #285170;
 }
 
 .button-filters-selected {
   border: 2px solid #285170;
-  background-color: #E5EDF0;
+  background-color: #e5edf0;
   color: #285170;
 }
 
@@ -367,16 +367,16 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-    .sitephoto {
-        width: -moz-available;          /* WebKit-based browsers will ignore this. */
-        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-        width: fill-available;
-    }
-    .tablet_and_smaller_fix {
-        width: -moz-available;          /* WebKit-based browsers will ignore this. */
-        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-        width: fill-available;
-    }
+  .sitephoto {
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+  }
+  .tablet_and_smaller_fix {
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+  }
 }
 
 /***** BLOC KPI *****/
@@ -385,7 +385,7 @@ section {
   padding: 16px;
   text-align: left;
   position: relative;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   box-shadow: 0 4px 6px 0 rgba(100, 100, 100, 0.2);
 }
 .kpi-box .kpi-box-half {
