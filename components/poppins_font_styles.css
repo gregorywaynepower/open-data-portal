@@ -2,1737 +2,1734 @@
 ========================================================================== */
 
 .blue-h1 {
-    color: #003e7a;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-h2 {
-    color: #003e7a;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-h3 {
-    color: #003e7a;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-h4 {
-    color: #003e7a;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-h5 {
-    color: #003e7a;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-h6 {
-    color: #003e7a;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Primary Color - Cary Blue (with white font and blue background) -- Regular*/
 
 .blue-white-h1 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-h2 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-h3 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-h4 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-h5 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-h6 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Primary Color - Cary Blue -- Bold 
 ========================================================================== */
 
 .blue-bold-h1 {
-    color: #003e7a;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-bold-h2 {
-    color: #003e7a;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-bold-h3 {
-    color: #003e7a;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-bold-h4 {
-    color: #003e7a;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-bold-h5 {
-    color: #003e7a;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-bold-h6 {
-    color: #003e7a;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #003e7a;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Primary Color - Cary Blue (with white font and blue background) -- Bold */
 
 .blue-white-bold-h1 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-bold-h2 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-bold-h3 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-bold-h4 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-bold-h5 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .blue-white-bold-h6 {
-    color: #FFFFFF;
-    background-color: #003e7a;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Secondary Color - Orange -- Regular 
 ========================================================================== */
 
 .orange-h1 {
-    color: #d57146;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-h2 {
-    color: #d57146;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-h3 {
-    color: #d57146;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-h4 {
-    color: #d57146;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-h5 {
-    color: #d57146;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-h6 {
-    color: #d57146;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Secondary Color - Orange (with white font and orange background) -- Regular*/
 
 .orange-white-h1 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-h2 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-h3 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-h4 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-h5 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-h6 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Secondary Color - Orange -- Bold 
 ========================================================================== */
 
 .orange-bold-h1 {
-    color: #d57146;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-bold-h2 {
-    color: #d57146;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-bold-h3 {
-    color: #d57146;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-bold-h4 {
-    color: #d57146;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-bold-h5 {
-    color: #d57146;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-bold-h6 {
-    color: #d57146;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d57146;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Secondary Color - Orange (with white font and orange background) -- Bold */
 
 .orange-white-bold-h1 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-bold-h2 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-bold-h3 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-bold-h4 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-bold-h5 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .orange-white-bold-h6 {
-    color: #FFFFFF;
-    background-color: #d57146;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d57146;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Secondary Color - Green -- Regular 
 ========================================================================== */
 
 .green-h1 {
-    color: #6aaa37;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-h2 {
-    color: #6aaa37;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-h3 {
-    color: #6aaa37;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-h4 {
-    color: #6aaa37;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-h5 {
-    color: #6aaa37;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-h6 {
-    color: #6aaa37;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Secondary Color - Green (with white font and green background) -- Regular*/
 
 .green-white-h1 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-h2 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-h3 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-h4 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-h5 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-h6 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Secondary Color - Green -- Bold 
 ========================================================================== */
 
 .green-bold-h1 {
-    color: #6aaa37;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-bold-h2 {
-    color: #6aaa37;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-bold-h3 {
-    color: #6aaa37;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-bold-h4 {
-    color: #6aaa37;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-bold-h5 {
-    color: #6aaa37;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-bold-h6 {
-    color: #6aaa37;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #6aaa37;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Secondary Color - Green (with white font and green background) -- Bold */
 
 .green-white-bold-h1 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-bold-h2 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-bold-h3 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-bold-h4 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-bold-h5 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .green-white-bold-h6 {
-    color: #FFFFFF;
-    background-color: #6aaa37;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #6aaa37;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Cool Gray 9 -- Regular 
 ========================================================================== */
 
 .gray-h1 {
-    color: #898a8d;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-h2 {
-    color: #898a8d;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-h3 {
-    color: #898a8d;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-h4 {
-    color: #898a8d;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-h5 {
-    color: #898a8d;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-h6 {
-    color: #898a8d;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Cool Gray 9 (with white font and gray background) -- Regular*/
 
 .gray-white-h1 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-h2 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-h3 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-h4 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-h5 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-h6 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Cool Gray 9 -- Bold 
 ========================================================================== */
 
 .gray-bold-h1 {
-    color: #898a8d;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-bold-h2 {
-    color: #898a8d;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-bold-h3 {
-    color: #898a8d;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-bold-h4 {
-    color: #898a8d;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-bold-h5 {
-    color: #898a8d;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-bold-h6 {
-    color: #898a8d;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #898a8d;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Cool Gray 9 (with white font and gray background) -- Bold */
 
 .gray-white-bold-h1 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-bold-h2 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-bold-h3 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-bold-h4 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-bold-h5 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .gray-white-bold-h6 {
-    color: #FFFFFF;
-    background-color: #898a8d;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #898a8d;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Cool Gray 1 -- Regular 
 ========================================================================== */
 
 .lightgray-h1 {
-    color: #d9d8d6;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-h2 {
-    color: #d9d8d6;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-h3 {
-    color: #d9d8d6;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-h4 {
-    color: #d9d8d6;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-h5 {
-    color: #d9d8d6;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-h6 {
-    color: #d9d8d6;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Cool Gray 1 (with white font and light gray background) -- Regular */
 
 .lightgray-white-h1 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-h2 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-h3 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-h4 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-h5 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-h6 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Cool Gray 1 -- Bold 
 ========================================================================== */
 
 .lightgray-bold-h1 {
-    color: #d9d8d6;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-bold-h2 {
-    color: #d9d8d6;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-bold-h3 {
-    color: #d9d8d6;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-bold-h4 {
-    color: #d9d8d6;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-bold-h5 {
-    color: #d9d8d6;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-bold-h6 {
-    color: #d9d8d6;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #d9d8d6;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Cool Gray 1 (with white font and light gray background) -- Bold */
 
 .lightgray-white-bold-h1 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-bold-h2 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-bold-h3 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-bold-h4 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-bold-h5 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .lightgray-white-bold-h6 {
-    color: #FFFFFF;
-    background-color: #d9d8d6;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #d9d8d6;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - White -- Regular 
 ========================================================================== */
 
 .white-h1 {
-    color: #FFFFFF;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-h2 {
-    color: #FFFFFF;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-h3 {
-    color: #FFFFFF;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-h4 {
-    color: #FFFFFF;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-h5 {
-    color: #FFFFFF;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-h6 {
-    color: #FFFFFF;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - White -- Bold 
 ========================================================================== */
 
 .white-bold-h1 {
-    color: #FFFFFF;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-bold-h2 {
-    color: #FFFFFF;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-bold-h3 {
-    color: #FFFFFF;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-bold-h4 {
-    color: #FFFFFF;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-bold-h5 {
-    color: #FFFFFF;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .white-bold-h6 {
-    color: #FFFFFF;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
-
 
 /* Tertiary Color - Black -- Regular 
 ========================================================================== */
 
 .black-h1 {
-    color: #000000;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-h2 {
-    color: #000000;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-h3 {
-    color: #000000;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-h4 {
-    color: #000000;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-h5 {
-    color: #000000;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-h6 {
-    color: #000000;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Black (with white font and black background) -- Regular */
 
 .black-white-h1 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-h2 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-h3 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-h4 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-h5 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-h6 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Black -- Bold 
 ========================================================================== */
 
 .black-bold-h1 {
-    color: #000000;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-bold-h2 {
-    color: #000000;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-bold-h3 {
-    color: #000000;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-bold-h4 {
-    color: #000000;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-bold-h5 {
-    color: #000000;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-bold-h6 {
-    color: #000000;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Tertiary Color - Black (with white font and black background) -- Bold */
 
 .black-white-bold-h1 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 2rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-bold-h2 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.75rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-bold-h3 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.50rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-bold-h4 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-bold-h5 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.10rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 .black-white-bold-h6 {
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 1.00rem;
-    line-height: 1.25;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-transform: none;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
 }
 
 /* Media Queries for different screen width breakpoints
 ========================================================================== */
 
-
 @media only screen and (max-width: 767px) {
-    h1 {
-        line-height: 1.7em;
-        letter-spacing: 2.2px;
-        word-spacing: 0.1em;
-    }
+  h1 {
+    line-height: 1.7em;
+    letter-spacing: 2.2px;
+    word-spacing: 0.1em;
+  }
 
-    h2 {
-        letter-spacing: 0px;
-    }
+  h2 {
+    letter-spacing: 0px;
+  }
 
-    h3 {
-        letter-spacing: 0px;
-    }
+  h3 {
+    letter-spacing: 0px;
+  }
 
-    h5 {
-        line-height: 25px;
-        letter-spacing: 1.8px;
-    }
+  h5 {
+    line-height: 25px;
+    letter-spacing: 1.8px;
+  }
 
-    p {
-        line-height: 18px;
-    }
-
+  p {
+    line-height: 18px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    h1 {
-        letter-spacing: 1.4px;
-    }
+  h1 {
+    letter-spacing: 1.4px;
+  }
 
-    h5 {
-        letter-spacing: -0.7px;
-    }
+  h5 {
+    letter-spacing: -0.7px;
+  }
 }
