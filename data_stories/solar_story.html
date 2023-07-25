@@ -21,12 +21,16 @@
       </div>
       <div class="col-md-6">
         <div class="row">
-          <p>
-            <div class="center">
-              <br />
-              <br />
-              <img src="/assets/theme_image/Did-you-know.jpg" alt="Did You Know?" width="50%" />
-              <br />
+          <div class="center">
+            <br />
+            <br />
+            <img
+              src="/assets/theme_image/Did-you-know.jpg"
+              alt="Did You Know?"
+              width="50%"
+            />
+            <br />
+            <p>
               <b>
                 Cary has been designed as a
                 <b style="color: #d5b038">Gold</b> Level Community by the
@@ -36,14 +40,20 @@
                 due to our streamlined processes that make it faster, easier,
                 and more affordable for citizens to access solar installation.
               </b>
-            </div>
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <div class="column">
       <div class="col-md-6">
-        <div class="center"><img src="/assets/theme_image/solar.jpg" alt="Utility-sized solar field" width="80%" /></div>
+        <div class="center">
+          <img
+            src="/assets/theme_image/solar.jpg"
+            alt="Utility-sized solar field"
+            width="80%"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -369,16 +379,19 @@
       high density of permits have been issued in Western Cary. Click the play
       button to see how the hot spots trends have shifted each year between 2017
       and 2023 with the map on the right [bottom on tablet and mobile devices].
-      <br />
-      <div class="center">
-        <ods-timer
-          delay="2000"
-          stop-condition="(values.start | moment:'YYYY')==='2023' "
-          exec=" values.start = (values.start | momentadd : 'year':1) "
-        >
-        </ods-timer>
-      </div>
     </p>
+    <br />
+    <div class="center">
+      <ods-timer
+        delay="2000"
+        stop-condition="(values.start | moment:'YYYY')==='2023' "
+        exec=" values.start = (values.start | momentadd : 'year':1) "
+      >
+      </ods-timer>
+    </div>
+    <br />
+    <br />
+    <br />
     <div class="column">
       <div class="col-md-6">
         <h2>
