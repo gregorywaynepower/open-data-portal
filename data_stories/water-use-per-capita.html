@@ -68,44 +68,98 @@ u
         </div>
       </div>
     </div>
-    <ods-dataset-context
-      context="residentialgpcd"
-      residentialgpcd-dataset="residential-gpcd"
-    >
-      <ods-chart
-        timescale="year"
-        single-y-axis="true"
-        single-y-axis-label="Gallons per Capita Daily"
-        scientific-display="false"
-        align-month="true"
-      >
-        <ods-chart-query
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <div class="chart-title">
+            Cary/Morrisville Average Residential Demand<sup
+              >[<a href="#Residential GPCD (Gallons Per Capita Daily)">1</a
+              >]</sup
+            >
+            <br />
+            in Gallons per Person per Day
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ods-dataset-context
           context="residentialgpcd"
-          field-x="year"
-          maxpoints="0"
-          timescale="year"
+          residentialgpcd-dataset="residential-gpcd"
         >
-          <ods-chart-serie
-            expression-y="gpcd"
-            chart-type="column"
-            function-y="AVG"
-            label-y="Gallons per Capita per Day"
-            color="#2B3F56"
-            display-values="false"
-            scientific-display="true"
+          <ods-chart
+            timescale="year"
+            single-y-axis="true"
+            single-y-axis-label="Gallons per Capita per Day"
+            scientific-display="false"
+            align-month="true"
           >
-          </ods-chart-serie>
-          <ods-chart-serie
-            expression-y="multi_year_average"
-            chart-type="line"
-            function-y="AVG"
-            label-y="Multi-Year Average"
-            color="#66c2a5"
-            scientific-display="true"
-          >
-          </ods-chart-serie>
-        </ods-chart-query>
-      </ods-chart>
-    </ods-dataset-context>
+            <ods-chart-query
+              context="residentialgpcd"
+              field-x="year"
+              maxpoints="0"
+              timescale="year"
+            >
+              <ods-chart-serie
+                expression-y="gpcd"
+                chart-type="column"
+                function-y="AVG"
+                label-y="Gallons per Capita per Day"
+                color="#2B3F56"
+                display-values="false"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+              <ods-chart-serie
+                expression-y="multi_year_average"
+                chart-type="line"
+                function-y="AVG"
+                label-y="Multi-Year Average Gallons per Capita per Day"
+                color="#66c2a5"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Data Sources</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <table class="center" aria-describedby="Source Reference Table">
+            <th></th>
+            <tr id="Residential-GPCD-(Gallons-Per-Capita-Daily)">
+              <td>1.</td>
+              <td>
+                <a
+                  href="https://data.townofcary.org/explore/dataset/residential-gpcd/information/"
+                  >Residential GPCD (Gallons Per Capita Daily)</a
+                >
+              </td>
+            </tr>
+            <tr id="CASSI-Autonomous-Shuttle-Stops">
+              <td>2.</td>
+              <td>
+                <a
+                  href="https://data.townofcary.org/explore/dataset/cawtf_peakingfactors/information/"
+                  >Cary/Apex Water Treatment Facility Peaking Factors</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

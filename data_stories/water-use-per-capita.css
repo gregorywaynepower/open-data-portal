@@ -1,9 +1,9 @@
-/* 
-<center> deprecation fix
-*/
+/* <center> deprecation fix */
+
 .center {
-  margin: auto 0px;
+  margin: 0px auto;
   text-align: center;
+  list-style-position: inside;
 }
 
 /* Variables & Shared classes
