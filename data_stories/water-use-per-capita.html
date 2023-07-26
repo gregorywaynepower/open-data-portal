@@ -1,0 +1,254 @@
+<section>
+  <div class="center">
+    <h1 class="title">Cary's Water Use per Capita</h1>
+    <ods-dataset-context
+      context="residentialgpcd"
+      residentialgpcd-dataset="residential-gpcd"
+      ng-init="values = {};"
+    >
+      <p class="kpi-description">
+        Last Updated:<span class="kpi-value2">
+          {{ residentialgpcd.dataset.metas.metadata_processed | date }}</span
+        >
+      </p>
+    </ods-dataset-context>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Overview</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          Today, most appliances are labeled as “high-efficiency” but it wasn’t
+          always that way.
+          <br />
+          <br />
+          Cary’s conservation strategy began in 1996 with an ambitious goal at a
+          time of extraordinary growth of reducing per person usage by 20% by
+          2015. The vision to was to support the high quality of life in Cary by
+          continuing to provide safe, and reliable water service, but also to
+          steward well both our natural resources and the infrastructure
+          investments.
+          <br />
+          <br />
+          That goal was met earlier than expected, achieving a 20% reduction by
+          2013. Remarkably, the conservation trend has continued with a
+          reduction of 30% by 2023. Additionally, thanks to a steady reduction
+          in maximum day demand, Cary was able to delay the expansion of two
+          water treatment facilities, resulting in significant cost savings.
+          <br />
+          <br />
+          The journey included impressive community support, multiple droughts,
+          cutting-edge technology, and significant shifts in both industry and
+          development standards.
+          <br />
+          <br />
+          This story honors the history, challenges and successes of Cary’s
+          water conservation strategy and the way it continues to shape Cary
+          today.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>Gallons per Capita per Day</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <div class="chart-title">
+            Cary/Morrisville Average Residential Demand<sup
+              >[<a href="#Residential GPCD (Gallons Per Capita Daily)">1</a
+              >]</sup
+            >
+            <br />
+            in Gallons per Person per Day
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ods-dataset-context
+          context="residentialgpcd"
+          residentialgpcd-dataset="residential-gpcd"
+        >
+          <ods-chart
+            timescale="year"
+            single-y-axis="true"
+            single-y-axis-label="Gallons per Capita per Day"
+            scientific-display="false"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="residentialgpcd"
+              field-x="year"
+              maxpoints="0"
+              timescale="year"
+            >
+              <ods-chart-serie
+                expression-y="gpcd"
+                chart-type="column"
+                function-y="AVG"
+                label-y="Gallons per Capita per Day"
+                color="#2B3F56"
+                display-values="false"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+              <ods-chart-serie
+                expression-y="multi_year_average"
+                chart-type="line"
+                function-y="AVG"
+                label-y="Multi-Year Average Gallons per Capita per Day"
+                color="#66c2a5"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>The Challenge - 1990s</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <p>
+          As more people moved to Cary in the suburban boom of the early 1990s.
+          Many of the single family homes came with irrigation systems installed
+          to water lawns with thirsty fescue turf. A large and green lawn became
+          a social normal. This expectation resulted in a dramatic increase in
+          water demand, especially on hot summer days.
+          <br />
+          <br />
+          Water Treatment and Reclamation Facilities are designed to handle peak
+          day demand which means irrigation was driving the time and size of
+          projected infrastructure needs. As Cary was planning for the future
+          water system, it became clear that partnering with the community to
+          reduce per capita usage was going to be necessary to sustainably
+          steward our shared resources.
+        </p>
+      </div>
+      <div class="col-md-4 center">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/water_report_National_Geographic.png"
+            alt="Image of single family homes cerca June 2001 from National Geographic"
+          />
+          <figcaption>National Geographic, June 2001</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>The Goal - 1996</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p style="margin-bottom: 0rem; padding-bottom: 0rem !important">
+          Cary adopted a water conservation program in 1996 with the goal to
+          <strong>reduce daily water usage per person by 20% in 20 years</strong
+          >, measured as GPCD (gallons per capita per day).
+          <br />
+          <br />
+          That goal was ambitious but well-supported with a comprehensive
+          conservation strategy including
+          <strong>regulations, education and incentives</strong>.
+          <br />
+          <br />
+          The conservation strategy had 3 main objectives:
+        </p>
+        <ul style="margin-top: 0rem; padding-left: 4rem !important">
+          <li>
+            <span
+              >Support the high quality of life in Cary by providing safe,
+              reliable water service, while reducing the per capita use of
+              water</span
+            >
+          </li>
+          <li><span>Conserve a natural resource</span></li>
+          <li><span>Reduce cost of infrastructure expansion</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row center">
+      <div class="col-md-6 col-md-offset-3">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/water_tower.jpg"
+            alt="Water Tower"
+            style="
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+              max-width: 500px;
+            "
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Data Sources</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <table class="center" aria-describedby="Source Reference Table">
+            <th></th>
+            <tr id="Residential-GPCD-(Gallons-Per-Capita-Daily)">
+              <td>1.</td>
+              <td>
+                <a
+                  href="https://data.townofcary.org/explore/dataset/residential-gpcd/information/"
+                  >Residential GPCD (Gallons Per Capita Daily)</a
+                >
+              </td>
+            </tr>
+            <tr id="CASSI-Autonomous-Shuttle-Stops">
+              <td>2.</td>
+              <td>
+                <a
+                  href="https://data.townofcary.org/explore/dataset/cawtf_peakingfactors/information/"
+                  >Cary/Apex Water Treatment Facility Peaking Factors</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
