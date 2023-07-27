@@ -395,6 +395,167 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
+        <h2>Back to Back Unprecedented Droughts</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          No one could have foreseen the record-breaking regional droughts
+          around the corner but Cary’s strong conservation strategy laid the
+          firm foundation necessary to weather the storm. The two most severe
+          droughts in recent history here occurred during 2001-2002 and
+          <a
+            href="https://climate.ncsu.edu/blog/2015/11/nc-extremes-2007s-drought-emerged-quickly-affected-millions-in-nc/"
+            >2007-2008, summarized by the State Climate Office</a
+          >.
+          <br />
+          <br />
+          The 2007-2008 drought caused significant regional attention. Many
+          citizens voluntarily changed their habits (both indoor and outdoor) in
+          ways that continue today.
+          <br />
+          <br />
+          While Jordan Lake, Cary’s water supply, was stable, Cary temporarily
+          entered into stage 1 of our
+          <a
+            href="https://www.carync.gov/services-publications/plans-publications-reports/water-shortage-response-plan"
+            >water shortage response plan</a
+          >
+          out of regional solidarity.
+          <br />
+          <br />
+          The regional strain spurred the development of regional agreements and
+          infrastructure to be able to support one another in times of extreme
+          need. The
+          <a href="http://www.trianglewaterpartnership.org/"
+            >Triangle Water Supply Partnership</a
+          >
+          continued to promote this spirit of cooperation and
+          interconnectedness.
+        </p>
+      </div>
+    </div>
+    <div class="row center">
+      <div class="col-md-6 col-md-offset-3">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/triangle_water_supply_partnership_interconnections_map.png"
+            alt="Triangle Water Supply Partnership Interconnections Map"
+            style="
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+              max-width: 500px;
+            "
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>The Summary & the Success</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          Cary’s water conservation strategy became nationally-recognized for
+          its comprehensiveness and success. While sudden growth initially
+          spurred this effort, the framework allowed Cary to serve as a leader
+          during unprecedented times of water shortage.
+          <br />
+          <br />
+          The success was a result of partnership from both individuals and the
+          industry.
+          <br />
+          <br />
+          After the drought, there was more societal appreciation and acceptance
+          for warm-season turf. Additionally, with changing development
+          patterns, irrigation systems no longer became standard fixtures. The
+          irrigation industry advanced the technologies available to include
+          more efficient design as well as soil moisture and rain sensors.
+          <br />
+          <br />
+          Today, many new homes have significantly smaller yards on average,
+          further reducing irrigation demand. Also, high-efficiency appliances
+          have become standard for both new and older homes.
+          <br />
+          <br />
+          All of these factors have contributed greatly to the improved
+          efficiency. As for the goal? We blew it out of the water with a 20%
+          reduction realized years earlier than expected and over 30% reduction
+          to date.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <div class="chart-title">
+            Cary/Morrisville Average Residential Demand<sup
+              >[<a href="#Residential-GPCD-(Gallons-Per-Capita-Daily)">1</a
+              >]</sup
+            >
+            <br />
+            in Gallons per Person per Day
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ods-dataset-context
+          context="residentialgpcd"
+          residentialgpcd-dataset="residential-gpcd"
+        >
+          <ods-chart
+            timescale="year"
+            single-y-axis="true"
+            single-y-axis-label="Gallons per Capita per Day"
+            scientific-display="false"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="residentialgpcd"
+              field-x="year"
+              maxpoints="0"
+              timescale="year"
+            >
+              <ods-chart-serie
+                expression-y="gpcd"
+                chart-type="column"
+                function-y="AVG"
+                label-y="Gallons per Capita per Day"
+                color="#2B3F56"
+                display-values="false"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+              <ods-chart-serie
+                expression-y="multi_year_average"
+                chart-type="line"
+                function-y="AVG"
+                label-y="Multi-Year Average Gallons per Capita per Day"
+                color="#66c2a5"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
         <h2>Data Sources</h2>
       </div>
     </div>
