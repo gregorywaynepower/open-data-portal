@@ -46,13 +46,12 @@
         <p>
           During a 13-week period from March 6 through June 2, 2023, Fred G.
           Bond Metro Park was the site of an exciting demonstration in
-          autonomous vehicle technology. <abbr>NCDOT</abbr> (The North Carolina
-          Department of Transportation) partnered with Cary to bring an
-          all-electric, driverless shuttle to Bond Park.
-          <abbr>CASSI</abbr> (Connected Autonomous Shuttle Supporting
-          Innovation) ran a 1.6-mile, four-stop route from the Cary Senior
-          Center to Bond Park Community Center on weekdays from 10:00 a.m. to
-          4:00 p.m. during the pilot.
+          autonomous vehicle technology. The North Carolina Department of
+          Transportation (<abbr>NCDOT</abbr>) partnered with Cary to bring an
+          all-electric, driverless shuttle to Bond Park. Connected Autonomous
+          Shuttle Supporting Innovation (<abbr>CASSI</abbr>) ran a 1.6-mile,
+          four-stop route from the Cary Senior Center to Bond Park Community
+          Center on weekdays from 10:00 a.m. to 4:00 p.m. during the pilot.
           <br />
           <br />
           Please see Cary's
@@ -323,7 +322,7 @@
       <div class="col-md-12">
         <div class="chart-title">
           <div class="center">
-            Average Hours of Operation by Week<sup
+            Average Hours Operated by Week<sup
               >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
             >
           </div>
@@ -371,6 +370,7 @@
               timescale="day"
               scientific-display="false"
               align-month="true"
+              label-x="Date"
             >
               <ods-chart-query
                 context="autonomousshuttleusage"
@@ -410,6 +410,7 @@
               timescale="day"
               scientific-display="false"
               align-month="true"
+              label-x="Date"
             >
               <ods-chart-query
                 context="autonomousshuttleusage"
@@ -421,7 +422,7 @@
                   expression-y="number_of_hours_operated"
                   chart-type="line"
                   function-y="SUM"
-                  label-y="Hours of Operation"
+                  label-y="Number of Hours Operated"
                   color="#003e7a"
                   step=""
                   scientific-display="true"
@@ -445,27 +446,31 @@
         <div class="chart-title">
           <div class="center">
             Ridership by Day of Week<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Usage">4</a>,<a
+                href="#CASSI-Ridership-By-Day-Total"
+                >5</a
+              >]</sup
             >
           </div>
         </div>
         <figure>
           <ods-dataset-context
-            context="autonomousshuttleusage"
-            autonomousshuttleusage-dataset="autonomous-shuttle-usage"
+            context="cassiautonomousshuttleusagedaysofweekwithhighestridership"
+            cassiautonomousshuttleusagedaysofweekwithhighestridership-dataset="cassi-autonomous-shuttle-usage-days-of-week-with-highest-ridership"
           >
             <ods-chart scientific-display="false" align-month="true">
               <ods-chart-query
-                context="autonomousshuttleusage"
-                field-x="day_of_week"
-                maxpoints="0"
+                context="cassiautonomousshuttleusagedaysofweekwithhighestridership"
+                field-x="day_of_the_week"
+                maxpoints="50"
                 sort="serie1-1"
               >
                 <ods-chart-serie
-                  expression-y="passengers_per_hour_of_availability"
+                  expression-y="passengers_per_hour_operated"
                   chart-type="bar"
                   function-y="AVG"
-                  color="#003e7a"
+                  label-y="Passengers per Hour Operated"
+                  color="#003E7A"
                   scientific-display="true"
                 >
                 </ods-chart-serie>
@@ -475,8 +480,8 @@
           <figcaption>
             <p>
               When controlling for the number of hours operated by day of the
-              week, Monday appears to be the day of the week with the highest
-              ridership at 5.98 passengers per hour of operation.
+              week, Wednesday appears to be the day of the week with the highest
+              ridership at 5.74 passengers per hour operated.
             </p>
           </figcaption>
         </figure>
@@ -789,7 +794,7 @@
             <p class="kpi-title">98.3 %</p>
             <p class="kpi-description">
               Time Spent in Autonomous Mode<sup
-                >[<a href="#Beep-Provided-Number">7</a>]</sup
+                >[<a href="#Beep-Provided-Number">8</a>]</sup
               >
             </p>
           </div>
@@ -968,7 +973,7 @@
         <div class="chart-title">
           <div class="center">
             Where did you get on the shuttle?<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1008,7 +1013,7 @@
         <div class="chart-title">
           <div class="center">
             Where did you get off the shuttle?<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1051,7 +1056,7 @@
         <div class="chart-title">
           <div class="center">
             Did you visit Bond Park to ride the shuttle?<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1092,7 +1097,7 @@
         <div class="chart-title">
           <div class="center">
             How did you get to Bond Park?<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1156,7 +1161,7 @@
         <div class="chart-title">
           <div class="center">
             I had a good experience using the shuttle.<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1198,7 +1203,7 @@
           <div class="center">
             I had a good experience with the attendant on the shuttle.
             <sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1243,7 +1248,7 @@
           <div class="center">
             The shuttle arrived at my stop within a reasonable amount of time.
             <sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1285,7 +1290,7 @@
           <div class="center">
             I was able to get to my destination in a reasonable amount of time.
             <sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1348,7 +1353,7 @@
             BEFORE & AFTER riding the shuttle, I felt that driverless vehicles
             are:
             <sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1383,7 +1388,7 @@
         <div class="chart-title">
           <div class="center">
             I support seeing more driverless shuttles in Cary.<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1423,7 +1428,7 @@
         <div class="chart-title">
           <div class="center">
             Would you ride the shuttle again?<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1482,7 +1487,7 @@
             Did you ride the driverless shuttle for a fun experience or to get
             to a specific destination?
             <sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1524,7 +1529,7 @@
             If you had not taken the driverless shuttle, which of the following
             modes of transportation best describes how you would have traveled?
             <sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1579,7 +1584,7 @@
         <div class="chart-title">
           <div class="center">
             What is your age?<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1619,7 +1624,7 @@
         <div class="chart-title">
           <div class="center">
             Are you a resident of Cary?<sup
-              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">5</a>]</sup
+              >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey">6</a>]</sup
             >
           </div>
         </div>
@@ -1667,7 +1672,7 @@
           <div class="center">
             What is the ZIP code of your residence?<sup
               >[<a href="#CASSI-Autonomous-Shuttle-Ridership-Survey-ZIP-Codes"
-                >6</a
+                >7</a
               >]</sup
             >
           </div>
@@ -1772,8 +1777,18 @@
                 >
               </td>
             </tr>
-            <tr id="CASSI-Autonomous-Shuttle-Ridership-Survey">
+            <tr id="CASSI-Ridership-By-Day-Total">
               <td>5.</td>
+              <td>
+                <a
+                  href="https://data.townofcary.org/explore/dataset/cassi-autonomous-shuttle-usage-days-of-week-with-highest-ridership/information/"
+                  >CASSI Autonomous Shuttle Usage (Days of Week with Highest
+                  Ridership)</a
+                >
+              </td>
+            </tr>
+            <tr id="CASSI-Autonomous-Shuttle-Ridership-Survey">
+              <td>6.</td>
               <td>
                 <a
                   href="https://data.townofcary.org/explore/dataset/cassi-in-cary-s-bond-park-rider-survey/information/"
@@ -1782,7 +1797,7 @@
               </td>
             </tr>
             <tr id="CASSI-Autonomous-Shuttle-Ridership-Survey-ZIP-Codes">
-              <td>6.</td>
+              <td>7.</td>
               <td>
                 <a
                   href="https://data.townofcary.org/explore/dataset/cassi-in-cary-s-bond-park-rider-survey-respondent-zip-codes/information/"
@@ -1791,7 +1806,7 @@
               </td>
             </tr>
             <tr id="Beep-Provided-Number">
-              <td>7.</td>
+              <td>8.</td>
               <td>
                 Estimate provided by
                 <a
