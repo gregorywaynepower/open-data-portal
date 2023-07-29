@@ -67,6 +67,16 @@ h6 {
   text-transform: none;
 }
 
+/* Add in-document  */
+
+a.citation-link > span{
+  text-decoration: none;
+}
+
+a.citation-link:hover > span{
+  text-decoration: underline;
+}
+
 /* iframe Container */
 
 .odp_container {
