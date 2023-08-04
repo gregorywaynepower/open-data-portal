@@ -67,6 +67,12 @@ h6 {
   text-transform: none;
 }
 
+/* Add styling for word cloud */
+
+.word-cloud-image {
+ max-width: -webkit-fill-available;
+}
+
 /* Add in-document  */
 
 a.citation-link > span {
