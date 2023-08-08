@@ -225,6 +225,9 @@ a.citation-link:hover > span {
 }
 
 @media only screen and (max-width: 990px) {
+  .shuttle-image {
+    width: 60%;
+  }
   .add-whitespace {
     margin-top: 2em;
   }
@@ -261,13 +264,11 @@ a.citation-link:hover > span {
   }
 }
 
-
 @media only screen and (min-width: 1025px) {
   .whitespace-large-screen {
     display: block;
   }
 }
-
 
 .kpi-value {
   color: #9bb9ad;
