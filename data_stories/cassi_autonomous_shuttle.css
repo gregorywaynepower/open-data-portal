@@ -232,6 +232,11 @@ a.citation-link:hover > span {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .align-items-center {
+    display: flex;
+    align-items: center;
+  }
+
   .laptop-width-fix {
     line-height: 49.59px;
   }
@@ -242,6 +247,10 @@ a.citation-link:hover > span {
 }
 
 @media only screen and (min-width: 994px) {
+  .align-items-center {
+    display: flex;
+    align-items: center;
+  }
   .kpi-box {
     margin-bottom: 2rem;
   }
