@@ -261,13 +261,11 @@ a.citation-link:hover > span {
   }
 }
 
-
 @media only screen and (min-width: 1025px) {
   .whitespace-large-screen {
     display: block;
   }
 }
-
 
 .kpi-value {
   color: #9bb9ad;
