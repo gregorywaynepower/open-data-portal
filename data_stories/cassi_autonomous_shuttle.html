@@ -194,7 +194,7 @@
           the Spring Daze Arts and Crafts Festival setup that impacted access to
           the Sertoma (Kiwanis) Shelter and Bond Park Boathouse stops (April
           28). Partial suspension of service was most commonly due to inclement
-          weather (3 service suspensions) or battery insufficiency (24 service
+          weather (4 service suspensions) or battery insufficiency (24 service
           suspensions). Midday charging of the shuttle was implemented on May 22
           through the end of the pilot period to mitigate battery insufficiency
           resulting from demand on the shuttle's air conditioning system on hot
@@ -351,9 +351,11 @@
                 <ods-chart-serie
                   expression-y="number_of_hours_operated"
                   chart-type="column"
-                  function-y="AVG"
+                  function-y="SUM"
+                  label-y="Number of Hours Operated"
                   color="#d57146"
                   scientific-display="true"
+                  display-units="true"
                 >
                 </ods-chart-serie>
               </ods-chart-query>
