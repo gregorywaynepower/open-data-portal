@@ -75,6 +75,13 @@ h6 {
   list-style-position: inside;
 }
 
+@media screen and (min-width: 992px) {
+  .justify-content-center {
+    display: flex;
+    align-items: center;
+  }
+}
+
 /* Variables & Shared classes
 ========================================================================== */
 :root {
@@ -95,10 +102,10 @@ h6 {
 }
 
 @media only screen and (min-width: 426px) {
-    .justify-content-around {
-        display: flex;
-        justify-content: space-around;
-    }
+  .justify-content-around {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /* KPI Card
