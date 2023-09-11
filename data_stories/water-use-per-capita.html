@@ -1,0 +1,770 @@
+<section>
+  <div class="center">
+    <h1 class="title">Cary's Water Use per Capita</h1>
+    <ods-dataset-context
+      context="residentialgpcd"
+      residentialgpcd-dataset="residential-gpcd"
+      ng-init="values = {};"
+    >
+      <p class="kpi-description">
+        Last Updated:<span class="kpi-value2">
+          {{ residentialgpcd.dataset.metas.metadata_processed | date }}</span
+        >
+      </p>
+    </ods-dataset-context>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Overview</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          While most of today’s appliances are labeled as “high-efficiency,” it
+          wasn’t always that way.
+          <br />
+          <br />
+          Cary’s conservation strategy began in 1996, a time of extraordinary
+          growth for the town, with the ambitious goal of reducing per person
+          water usage by 20% by 2015. The vision was to support the high quality
+          of life in Cary by continuing to provide safe and reliable water
+          service, but also to steward our natural resources and infrastructure
+          investments.
+          <br />
+          <br />
+          That goal was met earlier than expected, with the 20% reduction mark
+          hit by 2013. Remarkably, this conservation trend has continued with a
+          reduction of 30% by 2023. Additionally, thanks to a steady reduction
+          in maximum day demand, Cary was able to realize significant cost
+          savings.
+          <br />
+          <br />
+          Thanks to impressive community support, this successful journey
+          included multiple droughts, cutting-edge technology, and significant
+          shifts in both industry and development standards during its span.
+          <br />
+          <br />
+          This story honors the history, challenges, and successes of Cary's
+          water conservation strategy and the way it continues to shape Cary
+          today.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>Gallons per Capita per Day</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <div class="chart-title">
+            <span>Cary/Morrisville Average Residential Demand</span
+            ><sup
+              >[<a href="#Residential-GPCD-(Gallons-Per-Capita-Daily)">1</a>]
+              [<a href="#CAWTF-PeakingFactors">2</a>]</sup
+            >
+            <br />
+            in Gallons per Person per Day
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ods-dataset-context
+          context="residentialgpcd"
+          residentialgpcd-dataset="residential-gpcd"
+        >
+          <ods-chart
+            timescale="year"
+            single-y-axis="true"
+            single-y-axis-label="Gallons per Capita per Day"
+            scientific-display="false"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="residentialgpcd"
+              field-x="year"
+              maxpoints="0"
+              timescale="year"
+            >
+              <ods-chart-serie
+                expression-y="gpcd"
+                chart-type="column"
+                function-y="AVG"
+                label-y="Gallons per Capita per Day"
+                color="#003E7A"
+                display-values="false"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+              <ods-chart-serie
+                expression-y="multi_year_average"
+                chart-type="line"
+                function-y="AVG"
+                label-y="Multi-Year Average Gallons per Capita per Day"
+                color="#D57146"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>The Challenge: 1990s</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-6">
+        <p>
+          As more people moved to Cary during the suburban boom of the early
+          1990s, many new single family homes included irrigation systems
+          installed to water lawns with thirsty fescue turf. A large, green lawn
+          became a social normal. This expectation resulted in a dramatic
+          increase in water demand, especially on hot summer days.
+          <br />
+          <br />
+          Water Treatment and Reclamation Facilities are sized to handle peak
+          day demand which means irrigation was driving the time and size of
+          projected infrastructure needs. As Cary was planning for the future of
+          its water system, it became clear that partnering with the community
+          to reduce per capita usage was going to be necessary to sustainably
+          steward our shared resources.
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-6 center">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/HousingDroneShot.jpg"
+            alt="Drone Shot of Cary Neighborhoods"
+            style="
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+              max-width: 500px;
+            "
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>The Goal: 1996</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-6">
+        <p style="margin-bottom: 0rem; padding-bottom: 0rem !important">
+          Cary adopted a water conservation program in 1996 with the goal to
+          <strong>reduce daily water usage per person by 20% in 20 years</strong
+          >, measured as gallons per capita per day (GPCD).
+          <br />
+          <br />
+          That goal was ambitious but well-supported with a comprehensive
+          conservation strategy that included
+          <strong>regulations, education, and incentives</strong>.
+          <br />
+          <br />
+          The conservation strategy had these main objectives:
+        </p>
+        <ul style="margin-top: 0rem">
+          <li>
+            <span
+              >Support the high quality of life in Cary by providing safe,
+              reliable water service, while reducing the per capita use of
+              water</span
+            >
+          </li>
+          <li><span>Conserve natural resources</span></li>
+          <li>
+            <span>Reduce the impact of future infrastructure expansion</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-0">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/water_tower.jpg"
+            alt="Water Tower"
+            style="
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+              max-width: 500px;
+            "
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>The Strategy: Late 90s, 2000s</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          With nearly 40 years of conservation history, we can't explore it all,
+          but this story will share some of the highlights along the journey.
+          The program was based on other leading national programs in the
+          Southwest and California. The comprehensive program grew quickly and
+          adapted as needed. At its peak, it was directly administered by as
+          many as six staff members.
+          <br />
+          <br />
+          Here are some of the key tactics within the three main approaches.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3
+          style="
+            text-align: left;
+            margin-bottom: 0px;
+            padding-left: 20px;
+            color: #003e7a !important;
+            background: #ffff !important;
+          "
+        >
+          Regulatory
+        </h3>
+      </div>
+    </div>
+    <div
+      class="row justify-content-center"
+      style="display: flex; align-items: center"
+    >
+      <div class="col-md-12" style="margin: 0px">
+        <ul>
+          <li>1997 - Water Waste Ordinance and Rain Sensor Ordinance</li>
+          <li>2000 - Alternate Day Watering Ordinance</li>
+          <li>2002 - Separate Irrigation Meter Requirements</li>
+          <li>2003 - Irrigation System Design Requirements</li>
+          <li>
+            2003 - Drought-Tolerant Plant Requirement (non-residential
+            customers)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3
+          style="
+            text-align: left;
+            margin-bottom: 0px;
+            padding-left: 20px;
+            color: #003e7a !important;
+            background: #ffff !important;
+          "
+        >
+          Educational
+        </h3>
+      </div>
+    </div>
+    <div
+      class="row justify-content-center"
+      style="display: flex; align-items: center"
+    >
+      <div class="col-md-12">
+        <ul>
+          <li>1997 - Beat the Peak Campaign Begins</li>
+          <li>1998 - Block Leader Program and Residential Audits Begin</li>
+          <li>1999 - School Programs and WaterWise Workshops Begin</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3
+          style="
+            text-align: left;
+            margin-bottom: 0px;
+            padding-left: 20px;
+            color: #003e7a !important;
+            background: #ffff !important;
+          "
+        >
+          Financial Incentives
+        </h3>
+      </div>
+    </div>
+    <div
+      class="row justify-content-center"
+      style="display: flex; align-items: center"
+    >
+      <div class="col-md-12">
+        <ul>
+          <li>
+            1997 - Toilet Flapper Rebate Program, Giveaways (efficient
+            showerheads, faucet aerators, five-minute shower timers, rain
+            gauges)
+          </li>
+          <li>1998 - Tiered Rate Structure</li>
+          <li>2001/2008 - Rain Barrels at cost/Build-Your-Own Rain</li>
+          <li>
+            2008 - Turf Buy Back Program; High-efficiency Toilet Refit Rebate
+            Program
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- Add Images Here -->
+      <div class="col-sm-6 col-md-3">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/rain-barrel.png"
+            alt=""
+            style="width: 100%"
+          />
+        </figure>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/GaugeItForYourselfPamphlet.png"
+            alt=""
+            style="width: 100%"
+          />
+        </figure>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/LetsBeWaterConsciousYellowHouse.jpg"
+            alt=""
+            style="width: 100%"
+          />
+        </figure>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/watering-ordinance-art.jpg"
+            alt=""
+            style="width: 100%"
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Smart Meters: 2011</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-6">
+        <p>
+          While the term "smart city" is becoming more common every day, Cary
+          led the trend by installing smart water meters system-wide in 2011, a
+          time when the technology was still cutting-edge. The
+          <a
+            href="https://www.carync.gov/services-publications/water-sewer/water/aquastar"
+            target="_blank"
+            >Customer Portal</a
+          >
+          allows residents and business-owners to view hourly, daily, and weekly
+          consumption online.
+          <br />
+          <br />
+          This granularity allows for detection of high usage and potential
+          leaks within a day, which previously would have gone unidentified for
+          over a month.
+          <br />
+          <br />
+          This technology also allows individuals to set high-usage alerts and
+          actively manage their water use, empowering them with the insight
+          needed to optimize conservation.
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-6 col-md-offset-0 center">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/ReclaimedWater.jpg"
+            alt="Water Sprinkler"
+            style="
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+              max-width: 500px;
+            "
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Unprecedented Droughts</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          No one could have foreseen the record-breaking regional droughts
+          around the corner, but Cary’s strong conservation strategy laid the
+          firm foundation necessary to weather the storm. The most severe
+          droughts in recent history here occurred during 2001-2002 and
+          <a
+            href="https://climate.ncsu.edu/blog/2015/11/nc-extremes-2007s-drought-emerged-quickly-affected-millions-in-nc/"
+            target="_blank"
+            >2007-2008, as summarized by the State Climate Office</a
+          >.
+          <br />
+          <br />
+          The 2007-2008 drought caused significant regional attention. Many
+          citizens voluntarily changed their habits (both indoor and outdoor) in
+          ways that continue today.
+          <br />
+          <br />
+          While Jordan Lake, Cary’s water supply, was stable, Cary briefly
+          entered into Stage 1 of its
+          <a
+            href="https://www.carync.gov/services-publications/plans-publications-reports/water-shortage-response-plan"
+            target="_blank"
+            >water shortage response plan</a
+          >
+          out of regional solidarity.
+          <br />
+          <br />
+          The strain caused by the drought spurred the development of regional
+          agreements and infrastructure to be able to support one another in
+          times of extreme need. The
+          <a href="http://www.trianglewaterpartnership.org/" target="_blank"
+            >Triangle Water Supply Partnership</a
+          >
+          continued to promote this spirit of cooperation and
+          interconnectedness.
+        </p>
+      </div>
+    </div>
+    <div class="row center">
+      <div class="col-md-12 center">
+        <figure style="margin: 0px">
+          <a
+            href="https://data.townofcary.org/assets/theme_image/triangle_water_supply_partnership_interconnections_map.png"
+            target="_blank"
+            ><img
+              src="https://data.townofcary.org/assets/theme_image/triangle_water_supply_partnership_interconnections_map.png"
+              alt="Triangle Water Supply Partnership Interconnections Map"
+              style="
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                max-width: 800px;
+              "
+          /></a>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>The Summary and the Success</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          Cary’s water conservation strategy became nationally recognized for
+          its comprehensiveness and success. While sudden growth initially
+          spurred this effort, the framework allows Cary to serve as a leader
+          during times of regional drought.
+          <br />
+          <br />
+          The success was a result of partnership from both individuals and the
+          industry.
+          <br />
+          <br />
+          After the drought, there was more societal appreciation and acceptance
+          for warm-season turf. Additionally, with changing development
+          patterns, irrigation systems no longer became standard fixtures in new
+          homes. The irrigation industry advanced more efficient technologies
+          such as soil moisture and rain sensors and urged industry
+          professionals to design more efficient layouts.
+          <br />
+          <br />
+          Today, many new homes have significantly smaller yards on average,
+          further reducing irrigation demand. Also, high-efficiency appliances
+          have become standard for both new and older homes.
+          <br />
+          <br />
+          Along with behavioral changes, all of these factors have contributed
+          greatly to a reduction in per capita usage.
+          <br />
+          <br />
+          As for the goal? We blew it out of the water with a 20% reduction
+          realized years earlier than expected and over 30% reduction to date.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <div class="chart-title">
+            <span>Cary/Morrisville Average Residential Demand</span
+            ><sup
+              >[<a href="#Residential-GPCD-(Gallons-Per-Capita-Daily)">1</a>]
+              [<a href="#CAWTF-PeakingFactors">2</a>]</sup
+            >
+            <br />
+            <span>in Gallons per Person per Day</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ods-dataset-context
+          context="residentialgpcd"
+          residentialgpcd-dataset="residential-gpcd"
+        >
+          <ods-chart
+            timescale="year"
+            single-y-axis="true"
+            single-y-axis-label="Gallons per Capita per Day"
+            scientific-display="false"
+            align-month="true"
+          >
+            <ods-chart-query
+              context="residentialgpcd"
+              field-x="year"
+              maxpoints="0"
+              timescale="year"
+            >
+              <ods-chart-serie
+                expression-y="gpcd"
+                chart-type="column"
+                function-y="AVG"
+                label-y="Gallons per Capita per Day"
+                color="#003E7A"
+                display-values="false"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+              <ods-chart-serie
+                expression-y="multi_year_average"
+                chart-type="line"
+                function-y="AVG"
+                label-y="Multi-Year Average Gallons per Capita per Day"
+                color="#D57146"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+        </ods-dataset-context>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Looking Forward: Your Choices and Voice Matter</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p style="margin-bottom: 0rem; padding-bottom: 0rem !important">
+          The initial goals of the water conservation strategy are still valid
+          and important today:
+        </p>
+        <ul style="margin-top: 0rem">
+          <li>
+            <span
+              >Support the high quality of life in Cary by providing safe,
+              reliable water serfice, while reducing the per capita use of
+              water</span
+            >
+          </li>
+          <li>
+            <span>Conserve natural resources</span>
+          </li>
+          <li>
+            <span>Reduce the impact of future infrastructure expansion</span>
+          </li>
+        </ul>
+        <p>
+          This means, while great progress has been made, everyone is needed to
+          do their part to use water wisely.
+          <br />
+          <br />
+          Check out Cary’s
+          <a
+            href="https://www.carync.gov/services-publications/water-sewer/sewer/water-conservation"
+            target="_blank"
+            >water conservation page</a
+          >
+          to see how you can
+          <a
+            href="https://www.carync.gov/services-publications/water-sewer/water/aquastar/how-to-use-aquastar"
+            target="_blank"
+            >track your water usage</a
+          >, get tips on how to
+          <a
+            href="https://www.carync.gov/services-publications/water-sewer-stormwater/water/water-conservation/education/household-conservation-tips/fix-a-leak"
+            target="_blank"
+            ><strong>fix a leak</strong></a
+          >
+          or optimize your
+          <a
+            href="https://www.carync.gov/services-publications/water-sewer/sewer/water-conservation/irrigation/tips-to-maintain-your-system"
+            target="_blank"
+            >irrigation plans</a
+          >.
+          <br />
+          <br />
+          Today, Cary’s role as a regional environmental leader ranges from
+          conservation to composting, from transportation to trees, and water to
+          energy. You can learn more about our
+          <a
+            href="https://www.carync.gov/projects-initiatives/sustainable-resilient-cary"
+            target="_blank"
+            >stewardship strategies</a
+          >
+          and our
+          <a
+            href="https://cary-nc.civilspace.io/en/projects/count-me-in-cary"
+            target="_blank"
+            >Count me in, Cary! survey</a
+          >.
+          <br />
+          <br />
+          As we continue to build a resilient and sustainable community, know
+          that Cary has a long history of successful trail-blazing.
+        </p>
+      </div>
+    </div>
+    <div class="row center">
+      <div class="col-md-6 col-md-offset-3">
+        <figure>
+          <img
+            src="https://data.townofcary.org/assets/theme_image/jordan_lake.jpg"
+            alt="Jordan Lake"
+            style="
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+              max-width: 500px;
+            "
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>WaterSense</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-8">
+      <p>
+        Since its inception in 2006, Cary has been a partner with WaterSense, an
+        outreach branch of the Environmental Protection Agency (EPA) providing
+        high-quality education and outreach materials related to water
+        efficiency. Products with a WaterSense Label offer a simple way for
+        consumers to identify water-efficient products by ensuring that they
+        meet the EPA's specifications for performance. You can also find
+        resources for both
+        <a href="https://www.epa.gov/watersense/watersense-kids" target="_blank"
+          >kids</a
+        >
+        and
+        <a href="https://www.epa.gov/watersense/start-saving" target="_blank"
+          >adults</a
+        >
+        on the WaterSense home page.
+      </p>
+    </div>
+    <div class="col-sm-12 col-md-4 center">
+      <figure>
+        <img
+          src="https://data.townofcary.org/assets/theme_image/WaterSense_logo.png"
+          alt="WaterSense Logo"
+          style="max-height: 13rem"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>References</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="center">
+          <div
+            class="references-list"
+            style="display: flex; justify-content: space-around"
+          >
+            <ol style="text-align: left">
+              <li id="Residential-GPCD-(Gallons-Per-Capita-Daily)">
+                <a
+                  href="https://data.townofcary.org/explore/dataset/residential-gpcd/information/"
+                  target="_blank"
+                  >Residential GPCD (Gallons Per Capita Daily)</a
+                >
+              </li>
+              <li id="CAWTF-PeakingFactors">
+                <a
+                  href="https://data.townofcary.org/explore/dataset/cawtf_peakingfactors/information/"
+                  target="_blank"
+                  >Cary/Apex Water Treatment Facility Peaking Factors</a
+                >
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

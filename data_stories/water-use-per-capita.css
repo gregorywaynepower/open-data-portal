@@ -1,9 +1,85 @@
-/* 
-<center> deprecation fix
-*/
-.center {
-  margin: auto 0px;
+html {
+  font-size: 16px;
+}
+
+h1 {
+  color: #003e7a !important;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   text-align: center;
+  text-transform: none;
+}
+
+h2 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
+
+h3 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1.17rem;
+  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
+
+h4 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 1rem;
+  line-height: 1.17;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
+
+h5 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 0.83rem;
+  line-height: 1.17;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
+
+h6 {
+  color: #ffffff;
+  background-color: #003e7a;
+  font-size: 0.67rem;
+  line-height: 1.17;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
+
+/* <center> deprecation fix */
+
+.center {
+  margin: 0px auto;
+  text-align: center;
+  list-style-position: inside;
+}
+
+@media screen and (min-width: 992px) {
+  .justify-content-center {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* Variables & Shared classes
@@ -24,6 +100,14 @@
 .row-equal-height:after {
   content: normal;
 }
+
+@media only screen and (min-width: 426px) {
+  .justify-content-around {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 /* KPI Card
 ========================================================================== */
 .kpi-card {
