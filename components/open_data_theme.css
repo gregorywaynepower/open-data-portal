@@ -282,6 +282,12 @@
     U+FEFF, U+FFFD;
 }
 
+/* To ensure Data Catalog Table panels had consistent text sizing */
+
+.odswidget-table__cell-container span {
+  font-size: 14px;
+}
+
 /* Make API link in Catalog page same font-size */
 
 a.ods-catalog-card__visualization.ng-scope > span {
