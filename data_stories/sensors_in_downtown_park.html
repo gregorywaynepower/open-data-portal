@@ -217,6 +217,61 @@
     <div class="row">
       <div class="col-md-12">
         <div class="center">
+          <h2>Door Sensors by Day</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Downtown Park Sound Sensors<sup
+              >[<a href="#DowntownParkSoundSensors" id="citation-1-a"
+                ><span>2</span></a
+              >]
+            </sup>
+          </div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="sensordatacapture"
+            sensordatacapture-dataset="sensor-data-capture"
+            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.link_type':'uplink','refine.decoded_content_1_value':'OPEN','refine.decoded_content_1_name':'Door','q.timerange.datetime':'datetime:[2023-11-17T05:00:00Z TO 2023-11-21T04:59:59Z]'}"
+          >
+            <ods-chart
+              timescale="day"
+              scientific-display="false"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="sensordatacapture"
+                field-x="datetime"
+                maxpoints="0"
+                timescale="day"
+                series-breakdown="building"
+              >
+                <ods-chart-serie
+                  expression-y="decoded_content_0_value"
+                  chart-type="column"
+                  function-y="COUNT"
+                  color="range-custom"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
           <h2>Sound Sensor Measurements</h2>
         </div>
       </div>
@@ -248,6 +303,226 @@
               >
                 <ods-chart-serie
                   expression-y="sound_level"
+                  chart-type="line"
+                  function-y="AVG"
+                  color="range-custom"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>The Nest Paper Towel Sensors</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Downtown Park Sensors<sup
+              >[<a href="#DowntownParkSensors" id="citation-1-a"
+                ><span>2</span></a
+              >]
+            </sup>
+          </div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="sensordatacapture"
+            sensordatacapture-dataset="sensor-data-capture"
+            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.type':'Paper Towel Sensor','refine.link_type':'uplink','refine.building':'The Nest'}"
+          >
+            <ods-chart
+              timescale="hour"
+              scientific-display="false"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="sensordatacapture"
+                field-x="datetime"
+                maxpoints="0"
+                timescale="hour"
+                series-breakdown="location_name"
+              >
+                <ods-chart-serie
+                  expression-y="distance_in_millimeters"
+                  chart-type="line"
+                  function-y="AVG"
+                  color="range-custom"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>Bark Bar Paper Towel Sensors</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Downtown Park Sensors<sup
+              >[<a href="#DowntownParkSensors" id="citation-1-a"
+                ><span>2</span></a
+              >]
+            </sup>
+          </div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="sensordatacapture"
+            sensordatacapture-dataset="sensor-data-capture"
+            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.type':'Paper Towel Sensor','refine.link_type':'uplink','refine.building':'Bark Bar'}"
+          >
+            <ods-chart
+              timescale="hour"
+              scientific-display="false"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="sensordatacapture"
+                field-x="datetime"
+                maxpoints="0"
+                timescale="hour"
+                series-breakdown="location_name"
+              >
+                <ods-chart-serie
+                  expression-y="distance_in_millimeters"
+                  chart-type="line"
+                  function-y="AVG"
+                  color="range-custom"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>Library Paper Towel Sensors</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Downtown Park Sensors<sup
+              >[<a href="#DowntownParkSensors" id="citation-1-a"
+                ><span>2</span></a
+              >]
+            </sup>
+          </div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="sensordatacapture"
+            sensordatacapture-dataset="sensor-data-capture"
+            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.type':'Paper Towel Sensor','refine.link_type':'uplink','refine.location_name':['Library Office Womens Bathroom','Library Office Family Bathroom','Library Office Mens Bathroom']}"
+          >
+            <ods-chart
+              timescale="hour"
+              scientific-display="false"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="sensordatacapture"
+                field-x="datetime"
+                maxpoints="0"
+                timescale="hour"
+                series-breakdown="location_name"
+              >
+                <ods-chart-serie
+                  expression-y="distance_in_millimeters"
+                  chart-type="line"
+                  function-y="AVG"
+                  color="range-custom"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>Performance Pavillion Paper Towel Sensors</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Downtown Park Sensors<sup
+              >[<a href="#DowntownParkSensors" id="citation-1-a"
+                ><span>2</span></a
+              >]
+            </sup>
+          </div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="sensordatacapture"
+            sensordatacapture-dataset="sensor-data-capture"
+            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.type':'Paper Towel Sensor','refine.link_type':'uplink','refine.building':'Performance Pavilion'}"
+          >
+            <ods-chart
+              timescale="hour"
+              scientific-display="false"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="sensordatacapture"
+                field-x="datetime"
+                maxpoints="0"
+                timescale="hour"
+                series-breakdown="location_name"
+              >
+                <ods-chart-serie
+                  expression-y="distance_in_millimeters"
                   chart-type="line"
                   function-y="AVG"
                   color="range-custom"
