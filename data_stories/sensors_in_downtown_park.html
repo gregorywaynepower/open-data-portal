@@ -23,6 +23,39 @@
 </section>
 <section>
   <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div
+          class="center"
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <img
+            class="shuttle-image"
+            src="https://data.townofcary.org/assets/theme_image/DowntownCaryParkDrone.png"
+            alt="Top-down view of the Downtown Cary Park grounds."
+          />
+        </div>
+      </div>
+      <div
+        class="col-md-6"
+        style="display: flex; justify-content: center; align-items: center"
+      >
+        <p>
+          Downtown Cary Park is the test bed for Internet-of-Things technology.
+          Cary is using a suite of sensors to provide better service to our
+          visitors. The integration of sensor technology in Cary's downtown park
+          exemplifies a commitment to sustainability and innovation. The
+          utilization of sensors transforms Cary's downtown park into a smart
+          and dynamic space, ensuring a seamless blend of technology and nature
+          for the enjoyment of residents and visitors alike.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="center">
@@ -84,6 +117,136 @@
   </div>
 </section>
 <br />
+<section>
+  <div class="row">
+    <div class="col-12 col-md-12">
+      <div class="center">
+        <h2>What Days Had the Most Traffic?</h2>
+        <p>
+          Interact with the sliders below each map to pick the date ranges you
+          want to visualize.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="chart-title">
+        <div class="center">
+          Downtown Park Door Sensor Heatmap<sup
+            >[<a
+              href="#DoorSensorDatafromDowntownCaryParkOpening"
+              id="citation-1-a"
+              ><span>2</span></a
+            >]
+          </sup>
+        </div>
+      </div>
+      <figure>
+        <ods-dataset-context
+          context="doorsensordatafromdowntowncaryparkopening"
+          doorsensordatafromdowntowncaryparkopening-dataset="door-sensor-data-from-downtown-cary-park-opening"
+          doorsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.decoded_content_1_value':true,'disjunctive.params_duplicate':true,'disjunctive.link_type':true,'disjunctive.building':true,'disjunctive.location_name':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','refine.decoded_content_1_value':'OPEN'}"
+        >
+          <ods-map
+            no-refit="true"
+            scroll-wheel-zoom="false"
+            basemap="jawg.light"
+            location="18,35.78393,-78.77969"
+          >
+            <ods-map-layer-group>
+              <ods-map-layer
+                context="doorsensordatafromdowntowncaryparkopening"
+                color-gradient="{'1':'#FF0000','0.4':'#0000FF','0.6':'#00FFFF','0.7':'#00FF00','0.8':'#FFFF00'}"
+                picto="ods-circle"
+                show-marker="true"
+                display="heatmap"
+                radius="4"
+                function="COUNT"
+                expression="decoded_content_0_value"
+                shape-opacity="0.5"
+                point-opacity="1"
+                border-color="#FFFFFF"
+                border-opacity="1"
+                border-size="1"
+                border-pattern="solid"
+                size-function="linear"
+              ></ods-map-layer>
+            </ods-map-layer-group>
+          </ods-map>
+          <ods-date-range-slider
+            context="doorsensordatafromdowntowncaryparkopening"
+            date-format="DD MMM YYYY"
+            initial-from="2023/11/17"
+            initial-to="2023/11/19"
+            precision="day"
+            date-field="dt"
+            start-bound="'2023/11/17'"
+            end-bound="'2023/11/19'"
+          >
+          </ods-date-range-slider>
+        </ods-dataset-context>
+      </figure>
+    </div>
+    <div class="col-md-6">
+      <div class="chart-title add-whitespace">
+        <div class="center">
+          Door Sensor Cluster Map<sup
+            >[<a href="#DoorSensorDatafromDowntownCaryParkOpening">2</a>]</sup
+          >
+        </div>
+      </div>
+      <figure>
+        <ods-dataset-context
+          context="doorsensordatafromdowntowncaryparkopening"
+          doorsensordatafromdowntowncaryparkopening-dataset="door-sensor-data-from-downtown-cary-park-opening"
+          doorsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.decoded_content_1_value':true,'disjunctive.params_duplicate':true,'disjunctive.link_type':true,'disjunctive.building':true,'disjunctive.location_name':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','refine.decoded_content_1_value':'OPEN'}"
+        >
+          <ods-map
+            no-refit="true"
+            scroll-wheel-zoom="false"
+            basemap="jawg.light"
+            location="18,35.78393,-78.77969"
+          >
+            <ods-map-layer-group>
+              <ods-map-layer
+                context="doorsensordatafromdowntowncaryparkopening"
+                color="#C32D1C"
+                picto="ods-circle"
+                show-marker="true"
+                display="clusters"
+                function="COUNT"
+                expression="decoded_content_0_value"
+                shape-opacity="0.5"
+                point-opacity="1"
+                border-color="#FFFFFF"
+                border-opacity="1"
+                border-size="1"
+                border-pattern="solid"
+                title="Downtown Park Sensor Data"
+                description="Wide form sensor data from the devices themselves in Downtown Cary Park."
+                size-min="3"
+                size-max="5"
+                size-function="linear"
+              ></ods-map-layer>
+            </ods-map-layer-group>
+          </ods-map>
+          <ods-date-range-slider
+            context="doorsensordatafromdowntowncaryparkopening"
+            date-format="DD MMM YYYY"
+            initial-from="2023/11/17"
+            initial-to="2023/11/19"
+            precision="day"
+            date-field="dt"
+            start-bound="'2023/11/17'"
+            end-bound="'2023/11/19'"
+          >
+          </ods-date-range-slider>
+        </ods-dataset-context>
+      </figure>
+    </div>
+  </div>
+</section>
 <section>
   <div class="container">
     <div class="row">
