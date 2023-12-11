@@ -610,3 +610,59 @@
   </div>
 </section>
 <br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>Trash Sensor Data from Downtown Cary Park Opening</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Trash Sensor Data from Downtown Cary Park Opening
+            <sup
+              >[<a href="#DowntownParkSensors" id="citation-1-a"
+                ><span>2</span></a
+              >]
+            </sup>
+          </div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="trashsensordatafromdowntowncaryparkopening"
+            trashsensordatafromdowntowncaryparkopening-dataset="trash-sensor-data-from-downtown-cary-park-opening"
+            trashsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.params_duplicate':true,'disjunctive.link_type':true,'disjunctive.location_name':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]'}"
+          >
+            <ods-chart
+              timescale="hour"
+              scientific-display="false"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="trashsensordatafromdowntowncaryparkopening"
+                field-x="dt"
+                maxpoints="0"
+                timescale="hour"
+              >
+                <ods-chart-serie
+                  expression-y="decoded_packets_2_content_0_value"
+                  chart-type="line"
+                  function-y="AVG"
+                  color="#2B3F56"
+                  min="0"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
