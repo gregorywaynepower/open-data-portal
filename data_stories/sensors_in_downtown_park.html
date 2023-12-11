@@ -45,6 +45,7 @@
           <ods-dataset-context
             context="downtownparkmap"
             downtownparkmap-dataset="downtown-park-map"
+            downtownparkmap-parameters="{'disjunctive.type':true}"
           >
             <ods-map
               no-refit="true"
@@ -56,11 +57,13 @@
               <ods-map-layer-group>
                 <ods-map-layer
                   context="downtownparkmap"
-                  color-categories="{'Occupancy Sensor':'#AF5FA2','Door Sensor':'#C64513','Paper Towel Sensor':'#638E5B','Sound Sensor':'#1216CC','Trash Sensor':'#BA0129'}"
+                  color-categories="{'Occupancy Sensor':'#638E5B','Door Sensor':'#2B3F56','Paper Towel Sensor (Paper Towel Roll)':'#F7C87E','Paper Towel Sensor (Stack of Paper Towels)':'#1216CC','Sound Sensor':'#8964A8','Trash Sensor':'#BA0129'}"
                   color-by-field="type"
                   picto="ods-circle"
                   show-marker="true"
                   display="categories"
+                  function="COUNT"
+                  expression="lat"
                   shape-opacity="0.5"
                   point-opacity="1"
                   border-color="#FFFFFF"
@@ -103,9 +106,9 @@
         </div>
         <figure>
           <ods-dataset-context
-            context="sensordatacapture"
-            sensordatacapture-dataset="sensor-data-capture"
-            sensordatacapture-parameters="{'refine.type':'Door Sensor','refine.link_type':'uplink'}"
+            context="doorsensordatafromdowntowncaryparkopening"
+            doorsensordatafromdowntowncaryparkopening-dataset="door-sensor-data-from-downtown-cary-park-opening"
+            doorsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.decoded_content_1_value':true,'disjunctive.params_duplicate':true,'disjunctive.link_type':true,'disjunctive.building':true,'disjunctive.location_name':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','refine.decoded_content_1_value':'OPEN'}"
           >
             <ods-map
               no-refit="true"
@@ -118,7 +121,7 @@
             >
               <ods-map-layer-group>
                 <ods-map-layer
-                  context="sensordatacapture"
+                  context="doorsensordatafromdowntowncaryparkopening"
                   color="#C32D1C"
                   picto="ods-circle"
                   show-marker="true"
@@ -169,9 +172,9 @@
         </div>
         <figure>
           <ods-dataset-context
-            context="sensordatacapture"
-            sensordatacapture-dataset="sensor-data-capture"
-            sensordatacapture-parameters="{'refine.link_type':'uplink','refine.type':'Door Sensor'}"
+            context="doorsensordatafromdowntowncaryparkopening"
+            doorsensordatafromdowntowncaryparkopening-dataset="door-sensor-data-from-downtown-cary-park-opening"
+            doorsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.decoded_content_1_value':true,'disjunctive.params_duplicate':true,'disjunctive.link_type':true,'disjunctive.building':true,'disjunctive.location_name':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','refine.decoded_content_1_value':'OPEN'}"
           >
             <ods-map
               no-refit="true"
@@ -184,7 +187,7 @@
             >
               <ods-map-layer-group>
                 <ods-map-layer
-                  context="sensordatacapture"
+                  context="doorsensordatafromdowntowncaryparkopening"
                   color-gradient="{'1':'#FF0000','0.4':'#0000FF','0.6':'#00FFFF','0.7':'#00FF00','0.8':'#FFFF00'}"
                   picto="ods-circle"
                   show-marker="true"
@@ -234,24 +237,20 @@
         </div>
         <figure>
           <ods-dataset-context
-            context="sensordatacapture"
-            sensordatacapture-dataset="sensor-data-capture"
-            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.link_type':'uplink','refine.decoded_content_1_value':'OPEN','refine.decoded_content_1_name':'Door','q.timerange.datetime':'datetime:[2023-11-17T05:00:00Z TO 2023-11-21T04:59:59Z]'}"
+            context="doorsensordatafromdowntowncaryparkopening"
+            doorsensordatafromdowntowncaryparkopening-dataset="door-sensor-data-from-downtown-cary-park-opening"
+            doorsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.decoded_content_1_value':true,'disjunctive.params_duplicate':true,'disjunctive.link_type':true,'disjunctive.building':true,'disjunctive.location_name':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','refine.decoded_content_1_value':'OPEN'}"
           >
-            <ods-chart
-              timescale="day"
-              scientific-display="false"
-              align-month="true"
-            >
+            <ods-chart scientific-display="false" align-month="true">
               <ods-chart-query
-                context="sensordatacapture"
-                field-x="datetime"
+                context="doorsensordatafromdowntowncaryparkopening"
+                field-x="dt"
                 maxpoints="0"
                 timescale="day"
                 series-breakdown="building"
               >
                 <ods-chart-serie
-                  expression-y="decoded_content_0_value"
+                  expression-y="decoded_content_2_value"
                   chart-type="column"
                   function-y="COUNT"
                   color="range-custom"
@@ -291,14 +290,18 @@
           <ods-dataset-context
             context="downtownparksoundsensors"
             downtownparksoundsensors-dataset="downtown-park-sound-sensors"
-            downtownparksoundsensors-parameters="{'disjunctive.sound_level':true}"
+            downtownparksoundsensors-parameters="{'disjunctive.day_of_week':true,'refine.rx_datetime':'2023/11','q.timerange.rx_datetime':'rx_datetime:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]'}"
           >
-            <ods-chart scientific-display="false" align-month="true">
+            <ods-chart
+              timescale="minute"
+              scientific-display="false"
+              align-month="true"
+            >
               <ods-chart-query
                 context="downtownparksoundsensors"
                 field-x="rx_datetime"
                 maxpoints="0"
-                timescale="minute"
+                timescale="hour"
                 series-breakdown="location_name"
               >
                 <ods-chart-serie
@@ -306,6 +309,7 @@
                   chart-type="line"
                   function-y="AVG"
                   color="range-custom"
+                  min="0"
                   scientific-display="true"
                 >
                 </ods-chart-serie>
@@ -331,7 +335,7 @@
       <div class="col-md-12">
         <div class="chart-title">
           <div class="center">
-            Downtown Park Sensors<sup
+            Paper Towel Sensor Data from Downtown Cary Park Opening<sup
               >[<a href="#DowntownParkSensors" id="citation-1-a"
                 ><span>2</span></a
               >]
@@ -340,27 +344,29 @@
         </div>
         <figure>
           <ods-dataset-context
-            context="sensordatacapture"
-            sensordatacapture-dataset="sensor-data-capture"
-            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.type':'Paper Towel Sensor','refine.link_type':'uplink','refine.building':'The Nest'}"
+            context="papertowelsensordatafromdowntowncaryparkopening"
+            papertowelsensordatafromdowntowncaryparkopening-dataset="paper-towel-sensor-data-from-downtown-cary-park-opening"
+            papertowelsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.building':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','refine.building':'The Nest'}"
           >
             <ods-chart
-              timescale="hour"
+              timescale="day"
               scientific-display="false"
               align-month="true"
             >
               <ods-chart-query
-                context="sensordatacapture"
-                field-x="datetime"
+                context="papertowelsensordatafromdowntowncaryparkopening"
+                field-x="dt"
                 maxpoints="0"
                 timescale="hour"
                 series-breakdown="location_name"
               >
                 <ods-chart-serie
-                  expression-y="distance_in_millimeters"
+                  expression-y="decoded_packets_2_content_0_value"
                   chart-type="line"
                   function-y="AVG"
                   color="range-custom"
+                  min="0"
+                  max="100"
                   scientific-display="true"
                 >
                 </ods-chart-serie>
@@ -386,7 +392,7 @@
       <div class="col-md-12">
         <div class="chart-title">
           <div class="center">
-            Downtown Park Sensors<sup
+            Paper Towel Sensor Data from Downtown Cary Park Opening<sup
               >[<a href="#DowntownParkSensors" id="citation-1-a"
                 ><span>2</span></a
               >]
@@ -395,27 +401,29 @@
         </div>
         <figure>
           <ods-dataset-context
-            context="sensordatacapture"
-            sensordatacapture-dataset="sensor-data-capture"
-            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.type':'Paper Towel Sensor','refine.link_type':'uplink','refine.building':'Bark Bar'}"
+            context="papertowelsensordatafromdowntowncaryparkopening"
+            papertowelsensordatafromdowntowncaryparkopening-dataset="paper-towel-sensor-data-from-downtown-cary-park-opening"
+            papertowelsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.building':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','disjunctive.location_name':true,'disjunctive.sensor_type':true,'refine.building':'Bark Bar'}"
           >
             <ods-chart
-              timescale="hour"
+              timescale="day"
               scientific-display="false"
               align-month="true"
             >
               <ods-chart-query
-                context="sensordatacapture"
-                field-x="datetime"
+                context="papertowelsensordatafromdowntowncaryparkopening"
+                field-x="dt"
                 maxpoints="0"
                 timescale="hour"
                 series-breakdown="location_name"
               >
                 <ods-chart-serie
-                  expression-y="distance_in_millimeters"
+                  expression-y="decoded_packets_2_content_0_value"
                   chart-type="line"
                   function-y="AVG"
                   color="range-custom"
+                  min="0"
+                  max="100"
                   scientific-display="true"
                 >
                 </ods-chart-serie>
@@ -441,7 +449,8 @@
       <div class="col-md-12">
         <div class="chart-title">
           <div class="center">
-            Downtown Park Sensors<sup
+            Paper Towel Sensor Data from Downtown Cary Park Opening
+            <sup
               >[<a href="#DowntownParkSensors" id="citation-1-a"
                 ><span>2</span></a
               >]
@@ -450,27 +459,29 @@
         </div>
         <figure>
           <ods-dataset-context
-            context="sensordatacapture"
-            sensordatacapture-dataset="sensor-data-capture"
-            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.type':'Paper Towel Sensor','refine.link_type':'uplink','refine.location_name':['Library Office Womens Bathroom','Library Office Family Bathroom','Library Office Mens Bathroom']}"
+            context="papertowelsensordatafromdowntowncaryparkopening"
+            papertowelsensordatafromdowntowncaryparkopening-dataset="paper-towel-sensor-data-from-downtown-cary-park-opening"
+            papertowelsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.building':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','disjunctive.location_name':true,'disjunctive.sensor_type':true,'refine.building':'Library Office'}"
           >
             <ods-chart
-              timescale="hour"
+              timescale="day"
               scientific-display="false"
               align-month="true"
             >
               <ods-chart-query
-                context="sensordatacapture"
-                field-x="datetime"
+                context="papertowelsensordatafromdowntowncaryparkopening"
+                field-x="dt"
                 maxpoints="0"
                 timescale="hour"
                 series-breakdown="location_name"
               >
                 <ods-chart-serie
-                  expression-y="distance_in_millimeters"
+                  expression-y="decoded_packets_2_content_0_value"
                   chart-type="line"
                   function-y="AVG"
                   color="range-custom"
+                  min="0"
+                  max="100"
                   scientific-display="true"
                 >
                 </ods-chart-serie>
@@ -488,7 +499,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="center">
-          <h2>Performance Pavillion Paper Towel Sensors</h2>
+          <h2>Academy Pavilion Paper Towel Sensors</h2>
         </div>
       </div>
     </div>
@@ -496,7 +507,8 @@
       <div class="col-md-12">
         <div class="chart-title">
           <div class="center">
-            Downtown Park Sensors<sup
+            Paper Towel Sensor Data from Downtown Cary Park Opening
+            <sup
               >[<a href="#DowntownParkSensors" id="citation-1-a"
                 ><span>2</span></a
               >]
@@ -505,9 +517,67 @@
         </div>
         <figure>
           <ods-dataset-context
-            context="sensordatacapture"
-            sensordatacapture-dataset="sensor-data-capture"
-            sensordatacapture-parameters="{'disjunctive.location_name':true,'disjunctive.type':true,'disjunctive.building':true,'refine.type':'Paper Towel Sensor','refine.link_type':'uplink','refine.building':'Performance Pavilion'}"
+            context="papertowelsensordatafromdowntowncaryparkopening"
+            papertowelsensordatafromdowntowncaryparkopening-dataset="paper-towel-sensor-data-from-downtown-cary-park-opening"
+            papertowelsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.building':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','disjunctive.location_name':true,'disjunctive.sensor_type':true,'refine.building':'Academy Pavilion'}"
+          >
+            <ods-chart
+              timescale="day"
+              scientific-display="false"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="papertowelsensordatafromdowntowncaryparkopening"
+                field-x="dt"
+                maxpoints="0"
+                timescale="hour"
+                series-breakdown="location_name"
+              >
+                <ods-chart-serie
+                  expression-y="decoded_packets_2_content_0_value"
+                  chart-type="line"
+                  function-y="AVG"
+                  color="range-custom"
+                  min="0"
+                  max="100"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>Performance Pavilion Paper Towel Sensors</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">
+            Paper Towel Sensor Data from Downtown Cary Park Opening
+            <sup
+              >[<a href="#DowntownParkSensors" id="citation-1-a"
+                ><span>2</span></a
+              >]
+            </sup>
+          </div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="papertowelsensordatafromdowntowncaryparkopening"
+            papertowelsensordatafromdowntowncaryparkopening-dataset="paper-towel-sensor-data-from-downtown-cary-park-opening"
+            papertowelsensordatafromdowntowncaryparkopening-parameters="{'disjunctive.day_of_week':true,'disjunctive.building':true,'q.timerange.dt':'dt:[2023-11-17T05:00:00Z TO 2023-11-20T04:59:59Z]','refine.building':'Performance Pavilion'}"
           >
             <ods-chart
               timescale="hour"
@@ -515,17 +585,19 @@
               align-month="true"
             >
               <ods-chart-query
-                context="sensordatacapture"
-                field-x="datetime"
+                context="papertowelsensordatafromdowntowncaryparkopening"
+                field-x="dt"
                 maxpoints="0"
                 timescale="hour"
                 series-breakdown="location_name"
               >
                 <ods-chart-serie
-                  expression-y="distance_in_millimeters"
+                  expression-y="decoded_packets_2_content_0_value"
                   chart-type="line"
                   function-y="AVG"
                   color="range-custom"
+                  min="0"
+                  max="100"
                   scientific-display="true"
                 >
                 </ods-chart-serie>
