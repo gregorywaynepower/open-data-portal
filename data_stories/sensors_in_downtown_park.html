@@ -48,6 +48,13 @@
           utilization of sensors transforms Cary's downtown park into a smart
           and dynamic space, ensuring a seamless blend of technology and nature
           for the enjoyment of residents and visitors alike.
+          <br />
+          <br />
+          The data for this report is from Downtown Cary Park's opening weekend
+          spanning November 17 2023 to November 19 2023. All maps and charts are
+          interactive. For charts, hover over points of interest, and
+          click-and-drag inside chart areas to select a particular range you
+          want to get a closer look into.
         </p>
       </div>
     </div>
@@ -82,7 +89,7 @@
           >
             <ods-map
               no-refit="true"
-              scroll-wheel-zoom="false"
+              scroll-wheel-zoom="true"
               toolbar-fullscreen="true"
               basemap="jawg.streets"
               location="17,35.78441,-78.7778"
@@ -124,7 +131,8 @@
         <h2>What Days Had the Most Traffic?</h2>
         <p>
           Interact with the sliders below each map to pick the date ranges you
-          want to visualize.
+          want to visualize. The data has been filtered to show the number of
+          instances a door has been opened.
         </p>
       </div>
     </div>
@@ -150,7 +158,7 @@
         >
           <ods-map
             no-refit="true"
-            scroll-wheel-zoom="false"
+            scroll-wheel-zoom="true"
             basemap="jawg.light"
             location="18,35.78393,-78.77969"
           >
@@ -204,7 +212,7 @@
         >
           <ods-map
             no-refit="true"
-            scroll-wheel-zoom="false"
+            scroll-wheel-zoom="true"
             basemap="jawg.light"
             location="18,35.78393,-78.77969"
           >
@@ -277,7 +285,7 @@
           >
             <ods-map
               no-refit="true"
-              scroll-wheel-zoom="false"
+              scroll-wheel-zoom="true"
               search-box="true"
               toolbar-fullscreen="true"
               toolbar-geolocation="true"
@@ -310,6 +318,15 @@
             </ods-map>
           </ods-dataset-context>
         </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          This shows the total number of times door were opened across the whole
+          weekend. The clustering is dependent on the zoom level. Feel free to
+          zoom and click on the elements to inspect columns.
+        </p>
       </div>
     </div>
   </div>
@@ -345,7 +362,7 @@
           >
             <ods-map
               no-refit="true"
-              scroll-wheel-zoom="false"
+              scroll-wheel-zoom="true"
               search-box="true"
               toolbar-fullscreen="true"
               toolbar-geolocation="true"
@@ -377,6 +394,15 @@
             </ods-map>
           </ods-dataset-context>
         </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          This shows the density of times door were opened across the whole
+          weekend. The heatmap's "temperature" is dependent on the zoom level
+          and what points are visible within the map.
+        </p>
       </div>
     </div>
   </div>
