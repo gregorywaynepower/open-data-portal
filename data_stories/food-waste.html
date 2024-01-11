@@ -3,7 +3,9 @@
     <div class="heading">
       <br />
       <div class="center">
-        <h1 class="title">Cary Composts - Food Waste Recycling</h1>
+        <h1 class="title">
+          [Internal Draft] Cary Composts - Food Waste Recycling
+        </h1>
         <ods-dataset-context
           context="foodwastepilotproject"
           foodwastepilotproject-dataset="food-waste-pilot"
@@ -121,7 +123,8 @@
                 width="20%"
               />
               <p class="kpi-description">
-                Total <b>Lbs</b> of Food Waste Collected to Date:
+                Total
+                <b>Lbs</b> of Food Waste Collected to Date:
               </p>
               <span class="kpi-value"> {{ myvar | number }}</span>
             </div>
@@ -162,7 +165,8 @@
                 width="20%"
               />
               <p class="kpi-description">
-                Total Estimated Earned <b>Lbs</b> of Compost Created to Date:
+                Total Estimated Earned
+                <b>Lbs</b> of Compost Created to Date:
               </p>
               <span class="kpi-value"> {{ myvar | number }}</span>
             </div>
@@ -174,38 +178,53 @@
       <div class="col-md-12">
         <p></p>
         <ods-dataset-context
-          context="foodwastepilotproject"
-          foodwastepilotproject-dataset="food-waste-pilot"
-          foodwastepilotproject-parameters="{'sort':'date_collection_datetime'}"
+          context="secondcompostsitetestingforimpact"
+          secondcompostsitetestingforimpact-dataset="second_compost_site_testing_for-impact"
         >
           <ods-chart
-            label-x="Collection Date"
             timescale="month"
             single-y-axis="true"
+            single-y-axis-label="Pounds (lb)"
+            scientific-display="true"
             align-month="true"
           >
             <ods-chart-query
-              context="foodwastepilotproject"
+              context="secondcompostsitetestingforimpact"
               field-x="date_collection_datetime"
               maxpoints="0"
               timescale="month"
             >
               <ods-chart-serie
                 expression-y="lbs_collected"
-                chart-type="column"
-                function-y="SUM"
-                label-y="Food Waste Collected (Lbs)"
-                color="#83a506"
+                chart-type="line"
+                function-y="AVG"
+                color="#0C6256"
+                display-units="true"
+                display-values="false"
                 scientific-display="true"
+                index="2"
               >
               </ods-chart-serie>
+            </ods-chart-query>
+            <ods-chart-query
+              context="secondcompostsitetestingforimpact"
+              field-x="date_collection_datetime"
+              maxpoints="0"
+              timescale="month"
+              stacked="normal"
+              series-breakdown="stop_name"
+              category-colors="{'Citizen\'s Convenience Center':'#83A506','Mills Park':'#8964A8'}"
+            >
               <ods-chart-serie
-                expression-y="compost_created_lbs"
-                chart-type="line"
+                expression-y="lbs_collected"
+                chart-type="column"
                 function-y="SUM"
-                label-y="Estimated Earned Compost Created (Lbs)"
-                color="#0c6256"
+                label-y="Total Average Food Waste Collected"
+                color="range-Accent"
+                display-units="true"
+                display-stack-values="false"
                 scientific-display="true"
+                index="1"
               >
               </ods-chart-serie>
             </ods-chart-query>
