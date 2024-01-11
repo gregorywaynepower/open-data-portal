@@ -143,8 +143,8 @@
     <div class="column">
       <div class="col-md-4">
         <ods-dataset-context
-            context="secondcompostsitetestingforimpact"
-            secondcompostsitetestingforimpact-dataset="second_compost_site_testing_for-impact"
+          context="secondcompostsitetestingforimpact"
+          secondcompostsitetestingforimpact-dataset="second_compost_site_testing_for-impact"
         >
           <div class="kpi-box">
             <div
@@ -167,7 +167,7 @@
                 Total Estimated Earned
                 <b>Lbs</b> of Compost Created to Date:
               </p>
-              <span class="kpi-value"> {{ myvar | number : 0 }}</span> 
+              <span class="kpi-value"> {{ myvar | number : 0 }}</span>
             </div>
           </div>
         </ods-dataset-context>
@@ -254,11 +254,12 @@
         </p>
       </div>
     </div>
-    <div class="column">
+    <div class="row">
       <div class="col-md-6">
         <div class="chart-title">
           <div class="center">
-            Estimated Drop-Offs Containing Food Waste by Day of Week:
+            Estimated Drop-Offs at Citizen's Convenience Center Containing Food
+            Waste by Day of Week:
           </div>
         </div>
         <ods-dataset-context
@@ -279,21 +280,20 @@
                 function-y="SUM"
                 color="range-Greens"
                 scientific-display="true"
-                label-y="Estimated Drop-Offs Containing Food Waste:"
+                label-y="Estimated Drop-Offs at Citizen's Convenience Center Containing Food Waste:"
               >
               </ods-chart-serie>
             </ods-chart-query>
           </ods-chart>
         </ods-dataset-context>
       </div>
-    </div>
-    <div class="column">
       <div class="col-md-6">
         <p>
           <img
             src="/assets/theme_image/FoodWasteAcceptedMaterials.jpg"
             alt="Listing of accepted materials, which are Fruits/Vegetables, Meat/Bones, Breads/Baked Goods, Eggs, Eggshells, Dairy, Grains, Coffee grounds, coffee filters, paper plates, napkins/paper towels, pet food, and BPI Certified Compostable items"
             width="100%"
+            class="img-fix"
           />
         </p>
       </div>
@@ -319,7 +319,8 @@
                 width="40%"
               />
               <p class="kpi-description">
-                Total Estimated Drop-Offs Containing Food Waste:
+                Total Estimated Drop-Offs at Citizen's Convenience Center
+                Containing Food Waste:
               </p>
               <span class="kpi-value"> {{ myvar | number }}</span>
             </div>
@@ -350,7 +351,7 @@
                 expression-y="counts"
                 chart-type="column"
                 function-y="SUM"
-                label-y="Estimated Drop-Offs Containing Food Waste"
+                label-y="Estimated Drop-Offs at Citizen's Convenience Center Containing Food Waste"
                 color="#48382b"
                 min="0"
                 scientific-display="true"
