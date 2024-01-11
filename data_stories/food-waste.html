@@ -102,12 +102,12 @@
       <div class="col-md-4">
         <div class="kpi-box">
           <ods-dataset-context
-            context="foodwastepilotproject"
-            foodwastepilotproject-dataset="food-waste-pilot"
+            context="secondcompostsitetestingforimpact"
+            secondcompostsitetestingforimpact-dataset="second_compost_site_testing_for-impact"
           >
             <div
               ods-aggregation="myvar"
-              ods-aggregation-context="foodwastepilotproject"
+              ods-aggregation-context="secondcompostsitetestingforimpact"
               ods-aggregation-function="SUM"
               ods-aggregation-expression="lbs_collected"
             >
@@ -125,7 +125,7 @@
                 Total
                 <b>Lbs</b> of Food Waste Collected to Date:
               </p>
-              <span class="kpi-value"> {{ myvar | number }}</span>
+              <span class="kpi-value"> {{ myvar | number : 1}}</span>
             </div>
           </ods-dataset-context>
         </div>
@@ -143,13 +143,13 @@
     <div class="column">
       <div class="col-md-4">
         <ods-dataset-context
-          context="foodwastepilotproject"
-          foodwastepilotproject-dataset="food-waste-pilot"
+            context="secondcompostsitetestingforimpact"
+            secondcompostsitetestingforimpact-dataset="second_compost_site_testing_for-impact"
         >
           <div class="kpi-box">
             <div
               ods-aggregation="myvar"
-              ods-aggregation-context="foodwastepilotproject"
+              ods-aggregation-context="secondcompostsitetestingforimpact"
               ods-aggregation-function="SUM"
               ods-aggregation-expression="compost_created_lbs"
             >
@@ -167,7 +167,7 @@
                 Total Estimated Earned
                 <b>Lbs</b> of Compost Created to Date:
               </p>
-              <span class="kpi-value"> {{ myvar | number }}</span>
+              <span class="kpi-value"> {{ myvar | number : 0 }}</span> 
             </div>
           </div>
         </ods-dataset-context>
