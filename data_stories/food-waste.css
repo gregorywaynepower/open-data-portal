@@ -18,6 +18,12 @@
   border-radius: 7px;
 }
 
+@media (min-width: 992px) {
+  .img-fix {
+    margin-top: 4.75rem;
+  }
+}
+
 @media (min-width: 994px) {
   .kpi-box {
     padding: 16px;
