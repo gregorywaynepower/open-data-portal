@@ -904,6 +904,113 @@
     </div>
   </div>
 </section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>Cisco Spaces Data</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">Cisco Spaces: Big Picture View</div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="ciscospacesstorageaccount"
+            ciscospacesstorageaccount-dataset="cisco-spaces-storage-account"
+            ciscospacesstorageaccount-parameters="{'disjunctive.local_hour':true,'disjunctive.location_name':true,'disjunctive.location_type':true,'disjunctive.location_path':true,'refine.location_path':['DTP','DTP/Academy Pavilion','DTP/Gathering House','DTP/Outdoor']}"
+          >
+            <ods-chart
+              timescale="hour"
+              single-y-axis="true"
+              single-y-axis-label="People Connected"
+              scientific-display="false"
+              labels-x-length="null"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="ciscospacesstorageaccount"
+                field-x="log_timestamp"
+                maxpoints="0"
+                timescale="hour"
+                series-breakdown="location_path"
+              >
+                <ods-chart-serie
+                  expression-y="associated_users_count"
+                  chart-type="line"
+                  function-y="AVG"
+                  label-y="People Connected"
+                  color="range-custom"
+                  display-values="false"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center">
+          <h2>Cisco Spaces Data</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="chart-title">
+          <div class="center">Cisco Spaces: Academy Pavilion</div>
+        </div>
+        <figure>
+          <ods-dataset-context
+            context="ciscospacesstorageaccount"
+            ciscospacesstorageaccount-dataset="cisco-spaces-storage-account"
+            ciscospacesstorageaccount-parameters="{'disjunctive.local_hour':true,'disjunctive.location_name':true,'disjunctive.location_type':true,'disjunctive.location_path':true,'refine.location_path':['DTP/Academy Pavilion','DTP/Academy Pavilion/Ground','DTP/Academy Pavilion/Lower Level']}"
+          >
+            <ods-chart
+              timescale="hour"
+              single-y-axis="true"
+              single-y-axis-label="People Connected"
+              scientific-display="false"
+              labels-x-length="null"
+              align-month="true"
+            >
+              <ods-chart-query
+                context="ciscospacesstorageaccount"
+                field-x="log_timestamp"
+                maxpoints="0"
+                timescale="hour"
+                series-breakdown="location_path"
+              >
+                <ods-chart-serie
+                  expression-y="associated_users_count"
+                  chart-type="line"
+                  function-y="AVG"
+                  label-y="People Connected"
+                  color="range-custom"
+                  display-values="false"
+                  scientific-display="true"
+                >
+                </ods-chart-serie>
+              </ods-chart-query>
+            </ods-chart>
+          </ods-dataset-context>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
 <br />
 <section>
   <div class="container">
