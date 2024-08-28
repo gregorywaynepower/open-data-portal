@@ -1,0 +1,387 @@
+<div class="container-fluid">
+  <div class="ods-box">
+    <section class="block-grey">
+      <div class="container">
+        <center>
+          <h1 class="header-title">
+            Effects of COVID-19 on the Town of Cary (March 2020 - May 2021)
+          </h1>
+        </center>
+      </div>
+    </section>
+    <p></p>
+    <section class="block-white">
+      <div class="container">
+        <center>
+          <h3 class="block-subtitle">COVID-19 in North Carolina</h3>
+        </center>
+        <div class="block-section">
+          <div class="column">
+            <div class="col-md-6">
+              <p class="block-text">
+                Everyone has a story about when the pandemic began to feel
+                “real” – an event cancellation, an all-staff email from their
+                boss, their child’s school going virtual.
+                <br />
+                <br />
+                For many, it had already hit home by the time Governor Roy
+                Cooper issued Executive Order 121 on March 27, 2020,
+                implementing a statewide Stay at Home Order set to begin three
+                days later on Monday, March 30. The order directed North
+                Carolinians to limit trips outside the home for all but a few
+                reasons (visiting essential businesses, exercising outdoors, or
+                helping a family member). In many peoples’ memories, the ensuing
+                months are a blur -- mask mandates enacted, rescinded, and
+                enacted again; restaurants turning to curbside and delivery
+                service to stay afloat; businesses struggling to adapt amid
+                widespread uncertainty; and a dawning realization that we’d all
+                be living with COVID, in some form, for a very long time.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="block-section">
+          <div class="column">
+            <div class="col-md-6">
+              <div style="line-height: 275%">
+                <br />
+              </div>
+              <img
+                src="/assets/theme_image/covid town hall closed.jpg"
+                width="100%"
+              />
+              <p></p>
+            </div>
+            <p></p>
+          </div>
+        </div>
+        <div class="col-md-12"></div>
+
+        <br />
+        <br />
+        <div class="block-section">
+          <div class="column">
+            <div class="col-md-5">
+              <p>
+                <img
+                  src="/assets/theme_image/covid playground closed.JPG"
+                  height="325"
+                  width="150"
+                />
+              </p>
+
+              <p></p>
+            </div>
+            <p></p>
+          </div>
+        </div>
+        <div class="block-section">
+          <div class="column">
+            <div class="col-md-7">
+              <p>
+                <br />
+                For a government entity, the story of the pandemic has been, at
+                least in part, one of metrics. To get a sense of how COVID
+                affected (and continues to affect) Cary citizens, we look to
+                data. Of course, data can’t tell the whole story, but it can
+                point to trends, support or refute hypotheses, and give us an
+                idea of where our services might be needed as the pandemic
+                continues through its second year.
+                <br />
+                <br />
+                Because the pandemic continues to affect day-to-day life in our
+                area and around the country, data for this story focuses on the
+                period from March 2020 to May 2021, and does not account for the
+                summer 2021 surge in delta variant cases.
+                <br />
+                <br />
+                With all that said, let’s examine a few statistics to quantify
+                how life changed for Cary citizens and the police who serve
+                them.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <img src="/assets/theme_image/social_distancing.png" />
+        </div>
+      </div>
+    </section>
+    <p></p>
+    <section class="block-white">
+      <div class="container">
+        <center>
+          <h3 class="block-subtitle">North Carolina COVID-19 Statistics</h3>
+          <p></p>
+        </center>
+        <div class="block-section">
+          <div class="column">
+            <div class="col-md-6">
+              <ods-dataset-context
+                context="nccovid19casesdeaths"
+                nccovid19casesdeaths-dataset="nc-covid-19-cases-deaths"
+              >
+                <ods-chart timescale="month" align-month="true">
+                  <ods-chart-query
+                    context="nccovid19casesdeaths"
+                    field-x="date"
+                    maxpoints="0"
+                    timescale="month"
+                  >
+                    <ods-chart-serie
+                      expression-y="cases_by_report_date"
+                      chart-type="line"
+                      function-y="SUM"
+                      label-y="Positive COVID-19 Cases"
+                      color="#66c2a5"
+                      scientific-display="true"
+                    >
+                    </ods-chart-serie>
+                  </ods-chart-query>
+                </ods-chart>
+              </ods-dataset-context>
+            </div>
+          </div>
+        </div>
+        <div class="block-section">
+          <div class="column">
+            <div class="col-md-6">
+              <ods-dataset-context
+                context="nccovid19casesdeaths"
+                nccovid19casesdeaths-dataset="nc-covid-19-cases-deaths"
+              >
+                <ods-chart timescale="month" align-month="true">
+                  <ods-chart-query
+                    context="nccovid19casesdeaths"
+                    field-x="date"
+                    maxpoints="0"
+                    timescale="month"
+                  >
+                    <ods-chart-serie
+                      expression-y="deaths_by_date_of_death"
+                      chart-type="line"
+                      function-y="SUM"
+                      label-y="COVID-19 Deaths"
+                      color="#66c2a5"
+                      scientific-display="true"
+                    >
+                    </ods-chart-serie>
+                  </ods-chart-query>
+                </ods-chart>
+              </ods-dataset-context>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <center>
+          <p class="block-text">
+            Data Source: NCDHHS (2021). Daily Cases and Deaths Metrics (Version
+            1.3) [Data set].
+            https://covid19.ncdhhs.gov/dashboard/data-behind-dashboards
+            <br />
+          </p>
+        </center>
+      </div>
+    </section>
+    <p></p>
+
+    <section class="block-grey">
+      <div class="container">
+        <center>
+          <h3 class="block-subtitle">
+            Cary's police incidents and car crashes drastically decreased
+          </h3>
+        </center>
+        <p class="block-text center-text">
+          During the COVID-19 pandemic some striking trends in our data began to
+          emerge. Specifically, our police and crash incident data showed
+          drastic decreases, especially during the beginning of the pandemic.
+        </p>
+
+        <div class="block-section">
+          <div class="row">
+            <div class="col-md-7">
+              <ods-dataset-context
+                context="cpdincidents"
+                cpdincidents-dataset="cpd-incidents"
+                cpdincidents-parameters="{'sort':'-newdate','disjunctive.year':true,'disjunctive.offensecategory':true,'disjunctive.crime_type':true,'disjunctive.violentproperty':true,'q':'date_from>=2020/01/01 AND date_from< 2021/06/01','disjunctive.crime_category':true,'disjunctive.crimeday':true,'disjunctive.total_incidents':true,'disjunctive.district':true}"
+              >
+                <ods-chart
+                  label-x="Date of Occurrence"
+                  timescale="month"
+                  align-month="true"
+                >
+                  <ods-chart-query
+                    context="cpdincidents"
+                    field-x="date_from"
+                    maxpoints="0"
+                    timescale="month"
+                  >
+                    <ods-chart-serie
+                      expression-y="lat"
+                      chart-type="column"
+                      function-y="COUNT"
+                      label-y="Total Police Incidents"
+                      color="#8da0cb"
+                      display-values="false"
+                      display-stack-values="false"
+                      min="0"
+                      step="100"
+                      scientific-display="true"
+                      color-thresholds="[]"
+                    >
+                    </ods-chart-serie>
+                  </ods-chart-query>
+                </ods-chart>
+              </ods-dataset-context>
+            </div>
+            <div class="col-md-5">
+              <img
+                src="https://data.townofcary.org/assets/theme_image/PoliceBadgeOD.jpg"
+                width="250"
+                height="350"
+              />
+            </div>
+            <div class="col-md-12">
+              <p class="block-text justify-text">
+                May 2020 saw just 335 total incidents reported to police, the
+                lowest monthly number since September 2018. Remarkably, police
+                incidents would remain below 400 for eight consecutive months.
+                Towards the end of 2020 and into the beginning of 2021, we saw
+                an increase in incidents, however total incidents pre-pandemic
+                (January-March 2020) were still about 13.41% higher than
+                January-March 2021.
+                <a
+                  href="https://data.townofcary.org/explore/dataset/cpd-incidents"
+                  >Explore Full Police Incident Dataset</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <div class="block-section">
+          <div class="row">
+            <div class="col-md-6">
+              <br />
+              <p class="block-text justify-text">
+                While everyone was at home, the roads were noticeably safer,
+                with April 2020 seeing only 148 reported crashes. Prior to that
+                month, the next lowest month in nearly 4.5 years was July 2017
+                with 312 crashes. So even the safest pre-pandemic month in
+                recent memory had nearly 111% more traffic collisions than the
+                first full month of the pandemic. Throughout the remainder of
+                2020, the monthly number of reported crashes fluctuated but
+                never went above 277. The first half of 2021 saw a slow but
+                steady increase in crashes, but still has yet to climb back to
+                pre-pandemic numbers.
+                <a
+                  href="https://data.townofcary.org/explore/dataset/cpd-crash-incidents"
+                  >Explore Full Crash Incident Dataset</a
+                >
+              </p>
+            </div>
+            <div class="col-md-6">
+              <ods-dataset-context
+                context="cpdcrashincidents"
+                cpdcrashincidents-dataset="cpd-crash-incidents"
+                cpdcrashincidents-parameters="{'sort':'crash_date','disjunctive.weather':true,'disjunctive.rdcharacter':true,'disjunctive.contributing_factor':true,'disjunctive.rdconfigur':true,'disjunctive.rdsurface':true,'disjunctive.vehicle_type':true,'disjunctive.lightcond':true,'disjunctive.rdcondition':true,'disjunctive.rdclass':true,'q':'crash_date>=2020/01/01 AND crash_date< 2021/06/01','disjunctive.month':true,'disjunctive.rdfeature':true,'disjunctive.trafcontrl':true}"
+              >
+                <ods-chart
+                  label-x="Crash Date (Month)"
+                  timescale="month"
+                  align-month="true"
+                >
+                  <ods-chart-query
+                    context="cpdcrashincidents"
+                    field-x="crash_date"
+                    maxpoints="0"
+                    timescale="month"
+                  >
+                    <ods-chart-serie
+                      expression-y="tamainid"
+                      chart-type="spline"
+                      function-y="COUNT"
+                      label-y="Total Crashes"
+                      color="#8da0cb"
+                      min="0"
+                      scientific-display="true"
+                    >
+                    </ods-chart-serie>
+                  </ods-chart-query>
+                </ods-chart>
+              </ods-dataset-context>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <p></p>
+  </div>
+  <section class="block-grey">
+    <div class="container">
+      <center>
+        <h3 class="block-subtitle">
+          Cary's Greenway usage dramatically increased
+        </h3>
+      </center>
+      <p class="block-text center-text">
+        An interesting byproduct of North Carolina’s Stay at Home order was a
+        dramatic rise in visits to the few places people could go: outdoor
+        public spaces. As local and state emergency orders began to take effect,
+        we saw a drastic increase in visits to our greenway system. Using Smart
+        City technology, Cary collects and monitors greenway usage data via
+        pedestrian counters (Eco-Counters). Below, we can see a major spike in
+        counts for the Black Creek greenway segment, with more than 32,000
+        people counted in April 2020 alone.
+      </p>
+
+      <div class="block-section">
+        <div class="column">
+          <div class="col-md-6">
+            <ods-dataset-context
+              context="ecocounterdata"
+              ecocounterdata-dataset="eco-counter-data"
+              ecocounterdata-parameters="{'sort':'-date','q':'date>=2020/01/01 AND date <2021/06/01','disjunctive.name':true,'refine.name':'CRY_BCN (Cary Black Creek Greenway - North)'}"
+            >
+              <ods-chart
+                label-x="Date (Month)"
+                timescale="day"
+                display-legend="false"
+                align-month="true"
+              >
+                <ods-chart-query
+                  context="ecocounterdata"
+                  field-x="date"
+                  maxpoints="0"
+                  timescale="month"
+                  series-breakdown="name"
+                >
+                  <ods-chart-serie
+                    expression-y="counts"
+                    chart-type="spline"
+                    function-y="SUM"
+                    label-y="Total Counts"
+                    step="5000"
+                    color="range-Dark2"
+                    min="0"
+                    scientific-display="true"
+                  >
+                  </ods-chart-serie>
+                </ods-chart-query>
+              </ods-chart>
+            </ods-dataset-context>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="/assets/theme_image/Black%20Creek%20Greenway%20At%20Lake%20Crabtree.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
