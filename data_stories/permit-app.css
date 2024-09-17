@@ -581,10 +581,9 @@ tbody {
 
 tr.gridlayout {
   display: grid;
-  grid-template-columns: 4.5fr minmax(0, 1.5fr) minmax(0, 1.3fr) minmax(
-      0,
-      1.7fr
-    ) 0.5fr;
+  grid-template-columns:
+    4.5fr minmax(0, 1.5fr) minmax(0, 1.3fr) minmax(0, 1.7fr)
+    0.5fr;
 }
 @media (max-width: 850px) {
   tr.gridlayout {
