@@ -1,0 +1,730 @@
+<!-- The context init will only serve to initialize the ods-results that will be used to link parking and lane contexts through the distance  -->
+
+<!-- 3 contexts are declared here: 
+                  - one for the dataset containing the restaurants => three fields are marked as disjunctive = multiple selection, the one serving for the filters 
+                  - one for the bike lanes (to fetch bike lanes that are around the restaurant selected) 
+                  - one for the bike parking locations (to fetch bike parkings around the restaurant selected) -->
+
+<ods-dataset-context
+  context="allpermits,kpipermits,selectedpermits,typedescription"
+  allpermits-dataset="permit-applications"
+  kpipermits-dataset="permit-applications"
+  selectedpermits-dataset="permit-applications"
+  typedescription-dataset="permit-applications"
+  allpermits-parameters="{'disjunctive.year_text':true,'disjunctive.permitclass':true,'disjunctive.statuscurrent':true,'disjunctive.permitclassmapped':true}"
+  kpipermits-parameters="{'disjunctive.year_text':true,'refine.year_text':'2024'}"
+  selectedpermits-parameters="{'disjunctive.year_text':true,'refine.year_text':'2024','disjunctive.permitclass':true,'disjunctive.statuscurrent':true,'refine.permitclass':['Single Family New','Multi-Family Add/Alt/Acc','Multi-Family New','Single Family Residential Add/','Non-Residential New','Non-Residential Add/Alt/Acc'],'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','CERTIFICATE ISSUED (CO)']}"
+  typedescription-parameters="{'disjunctive.year_text':true,'refine.year_text':'2024','disjunctive.permittypedesc':true,'disjunctive.statuscurrent':true,'refine.permittypedesc':['HVAC CHANGE OUT RESIDENTIAL (M107)','TANKLESS WATER HEATER CHANGE OUT RESIDENTIAL (P108)','GAS LINE RESIDENTIAL (NO ELECTRICAL) (M108)','ELEC ADD/EXTEND CIRCUITS/FIXTURES RESIDENTIAL (E105)','ELECTRICAL SERVICE CHANGE RESIDENTIAL (E104)'],'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)']}"
+  allpermits-sort="issuedate"
+  ng-init="values = {}; "
+>
+  <!-- ==========================================================================
+    Calculations
+    ========================================================================== -->
+
+  <span
+    ods-aggregation="nbpermits"
+    ods-aggregation-context="kpipermits"
+    ods-aggregation-function="COUNT"
+  >
+    {{ values.permits = nbpermits ; "" }}
+  </span>
+
+  <span
+    ods-aggregation="nbpermits"
+    ods-aggregation-context="allpermits"
+    ods-aggregation-function="COUNT"
+  >
+    {{ values.permitsearch = nbpermits ; "" }}
+  </span>
+
+  <span
+    ng-repeat="item in items"
+    ods-results="items"
+    ods-results-context="allpermits"
+    ods-results-max="1"
+  >
+    {{ default.dateto = item.fields.issuedate ; "" }}
+  </span>
+
+  <span
+    ods-analysis="analysispermit"
+    ods-analysis-context="allpermits"
+    ods-analysis-max="20"
+    ods-analysis-x="year_text"
+    ods-analysis-serie-count="COUNT(*)"
+  >
+    {{ values.distribyear = analysispermit.results ; "" }}
+  </span>
+
+  <span
+    ods-analysis="analysisnewpermit"
+    ods-analysis-context="kpipermits"
+    ods-analysis-max="20"
+    ods-analysis-x="workclassmapped"
+    ods-analysis-serie-count="COUNT(*)"
+    ods-analysis-sort="count"
+  >
+    {{ values.newpermit = analysisnewpermit.results ; "" }}
+  </span>
+
+  <span
+    ods-analysis="analysisresidential"
+    ods-analysis-context="kpipermits"
+    ods-analysis-max="20"
+    ods-analysis-x="permittype"
+    ods-analysis-serie-count="COUNT(*)"
+    ods-analysis-sort="count"
+  >
+    {{ values.residhome = (analysisresidential.results | toObject:'x') ; "" }}
+  </span>
+
+  <!-- Debug section : I've erased it but it is very useful to insert a Debug section at the beginning of the page to test the context.parameters values to check if everything is ok -->
+
+  <!-- ==========================================================================
+    Header Section
+    ========================================================================== -->
+
+  <section class="home-header">
+    <div class="container"></div>
+  </section>
+
+  <!-- ==========================================================================
+    Introductory Section 
+    ========================================================================== -->
+
+  <section class="container">
+    <div class="app-box">
+      <h2 class="section-title">Open Data Building Permit Dashboard</h2>
+
+      <p class="center">
+        <strong
+          >Last Updated: {{ allpermits.dataset.metas.data_processed | date }}
+        </strong>
+      </p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="bigger">
+            <h2 class="title">Cary: A Home, Workplace, and So Much More</h2>
+          </div>
+
+          <div class="narrow-top-bottom justify">
+            <br />
+            An idyllic, thriving community in the Triangle, Cary is ranked among
+            the top regions in the country to live, work, or start a
+            business. Its proximity to Research Triangle Park, ready land, and
+            high quality of life, have resulted in rapid growth over the past
+            few years. Cary’s appeal lies in its beautiful homes, quaint
+            shopping areas, and flourishing businesses tucked among tall groves
+            of lush trees.
+          </div>
+
+          <div class="narrow-top-bottom justify">
+            <br />
+            We invite you to browse our site and learn about our
+            growth, including basic performance statistics on housing and
+            business development over the years. Explore six years of permit
+            information as a homeowner (current or potential), a business, or a
+            realtor.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <img
+            src=" /assets/theme_image/fountain_cary.jpg "
+            class="page-subtitle-image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+    KPI Section
+    ========================================================================== -->
+
+  <div class="app-box">
+    <h2 class="section-title space-bottom">Annual Permit Activity</h2>
+    <p>
+      Cary receives and processes building permit applications covering a range
+      of projects from new office buildings, renovations to existing houses, or
+      even entire shopping centers! The information below is a snapshot of the
+      permit activity each year showing the total number of applications
+      received, the percent of applications that proposed new buildings and
+      finally, the percentage of applications that proposed new single-family
+      and townhouse. We hope this information is useful in helping you
+      understand how Cary has grown over the last several years.
+    </p>
+
+    <!--  Add your text here
+        
+        <p class="center">
+            
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero illum maxime voluptate minima velit, accusantium, soluta, harum delectus quas earum similique, placeat rerum aut! Est minus dicta consectetur earum! Consequatur.
+        </p>    -->
+
+    <!-- Filters bar -->
+
+    <div class="app-box">
+      <div class="row space-bottom">
+        <div class="filter-selection center">
+          <div class="filter-selection-item highlight-select">
+            <div
+              ods-facet-results="permits"
+              ods-facet-results-context="kpipermits"
+              ods-facet-results-facet-name="year_text"
+              ods-facet-results-sort="alphanum"
+            >
+              <ods-select
+                selected-values="kpipermits.parameters['refine.year_text']"
+                multiple="false"
+                options="permits"
+                label-modifier="name"
+                value-modifier="name"
+                placeholder="Select a year"
+              >
+              </ods-select>
+            </div>
+          </div>
+
+          {{ selectedpermits.parameters['refine.year_text'] =
+          kpipermits.parameters['refine.year_text'] ;
+          typedescription.parameters['refine.year_text'] =
+          kpipermits.parameters['refine.year_text'] ; "" }}
+
+          <!--
+
+
+
+
+                        <div class="filter-selection-item">
+
+
+
+
+
+                            <div  ods-facet-results="permits" 
+                                 ods-facet-results-context="allpermits"
+                                 ods-facet-results-facet-name="permitclass" 
+                                 ods-facet-results-sort="-count"
+                                 >
+
+                                <ods-select 
+                                            selected-values="allpermits.parameters['refine.permitclass']"
+                                            multiple="true"
+                                            options="permits"
+                                            label-modifier="name + ' (' + count + ')'"
+                                            value-modifier="name"
+                                            placeholder="Select the type of permit">
+                                </ods-select> 
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="filter-selection-item">
+
+                            <div  ods-facet-results="statuses" 
+                                 ods-facet-results-context="allpermits"
+                                 ods-facet-results-facet-name="statuscurrent" 
+                                 ods-facet-results-sort="-count"
+                                 >
+
+                                <ods-select 
+                                            selected-values="allpermits.parameters['refine.statuscurrent']"
+                                            multiple="true"
+                                            options="statuses"
+                                            label-modifier="name + ' (' + count + ')'"
+                                            value-modifier="name"
+                                            placeholder="Select the permit status">
+                                </ods-select> 
+
+                            </div>
+                        </div>
+
+                        <div class="filter-selection-item">
+
+                            <div  ods-facet-results="residentials" 
+                                 ods-facet-results-context="allpermits"
+                                 ods-facet-results-facet-name="permitclassmapped" 
+                                 ods-facet-results-sort="-count"
+                                 >
+
+                                <ods-select 
+                                            selected-values="allpermits.parameters['refine.permitclassmapped']"
+                                            multiple="true"
+                                            options="residentials"
+                                            label-modifier="name + ' (' + count + ')'"
+                                            value-modifier="name"
+                                            placeholder="Residential or not?">
+                                </ods-select> 
+
+                            </div>
+                        </div>
+
+-->
+        </div>
+      </div>
+
+      <!--   <div class="row space-top center">
+
+
+                <div ng-if="allpermits.parameters['refine.year_text'].length>0 || allpermits.parameters['refine.permitclass'].length>0 || allpermits.parameters['refine.statuscurrent'].length>0 || allpermits.parameters['refine.permitclassmapped'].length>0 ">
+                    <span class="cancel-button"
+                          ng-click="allpermits.parameters['year_text'] = undefined;
+                                    allpermits.parameters['refine.permitclass'] = undefined;
+                                    allpermits.parameters['refine.statuscurrent'] = undefined;
+                                    allpermits.parameters['refine.permitclassmapped'] = undefined;">
+                        Cancel filters                            </span>
+                </div>
+
+
+            </div>    -->
+
+      <div class="app-row space-bottom">
+        <!-- Number of permits -->
+
+        <div class="col-md-4 col-sm-12">
+          <div class="kpi-box" ng-if="true">
+            <div class="scene">
+              <div
+                class="card-flip"
+                ng-class="{'is-flipped': isFlipped}"
+                ng-init="isFlipped = false"
+                ng-click="isFlipped = !isFlipped"
+              >
+                <div class="card-face firstcard-face-front">
+                  <i class="kpi-icon fa fa-building" aria-hidden="true"></i>
+
+                  <h3 class="kpi-value">{{ values.permits | number }}</h3>
+                  <p class="kpi-description">
+                    Applications Received <br />
+                    <!-- since {{ default.dateto | date }}  -->
+                  </p>
+                </div>
+
+                <div class="card-face card-face-back">
+                  <ul
+                    class="kpi-infos"
+                    ng-repeat="(position,item) in values.distribyear"
+                  >
+                    <li>
+                      {{ item.x }} : <strong> {{ item.count | number}} </strong>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CO -->
+
+        <div class="col-md-4 col-sm-12">
+          <div class="kpi-box" ng-if="true">
+            <div class="scene">
+              <div
+                class="card-flip"
+                ng-class="{'is-flipped': isFlipped}"
+                ng-init="isFlipped = false"
+                ng-click="isFlipped = !isFlipped"
+              >
+                <div class="card-face card-face-front">
+                  <i class="kpi-icon fa fa-building-o" aria-hidden="true"></i>
+
+                  <h3 class="kpi-value">
+                    {{ values.newpermit[1].count / (values.newpermit[0].count +
+                    values.newpermit[1].count) * 100 | number: 1 }}%
+                  </h3>
+                  <p class="kpi-description">
+                    New Building Permits <br />
+                    <!-- since {{ default.dateto | date }}  -->
+                  </p>
+                </div>
+
+                <div class="card-face card-face-back" style="padding: 20px">
+                  <p>
+                    The percentage of the total number of permits received that
+                    represents new buildings.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Residential -->
+
+        <div class="col-md-4 col-sm-12">
+          <div class="kpi-box" ng-if="true">
+            <div class="scene">
+              <div
+                class="card-flip"
+                ng-class="{'is-flipped': isFlipped}"
+                ng-init="isFlipped = false"
+                ng-click="isFlipped = !isFlipped"
+              >
+                <div class="card-face card-face-front">
+                  <i class="kpi-icon fa fa-home" aria-hidden="true"></i>
+
+                  <h3 class="kpi-value">
+                    {{ (values.residhome['B101'].count +
+                    values.residhome['B102'].count) / values.permits * 100 |
+                    number: 1 }}%
+                  </h3>
+                  <p class="kpi-description">
+                    New Single Family Homes <br />
+                    <!-- since {{ default.dateto | date }}  -->
+                  </p>
+                </div>
+
+                <div class="card-face card-face-back" style="padding: 20px">
+                  <p style="padding-bottom: 0px !important">
+                    The percentage of the total number of permits received that
+                    represents permits for new Single-Family homes and
+                    Townhouses.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <hr class="soberline" />
+
+      <!-- Stacked bar chart -->
+
+      <div class="row big-space-top center">
+        <h2 class="section-title space-bottom-small">Permits Overview</h2>
+        <div class="narrow-top-bottom justify">
+          Cary issues building permits to ensure construction complies with all
+          state and local regulations that safeguard life and property. We
+          review design, construction methods, and materials before granting
+          approvals. Below is the permit status overview for both residential
+          and non-residential projects, as well as single trade permits such as
+          HVAC, gas line, etc.
+        </div>
+
+        <br />
+
+        <div ng-init="activeviz = 'status'" class="center space">
+          <a
+            href="#"
+            class="cary-button"
+            ng-click="activeviz = 'status'"
+            role="button"
+            ng-class="{'ul-button-active' : activeviz == 'status'}"
+          >
+            Permit Status Overview
+          </a>
+          <a
+            href="#"
+            class="cary-button"
+            ng-click="activeviz = 'type'"
+            role="button"
+            ng-class="{'cary-button-active' : activeviz == 'type'}"
+          >
+            Single Trade Permits
+          </a>
+        </div>
+
+        <div class="kpi-box" ng-if="activeviz == 'status'">
+          <ods-chart align-month="true" labels-x-length="30">
+            <ods-chart-query
+              context="selectedpermits"
+              field-x="permitclass"
+              maxpoints="0"
+              stacked="percent"
+              series-breakdown="statuscurrent"
+              category-colors="{'CERTIFICATE ISSUED (CO)':'#404f95','CERTICATE OF COMPLIANCE (CC)':'#af4159','PERMIT ISSUED (PI)':'#7b89a9
+                        
+                        
+                        '}"
+            >
+              <ods-chart-serie
+                expression-y="totalsqft"
+                chart-type="bar"
+                function-y="COUNT"
+                color="range-Accent"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+
+          <h1 class="invoice-card-subtitle center space-bottom">
+            Permits by Status
+          </h1>
+        </div>
+
+        <div class="kpi-box" ng-if="activeviz == 'type'">
+          <ods-chart align-month="true" labels-x-length="40">
+            <ods-chart-query
+              context="typedescription"
+              field-x="permittypedesc"
+              maxpoints="0"
+              stacked="percent"
+              series-breakdown="statuscurrent"
+              category-colors="{'CERTICATE OF COMPLIANCE (CC)':'#af4159','PERMIT ISSUED (PI)':'#404f95'}"
+            >
+              <ods-chart-serie
+                expression-y="totalsqft"
+                chart-type="bar"
+                function-y="COUNT"
+                scientific-display="true"
+              >
+              </ods-chart-serie>
+            </ods-chart-query>
+          </ods-chart>
+
+          <h1 class="invoice-card-subtitle center space-bottom">
+            Single Trade Permits by Status
+          </h1>
+        </div>
+      </div>
+
+      <p style="text-align: right">
+        <i class="fa fa-database" aria-hidden="true"></i>
+        <a href="/explore/dataset/permit-applications/table/" target="blank/"
+          >Data Source
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+    SEARCH / DATE RANGE SECTION
+    ========================================================================== -->
+
+  <section>
+    <div class="app-box">
+      <h2 class="section-title space-bottom-small">Find Building Permits</h2>
+
+      <div class="narrow-top-bottom justify">
+        <p>
+          Find permits by address, road or location. You can even search by
+          construction activity (such as “solar panel”) or contractors, to plan
+          for your needs as a homeowner or business. You can also search for
+          historical permits (more than 7 years old), by following this link:
+          <a
+            href="https://cary-egov.aspgov.com/Click2GovBP/selectpermit.html?OWASP_CSRFTOKEN=EJ3T-VVOG-VHE3-3S6G-KCJT-4GC2-EEV4-OCW6&initialSearchView=true"
+            target="_blank"
+            ><b>Find Permits</b></a
+          >
+        </p>
+      </div>
+
+      <div class="app-box space-bottom">
+        <div
+          ods-results="results"
+          ods-results-context="allpermits"
+          ods-results-max="500"
+        >
+          <div class="search-module">
+            <i class="fa fa-search search-module-icon" aria-hidden="true"></i>
+            <input
+              placeholder="Look for an address, road, neighborhood..."
+              ng-model="allpermits.parameters['q']"
+              ng-model-options="{ updateOn: 'keyup', debounce: { 'default': 300, 'blur': 0 }}"
+              class="search-module-input"
+              type="text"
+            />
+            <button
+              title="Reset"
+              class="search-module-clear"
+              ng-if="allpermits.parameters['q']"
+              ng-click="allpermits.parameters['q'] = undefined"
+            >
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          {{ values.results = results ; ""}}
+        </div>
+
+        <!-- ==========================================================================
+    BUILDING PERMIT DISPLAY
+    ========================================================================== -->
+
+        <div class="row space-top">
+          <!-- all layers have been created with the map builder 
+                                   on the restaurant layer, we add a refine on click on the geopoint to refine the allpermits context on this restaurant when it's clicked:  https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsMap -->
+
+          <div class="col-md-8">
+            <ods-map
+              no-refit="true"
+              scroll-wheel-zoom="false"
+              search-box="false"
+              toolbar-fullscreen="true"
+              toolbar-geolocation="true"
+              basemap="jawg.light"
+              display-control="dalse"
+            >
+              <ods-map-layer-group>
+                <ods-map-layer
+                  context="allpermits"
+                  color-categories="{'Residential':'#404f95','Non-Residential':'#af4159'}"
+                  color-by-field="permitclassmapped"
+                  color-categories-other="#AAAAAA"
+                  color-numeric-range-min="0"
+                  picto="dot"
+                  show-marker="false"
+                  display="categories"
+                  shape-opacity="0.5"
+                  point-opacity="0.8"
+                  border-color="#FFFFFF"
+                  border-opacity="1"
+                  border-size="2"
+                  border-pattern="solid"
+                  caption="true"
+                  title="Building Permit Applications"
+                  description="Explore building permit applications in the Town of Cary.  "
+                  size="7"
+                ></ods-map-layer>
+              </ods-map-layer-group>
+
+              <!-- Two additional layers with parking and lane that are showed with the parameters show-if only if the condition is applied : the condition depends on the click on the button, see previous part-->
+            </ods-map>
+
+            <div class="odswidget odswidget-map-legend">
+              <div class="odswidget-map-legend__header">
+                <div
+                  class="odswidget-map-legend__title"
+                  title="Residential Status"
+                >
+                  Residential Status
+                </div>
+              </div>
+              <div class="odswidget-map-legend__categories-container">
+                <div class="odswidget-map-legend__categories__item">
+                  <div class="odswidget-map-legend__categories__item-color">
+                    <div
+                      class="odswidget-map-legend__categories__color-block"
+                      style="background-color: #404f95"
+                    ></div>
+                    <div class="odswidget-map-legend__categories__item-value">
+                      Residential
+                    </div>
+                  </div>
+                </div>
+
+                <div class="odswidget-map-legend__categories__item">
+                  <div class="odswidget-map-legend__categories__item-color">
+                    <div
+                      class="odswidget-map-legend__categories__color-block"
+                      style="background-color: #af4159"
+                    ></div>
+                    <div class="odswidget-map-legend__categories__item-value">
+                      Non Residential
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h2 class="content-card-title center">List of permits</h2>
+
+            <br />
+
+            <hr class="soberline" />
+
+            <div
+              class="center list-permits"
+              ng-if="allpermits.parameters['q'] && values.results.length>0 "
+            >
+              {{ values.permitsearch }} permits found
+
+              <br />
+              <br />
+            </div>
+
+            <div
+              class="center list-permits"
+              ng-if="allpermits.parameters['q'] && values.results.length==0"
+            >
+              No permit found
+
+              <br />
+              <br />
+            </div>
+
+            <button
+              class="basic-button-reinit"
+              ng-if="allpermits.parameters['refine.permitnum']"
+              ng-click="allpermits.parameters['refine.permitnum']=undefined"
+            >
+              <i class="fa fa-ban" aria-hidden="true"></i>
+              Show complete list of permits
+            </button>
+
+            <div class="box-resultats">
+              <!-- here we declare an ods-results on the list of restaurants to show the restaurant cards: see item.fields.restaurant, items.fields.address etc. 
+                                         the ng-click directive allows you to trigger an refine on the restaurant when you click on the card : see the impact on the map -->
+
+              <ul class="results-list">
+                <li
+                  class="results-list-item"
+                  ng-repeat="item in items"
+                  ods-results="items"
+                  ods-results-context="allpermits"
+                  ods-results-max="1000"
+                  ng-click="allpermits.parameters['refine.permitnum']=item.fields.permitnum"
+                >
+                  <h2 class="business-name">
+                    {{ item.fields.originaladdress1 }}
+                  </h2>
+
+                  <ul class="business-infos">
+                    <li
+                      ng-if="item.fields.description"
+                      class="preformat-whitespaces"
+                    >
+                      Description : {{ item.fields.description | capitalize }}
+                    </li>
+                    <br />
+
+                    <li ng-if="item.fields.permitclass">
+                      <i class="fa fa-building-o"></i>
+                      Type of permit: {{item.fields.permitclass}}
+                    </li>
+
+                    <li ng-if="item.fields.permitclassmapped">
+                      <i class="fa fa-home"></i>
+                      {{ item.fields.permitclassmapped}}
+                    </li>
+
+                    <li ng-if="item.fields.totalsqft">
+                      <i class="fa fa-expand"></i>
+                      {{ item.fields.totalsqft }} sqft
+                    </li>
+
+                    <li ng-if="item.fields.year_text">
+                      <i class="fa fa-calendar-o"></i>
+                      Issue date: {{ item.fields.year_text }}
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <p style="text-align: right">
+              <i class="fa fa-database" aria-hidden="true"></i>
+              <a
+                href="/explore/dataset/permit-applications/table/?disjunctive.statuscurrent&q={{allpermits.parameters['q'] }} "
+                target="blank/"
+                >Data Source
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ods-dataset-context>
