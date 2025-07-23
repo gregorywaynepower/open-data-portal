@@ -67,7 +67,8 @@
       </h3>
     </div>
     <p>
-      Trends over time are increasing from 2017 to 2022.
+      Solar permitting trends increased from 2018 to 2023, and there was a
+      decrease in 2024.
       <br />
       Solar Permit dataset is available here:
       <a
@@ -90,114 +91,6 @@
   <div class="container">
     <div class="column">
       <div class="col-md-3">
-        <!--Calculate % increase 2017 to 2018 -->
-        <div class="kpi-box">
-          <ods-dataset-context
-            context="solarpermits2017,solarpermits2018"
-            solarpermits2017-dataset="permit-applications"
-            solarpermits2017-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2017', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
-            solarpermits2018-dataset="permit-applications"
-            solarpermits2018-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2018', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
-          >
-            <div
-              ods-aggregation="agg2017,agg2018"
-              ods-aggregation-agg2017-context="solarpermits2017"
-              ods-aggregation-agg2017-function="COUNT"
-              ods-aggregation-agg2018-context="solarpermits2018"
-              ods-aggregation-agg2018-function="COUNT"
-            >
-              <div class="kpi-card">
-                <i class="kpi-icon fa fa-line-chart" aria-hidden="true"></i>
-                <div class="kpi-value">
-                  {{ ((agg2018-agg2017) / agg2017 * 100) | number : 0}}%
-                  <div class="kpi-description">
-                    Increase in permits issued between 2017 and 2018
-                  </div>
-                </div>
-                <div class="kpi-description-detail">
-                  <b>{{ agg2017 | number }}</b> in 2017 and
-                  <b>{{ agg2018 | number }}</b> in 2018
-                </div>
-              </div>
-            </div>
-          </ods-dataset-context>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="col-md-3">
-        <!--Calculate % increase 2018 to 2019 -->
-        <div class="kpi-box">
-          <ods-dataset-context
-            context="solarpermits2018,solarpermits2019"
-            solarpermits2018-dataset="permit-applications"
-            solarpermits2018-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2018', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
-            solarpermits2019-dataset="permit-applications"
-            solarpermits2019-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2019', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
-          >
-            <div
-              ods-aggregation="agg2018,agg2019"
-              ods-aggregation-agg2018-context="solarpermits2018"
-              ods-aggregation-agg2018-function="COUNT"
-              ods-aggregation-agg2019-context="solarpermits2019"
-              ods-aggregation-agg2019-function="COUNT"
-            >
-              <div class="kpi-card">
-                <i class="kpi-icon fa fa-line-chart" aria-hidden="true"></i>
-                <div class="kpi-value">
-                  {{ ((agg2019-agg2018) / agg2018 * 100) | number : 0}}%
-                  <div class="kpi-description">
-                    Increase in permits issued between 2018 and 2019
-                  </div>
-                </div>
-                <div class="kpi-description-detail">
-                  <b>{{ agg2018 | number }}</b> in 2018 and
-                  <b>{{ agg2019 | number }}</b> in 2019
-                </div>
-              </div>
-            </div>
-          </ods-dataset-context>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="col-md-3">
-        <!--Calculate % increase 2019 to 2020 -->
-        <div class="kpi-box">
-          <ods-dataset-context
-            context="solarpermits2019,solarpermits2020"
-            solarpermits2019-dataset="permit-applications"
-            solarpermits2019-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2019', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
-            solarpermits2020-dataset="permit-applications"
-            solarpermits2020-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2020', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
-          >
-            <div
-              ods-aggregation="agg2019,agg2020"
-              ods-aggregation-agg2019-context="solarpermits2019"
-              ods-aggregation-agg2019-function="COUNT"
-              ods-aggregation-agg2020-context="solarpermits2020"
-              ods-aggregation-agg2020-function="COUNT"
-            >
-              <div class="kpi-card">
-                <i class="kpi-icon fa fa-line-chart" aria-hidden="true"></i>
-                <div class="kpi-value">
-                  {{ ((agg2020-agg2019) / agg2019 * 100) | number : 0}}%
-                  <div class="kpi-description">
-                    Increase in permits issued between 2019 and 2020
-                  </div>
-                </div>
-                <div class="kpi-description-detail">
-                  <b>{{ agg2019 | number }}</b> in 2019 and
-                  <b>{{ agg2020 | number }}</b> in 2020
-                </div>
-              </div>
-            </div>
-          </ods-dataset-context>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="col-md-3">
         <!--Calculate % increase 2020 to 2021 -->
         <div class="kpi-box">
           <ods-dataset-context
@@ -215,7 +108,10 @@
               ods-aggregation-agg2021-function="COUNT"
             >
               <div class="kpi-card">
-                <i class="kpi-icon fa fa-line-chart" aria-hidden="true"></i>
+                <i
+                  class="kpi-icon fa fa-arrow-circle-o-up"
+                  aria-hidden="true"
+                ></i>
                 <div class="kpi-value">
                   {{ ((agg2021-agg2020) / agg2020 * 100) | number : 0}}%
                   <div class="kpi-description">
@@ -251,7 +147,10 @@
               ods-aggregation-agg2022-function="COUNT"
             >
               <div class="kpi-card">
-                <i class="kpi-icon fa fa-line-chart" aria-hidden="true"></i>
+                <i
+                  class="kpi-icon fa fa-arrow-circle-o-up"
+                  aria-hidden="true"
+                ></i>
                 <div class="kpi-value">
                   {{ ((agg2022-agg2021) / agg2021 * 100) | number : 0}}%
                   <div class="kpi-description">
@@ -268,6 +167,84 @@
         </div>
       </div>
     </div>
+    <div class="column">
+      <div class="col-md-3">
+        <!--Calculate % increase 2022 to 2023 -->
+        <div class="kpi-box">
+          <ods-dataset-context
+            context="solarpermits2022,solarpermits2023"
+            solarpermits2022-dataset="permit-applications"
+            solarpermits2022-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2022', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
+            solarpermits2023-dataset="permit-applications"
+            solarpermits2023-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2023', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
+          >
+            <div
+              ods-aggregation="agg2022,agg2023"
+              ods-aggregation-agg2022-context="solarpermits2022"
+              ods-aggregation-agg2022-function="COUNT"
+              ods-aggregation-agg2023-context="solarpermits2023"
+              ods-aggregation-agg2023-function="COUNT"
+            >
+              <div class="kpi-card">
+                <i
+                  class="kpi-icon fa fa-arrow-circle-o-up"
+                  aria-hidden="true"
+                ></i>
+                <div class="kpi-value">
+                  {{ ((agg2023-agg2022) / agg2022 * 100) | number : 0}}%
+                  <div class="kpi-description">
+                    Increase in permits issued between 2022 and 2023
+                  </div>
+                </div>
+                <div class="kpi-description-detail">
+                  <b>{{ agg2022 | number }}</b> in 2022 and
+                  <b>{{ agg2023 | number }}</b> in 2023
+                </div>
+              </div>
+            </div>
+          </ods-dataset-context>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="col-md-3">
+        <!--Calculate % increase 2023 to 2024 -->
+        <div class="kpi-box">
+          <ods-dataset-context
+            context="solarpermits2023,solarpermits2024"
+            solarpermits2023-dataset="permit-applications"
+            solarpermits2023-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2023', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
+            solarpermits2024-dataset="permit-applications"
+            solarpermits2024-parameters="{'sort':'issuedate','disjunctive.permittype':true, 'disjunctive.year':true, 'disjunctive.statuscurrent':true, 'refine.permittype':'PVRS', 'refine.year':'2024', 'refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
+          >
+            <div
+              ods-aggregation="agg2023,agg2024"
+              ods-aggregation-agg2023-context="solarpermits2023"
+              ods-aggregation-agg2023-function="COUNT"
+              ods-aggregation-agg2024-context="solarpermits2024"
+              ods-aggregation-agg2024-function="COUNT"
+            >
+              <div class="kpi-card">
+                <i
+                  class="kpi-icon fa fa-arrow-circle-o-down"
+                  aria-hidden="true"
+                ></i>
+                <div class="kpi-value">
+                  {{ ((agg2024-agg2023) / agg2023 * 100) | number : 0}}%
+                  <div class="kpi-description">
+                    Increase in permits issued between 2023 and 2024
+                  </div>
+                </div>
+                <div class="kpi-description-detail">
+                  <b>{{ agg2023 | number }}</b> in 2023 and
+                  <b>{{ agg2024 | number }}</b> in 2024
+                </div>
+              </div>
+            </div>
+          </ods-dataset-context>
+        </div>
+      </div>
+    </div>
   </div>
   <br />
   <!--Permits issued by month chart -->
@@ -275,12 +252,12 @@
     <div class="column">
       <div class="col-lg-offset-1 col-lg-10">
         <div class="chart-title">
-          Photovoltaic Permits Issued by Year (2017 - Today)
+          Photovoltaic Permits Issued by Year (2018 - Today)
         </div>
         <ods-dataset-context
           context="permitapplications"
           permitapplications-dataset="permit-applications"
-          permitapplications-parameters="{'disjunctive.statuscurrent':true,'disjunctive.originalcity':true,'disjunctive.permitclass':true,'disjunctive.permitclassmapped':true,'disjunctive.statuscurrentmapped':true,'disjunctive.permittype':true,'disjunctive.permittypemapped':true,'disjunctive.permittypedesc':true,'disjunctive.contractorcompanyname':true,'disjunctive.contractortrade':true,'disjunctive.contractortrademapped':true,'q':'permittype=PVRS and year >=2017','sort':'applieddate','refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
+          permitapplications-parameters="{'disjunctive.statuscurrent':true,'disjunctive.originalcity':true,'disjunctive.permitclass':true,'disjunctive.permitclassmapped':true,'disjunctive.statuscurrentmapped':true,'disjunctive.permittype':true,'disjunctive.permittypemapped':true,'disjunctive.permittypedesc':true,'disjunctive.contractorcompanyname':true,'disjunctive.contractortrade':true,'disjunctive.contractortrademapped':true,'q':'permittype=PVRS and year >=2018','sort':'applieddate','refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
         >
           <ods-chart
             display-legend="false"
@@ -326,12 +303,12 @@
     <div class="column">
       <div class="col-md-8">
         <div class="chart-title">
-          Photovoltaic Permits Issued by Month (2017-2023)
+          Photovoltaic Permits Issued by Month (2018-2024)
         </div>
         <ods-dataset-context
           context="permitapplications"
           permitapplications-dataset="permit-applications"
-          permitapplications-parameters="{'sort':'applieddate','disjunctive.statuscurrent':true,'disjunctive.originalcity':true,'disjunctive.permitclass':true,'disjunctive.permitclassmapped':true,'disjunctive.statuscurrentmapped':true,'disjunctive.permittype':true,'disjunctive.permittypemapped':true,'disjunctive.permittypedesc':true,'disjunctive.contractorcompanyname':true,'disjunctive.contractortrade':true,'disjunctive.contractortrademapped':true,'q':'permittype=PVRS and year >=2017 and year<=2023','refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
+          permitapplications-parameters="{'sort':'applieddate','disjunctive.statuscurrent':true,'disjunctive.originalcity':true,'disjunctive.permitclass':true,'disjunctive.permitclassmapped':true,'disjunctive.statuscurrentmapped':true,'disjunctive.permittype':true,'disjunctive.permittypemapped':true,'disjunctive.permittypedesc':true,'disjunctive.contractorcompanyname':true,'disjunctive.contractortrade':true,'disjunctive.contractortrademapped':true,'q':'permittype=PVRS and year >=2018 and year<=2024','refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
         >
           <ods-chart
             timescale="year"
@@ -375,16 +352,19 @@
     <p>
       Now let's take a look at the trends in where photovoltaic permits are
       issued. The map on the left [top on tablet and mobile devices] takes into
-      account all permits issued between 2017 and the current year. We can see a
-      high density of permits have been issued in Western Cary. Click the play
-      button to see how the hot spots trends have shifted each year between 2017
-      and 2023 with the map on the right [bottom on tablet and mobile devices].
+      account all permits issued between 2018 and the current year. We can see a
+      high density of permits have been issued in Western Cary.
+    </p>
+    <p>
+      Click the play button to see how the hot spots trends have shifted each
+      year between 2018 and 2024 with the map on the right [bottom on tablet and
+      mobile devices].
     </p>
     <br />
     <div class="center">
       <ods-timer
         delay="2000"
-        stop-condition="(values.start | moment:'YYYY')==='2023' "
+        stop-condition="(values.start | moment:'YYYY')==='2024' "
         exec=" values.start = (values.start | momentadd : 'year':1) "
       >
       </ods-timer>
@@ -395,13 +375,13 @@
     <div class="column">
       <div class="col-md-6">
         <h2>
-          <div class="center">Hot Spots 2017 to Today</div>
+          <div class="center">Hot Spots 2018 to Today</div>
         </h2>
         <div class="kpi-box">
           <ods-dataset-context
             context="permitapplications"
             permitapplications-dataset="permit-applications"
-            permitapplications-parameters="{'sort':'applieddate','disjunctive.statuscurrent':true,'disjunctive.originalcity':true,'disjunctive.permitclass':true,'disjunctive.permitclassmapped':true,'disjunctive.statuscurrentmapped':true,'disjunctive.permittype':true,'disjunctive.permittypemapped':true,'disjunctive.permittypedesc':true,'disjunctive.contractorcompanyname':true,'disjunctive.contractortrade':true,'disjunctive.contractortrademapped':true,'q':'permittype=PVRS and year >=2017','refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
+            permitapplications-parameters="{'sort':'applieddate','disjunctive.statuscurrent':true,'disjunctive.originalcity':true,'disjunctive.permitclass':true,'disjunctive.permitclassmapped':true,'disjunctive.statuscurrentmapped':true,'disjunctive.permittype':true,'disjunctive.permittypemapped':true,'disjunctive.permittypedesc':true,'disjunctive.contractorcompanyname':true,'disjunctive.contractortrade':true,'disjunctive.contractortrademapped':true,'q':'permittype=PVRS and year >=2018','refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
           >
             <ods-map
               no-refit="true"
@@ -441,11 +421,11 @@
     <div class="column">
       <div class="col-md-6">
         <!--Animated Map -->
-        <div class="container" ng-init="values = {'start':'2017/01/01'}">
+        <div class="container" ng-init="values = {'start':'2018/01/01'}">
           <ods-dataset-context
             context="permitapplications"
             permitapplications-dataset="permit-applications"
-            permitapplications-parameters="{'sort':'applieddate','disjunctive.statuscurrent':true,'disjunctive.originalcity':true,'disjunctive.permitclass':true,'disjunctive.permitclassmapped':true,'disjunctive.statuscurrentmapped':true,'disjunctive.permittype':true,'disjunctive.permittypemapped':true,'disjunctive.permittypedesc':true,'disjunctive.contractorcompanyname':true,'disjunctive.contractortrade':true,'disjunctive.contractortrademapped':true,'q':'permittype=PVRS and year >=2017','refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
+            permitapplications-parameters="{'sort':'applieddate','disjunctive.statuscurrent':true,'disjunctive.originalcity':true,'disjunctive.permitclass':true,'disjunctive.permitclassmapped':true,'disjunctive.statuscurrentmapped':true,'disjunctive.permittype':true,'disjunctive.permittypemapped':true,'disjunctive.permittypedesc':true,'disjunctive.contractorcompanyname':true,'disjunctive.contractortrade':true,'disjunctive.contractortrademapped':true,'q':'permittype=PVRS and year >=2018','refine.statuscurrent':['PERMIT ISSUED (PI)','CERTICATE OF COMPLIANCE (CC)','APPROVED (AP)','ON HOLD (HD)']}"
           >
             {{ permitapplications.parameters['refine.issuedate'] =
             (values.start|moment : 'YYYY') ; "" }}
